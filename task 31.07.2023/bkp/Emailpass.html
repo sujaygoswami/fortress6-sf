@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schulfoto Pass Download</title>
+  <base href="{base_url}" target="_blank">
+</head>
+
+ <table cellpadding="0" cellspacing="0" style="border: 0px; max-width: 600px; margin: 0 auto; font-family: Arial; padding: 30px;">
+        <tbody>
+            <tr>
+                <td><img src="fileadmin/Images/primary-logo.png" width="200"></td>
+                <td align="right"><img src="fileadmin/Images/secondary-logo.png" width="70"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Speichern Sie den digitalen Schülerausweis jetzt!</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <p>   <f:if condition="{school_image}">
+                                      <f:then>
+                                          <f:image src="{school_image.uid}" alt="" width="150" treatIdAsReference="1" />
+                                      </f:then>
+                                      <f:else>
+                                        N/A
+                                      </f:else>
+                                   </f:if></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="margin: 0px; padding: 0px;" colspan="2">
+                    <p style="padding: 20px; background-color: #eee; line-height: 23px;">
+                        1) Auf “Hinzufügen zu Apple Wallet” klicken<br>
+                        <f:if condition="{apple_path}">
+                        <span style="display: block;"><em>Für Apple:</em><br><a href="{apple_path}" target="_blank"><img src="fileadmin/Images/Add_to_Apple_Wallet_rgb_DE.png" alt="" height="35" ></a></span>
+                    </f:if>
+                    <f:if condition="{android_path}">
+                        <span style="display: block;"><em>Für Android:</em><br><a href="{android_path}" target="_blank"><img src="fileadmin/Images/andr-PassWallet.png" alt=""  height="35"></a></span>
+                    </f:if>    
+                    <f:if condition="{google_wallet}">
+                        <span style="display: block;"><em>Google Wallet:</em><br>  <a href="{google_wallet}" target="_blank"><img src="fileadmin/Images/google-wallet.png" alt="" height="35"></a></span>
+                    </f:if> 
+                        <span style="display: block;"><em>Sollten Sie den Pass mit den obigen Buttons nicht herunterladen können oder sollten die Buttons nicht richtig dargestellt werden, können Sie die Datei über diesen Link herunterladen:</em><br><a href="{android_path}" target="_blank"> Download Schülerausweis</a></span>
+                          <br> 2) Die Karte öffnen.<br><br> 3) Nach dem Öffnen der Karte wird eine Vorschau der Karte angezeigt. Erst ein Klick auf “Zu Wallet hinzufügen” speichert die Karte in der Wallet-App.<br><br>                        4) Die Wallet-App am Smartphone prüfen.
+                    </p>
+                    <p style="line-height: 23px;">Immer dann, wenn die Wallet-App geöffnet wird, kann der neue digitale Schülerausweis angezeigt werden. Die Rückseite des Schülerausweises kann geöffnet werden, indem auf die drei Punkte geklickt wird.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">
+                        <strong>Manuelle Löschung Ihrer Daten:</strong><br> Alternativ haben Sie die Möglichkeit, jederzeit Ihre Daten für den digitalen Schülerausweis löschen zu lassen. Beachten Sie bitte, dass Sie diesen Service dann zukünftig nicht mehr nutzen können. Schreiben Sie uns bitte mit Ihrer Kundennummer an <a href="mailto:datenschutz@energy-imaging.de">datenschutz@energy-imaging.de</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                       <p style="line-height: 23px; padding: 20px; background-color: #eee; font-size: 14px;">
+                        <strong>Energy-Imaging: Die Experten für Schulmarketing<br> Susanne Henkel Fotografie<br>Schubertstraße 21<br> 40699 Erkrath</strong><br> <a href="mailto:www.schülerausweis.de">www.schülerausweis.de</a><br> <a href="mailto: support@schülerausweis.de">support@schülerausweis.de</a>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</html>

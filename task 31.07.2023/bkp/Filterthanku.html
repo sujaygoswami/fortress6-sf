@@ -1,0 +1,191 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+
+      <main class="my-row">
+
+        <!-- section -->
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- steps-module -->
+            <div class="steps-module clearfix">
+                <div class="container-fluid">
+                    <div class="row flex-row">
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed">
+                                <span>Einstieg</span><i><em>&nbsp;</em></i>
+                            </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed">
+                                <span>Daten <br>korrekt?</span><i><em>&nbsp;</em></i>
+                            </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed">
+                                <span>Portrait <br>Upload</span><i><em>&nbsp;</em></i>
+                            </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed">
+                                <span>Fertig</span><i><em>&nbsp;</em></i>
+                            </div>
+                        </div>
+                        <!-- col -->
+                    </div>
+                </div>
+            </div>
+            <!-- steps-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+        <section class="clearfix section-ow element element-gap-medium">
+            <!-- intro module -->
+            <div class="intro-module clearfix">
+                <div class="container-fluid">
+
+            <f:if condition="{userdata.schulname.checkpass}">
+            <f:then>
+                <f:if condition="{image_uploadedfolder_sattus}">
+                    <f:then>
+                    <div class="intro-header element element-gap-medium">
+                            <h1>Speichern Sie den digitalen Schülerausweis jetzt!</h1>
+
+                          
+                        </div>
+                        <div class="row element element-gap-medium">
+                        <div class="col-xs-4 my-col ">
+                              <h5>Dein hochgeladenes Bild</h5>
+                             <f:if condition="{userdata.images}">
+                            <f:then>
+                            <f:image image="{userdata.images}" width="{img_size}c" />
+                            </f:then>
+                            <f:else>
+                              N/A
+                            </f:else>
+                          </f:if>
+                        </div>
+
+
+                        
+                        <f:if condition="{userdata.importpicture}==0">
+                            <div class="col-xs-8">
+                                <h5>Wenn Sie das Bild ändern möchten, klicken Sie bitte auf Zurück.</h5>
+                                <f:link.action action="filtersubmit" pageUid="{edit_picturepage}"   pluginName="Sfilter" arguments="{uid:userdata.uid,type:'fieldinsert',form_type:'withoutmail',email:userdata.email,korren:userdata.korrekturen}" class="form-btn">Zurück</f:link.action>
+
+                            </div>
+                        </f:if>
+                            
+                        </div>
+
+                        <div class="entry">
+                            <ul>
+                                <li>Auf “Hinzufügen zu Apple Wallet” klicken
+                                    <f:if condition="{apple_path}">
+                                     <span style="display: block;margin-top: 5px;"><em>Für Apple:</em><br><a href="{apple_path}" target="_blank"><img src="fileadmin/Images/Add_to_Apple_Wallet_rgb_DE.svg" alt="" height="355" width="117"></a></span>
+                                    </f:if>
+                                    <f:if condition="{android_path}">
+                                     <span style="display: block;margin-top: 5px;"><em>Für Android:</em><br>  <a href="{android_path}" target="_blank"><img src="fileadmin/Images/andr-PassWallet.svg" alt="" height="355" width="117"></a></span>
+                                    </f:if> 
+                                    <f:if condition="{google_wallet}">
+                                     <span style="display: block;margin-top: 5px;"><em>Google Wallet:</em><br>  <a href="{google_wallet}" target="_blank"><img src="fileadmin/Images/google-wallet.png" alt="" height="355" width="117"></a></span>
+                                    </f:if>
+                                </li>
+                                <li>Die Karte öffnen.</li>
+                                <li>Nach dem Öffnen der Karte wird eine Vorschau der Karte angezeigt.
+                                Erst ein Klick auf "Zu Wallet hinzufügen" speichert die Karte in der Wallet-App.</li>
+                                <li>Die Wallet-App am Smartphone prüfen.
+                                Immer dann, wenn die Wallet-App geöffnet wird, kann der neue digitale Schülerausweis angezeigt werden. Die Rückseite des Schülerausweises kann geöffnet werden, indem auf die drei Punkte geklickt wird.
+                                </li></ul>
+                            <p>Sie haben parallel den neuen digitalen Schülerausweis auch an Ihre E-Mail geschickt bekommen.</p>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="intro-header element element-gap-medium">
+                            Beim Hochladen von Bildern ist etwas schief gelaufen.
+                            <div class="col-xs-12 my-col pull-text-center"> <f:link.action action="filtersubmit"  pluginName="Sfilter" pageUid="{edit_picturepage}" arguments="{uid:userdata.uid,type:'fieldinsert',form_type:'withoutmail',email:userdata.email,korren:userdata.korrekturen}" class="form-btn">Zurück</f:link.action></div>
+
+                        </div>
+                    </f:else>
+                </f:if>
+
+            </f:then>
+            <f:else>
+                <f:if condition="{image_uploadedfolder_sattus}">
+                    <f:then>
+                    <div class="intro-header element element-gap-medium">
+                        <h1>Vielen Dank - Ihre Daten wurden erfolgreich übermittelt.</h1>
+                         
+                    </div>
+                    <div class="row element element-gap-medium">
+                        <div class="col-xs-4 my-col ">
+                              <h5>Dein hochgeladenes Bild</h5>
+                             <f:if condition="{userdata.images}">
+                            <f:then>
+                              <f:image image="{userdata.images}" width="{img_size}c"  />
+                            </f:then>
+                            <f:else>
+                              N/A
+                            </f:else>
+                          </f:if>
+                        </div>
+                        <f:if condition="{userdata.importpicture}==0">
+                            <div class="col-xs-8">
+                                <h5>Wenn Sie das Bild ändern möchten, klicken Sie bitte auf Zurück.</h5>
+                                <f:link.action action="filtersubmit" pageUid="{edit_picturepage}"  pluginName="Sfilter" arguments="{uid:userdata.uid,type:'fieldinsert',form_type:'withoutmail',email:userdata.email,korren:userdata.korrekturen}" class="form-btn">Zurück</f:link.action>
+                            </div>
+                        </f:if>
+                            
+                    </div>
+                    <div class="intro-header element element-gap-medium">
+                        <p>Wir fertigen den Schülerausweis i.d. Regel zwischen 5-7 Werktagen. Diesen erhalten Sie dann über die Schule.</p>
+                        <p>Sie können die Anwendung jetzt schließen.</p>
+                    </div>
+
+                    </f:then>
+                    <f:else>
+                        <div class="intro-header element element-gap-medium">
+                            Beim Hochladen von Bildern ist etwas schief gelaufen.
+                            <div class="col-xs-12 my-col pull-text-center"> <f:link.action action="filtersubmit" pluginName="Sfilter" pageUid="{edit_picturepage}" arguments="{uid:userdata.uid,type:'fieldinsert',form_type:'withoutmail',email:userdata.email,korren:userdata.korrekturen}" class="form-btn">Zurück</f:link.action></div>
+
+                        </div>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+
+                    
+
+                    
+                </div>
+            </div>
+            <!-- intro-module -->
+        </section>
+        <!-- section -->
+
+
+    </main>
+    <!-- main -->
+   
+
+  
+</f:section>
+</html>
