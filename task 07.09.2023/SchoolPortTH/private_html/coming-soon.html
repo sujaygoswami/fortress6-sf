@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>School Portraits (Thailand) Co., Ltd.</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- GOOGLE FONTS -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,700,400,300' rel='stylesheet' type='text/css'>
+
+<!-- CSS STYLES -->
+<link rel="stylesheet" type="text/css" href="css/uikit.css" />
+<link rel="stylesheet" type="text/css" href="css/master.css" />
+<link rel="stylesheet" href="css/flipclock.css">
+
+<!-- FAVICONS -->
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+<!-- JavaScript library to detect HTML5 and CSS3 features in the user's browser -->
+<script src="js/modernizr.custom.js"></script>
+
+<!-- Internet Explorer fallback -->
+<!--[if IE]>
+<style>
+    [data-uk-scrollspy*='uk-animation-'] { opacity: 1; }
+</style>
+<![endif]-->
+
+<!-- Overwrite for some css styles from master.css -->
+<style>
+body {
+	padding: 0;
+}
+header {
+	position: relative;
+}
+.subtitle {
+	min-height: 300px;
+	position: relative;
+}
+input[type="email"] {
+	width: 320px;
+	height: 54px !important;
+	background: #f3f3f3 !important;
+	border: 0 !important;
+}
+input.error, textarea.error {
+	border-color: #da3e5a;
+	box-shadow: 0 0 0 2px rgba(218, 62, 90, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+#mess {
+	padding-top: 5px;
+	font-size: 13px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<!-- ===================================== 
+	HEADER
+===================================== -->
+<header>
+  <div class="uk-container uk-container-heading uk-text-center"> <a href=""><img src="images/logo.png" alt="Company Name" /></a><br></div>
+</header>
+
+<!-- ===================================== 
+	SUBTITLE
+===================================== -->
+<section class="mobile-bg" style="background: url(images/4258_XXXLarge.jpg) no-repeat center center fixed; background-size: cover;">
+  <div class="parallax">
+    <div class="subtitle">
+      <div class="content" data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}">
+        <h3 class="maintitle maintitle-black">Coming Soon</h3>
+        <h5 class="gray uk-text-center">We are launching our new website soon</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================== 
+	HEADING
+===================================== -->
+<div class="uk-container uk-container-heading">
+  <h2 class="section-title">Time left for launching</h2>
+</div>
+
+<!-- ===================================== 
+	COUNTER -> refer to template documentation for language customization, etc.
+===================================== -->
+<section class="section-background2">
+  <div id="cs-wrapper" class="uk-clearfix">
+    <div class="clock"></div>
+
+<div class="uk-container uk-text-center">
+  <h4>We can let you know when we are launching</h4>
+  <form name="getnotified" action="send-comingsoon.php" class="uk-form" onsubmit="return validateForm();" method="post">
+    <fieldset>
+      <div class="uk-form-icon"> <i class="uk-icon-clock-o"></i>
+        <input type="email" name="email" placeholder="Enter your email">
+      </div>
+      <button name="submit" class="btn btn-green">Get notified </button>
+    </fieldset>
+  </form>
+</div>
+</div>
+</section>
+<!-- ===================================== 
+	COLOR BARS
+===================================== -->
+<div class="uk-grid">
+  <div class="uk-width-1-4 color-bars bg-purple"></div>
+  <div class="uk-width-1-4 color-bars bg-red"></div>
+  <div class="uk-width-1-4 color-bars bg-green"></div>
+  <div class="uk-width-1-4 color-bars bg-blue"></div>
+</div>
+
+<!-- ===================================== 
+	FOOTER
+===================================== -->
+<footer id="footer">
+  <div class="uk-container uk-container-heading">
+    <div class="uk-grid">
+      <div class="uk-width-medium-1-2 uk-width-small-1-1">
+        <div class="copyright">
+          <p>School Portraits (Thailand) Co., Ltd.</p>
+        </div>
+      </div>
+      <!-- / -->
+      <div class="uk-width-medium-1-2 uk-width-small-1-1">
+        <div class="address">
+          <p>55/1 Bandon – Cherngtalay Road Cherngtalay, Thalang Phuket 83110<br>
+          Tel: 076 615 865 Fax: 076 615 864</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- start java --> 
+<script src="js/jquery.min.js"></script> 
+<script src="js/uikit.min.js"></script> 
+<script src="js/flipclock.js"></script> 
+<!-- / end java --> 
+
+<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+
+// Grab the current date
+				var currentDate = new Date();
+
+// Set some date in the future. In this case September 28th - * Remember that Jquery counts from 0, so September is 8 instead of 9.
+				var futureDate  = new Date(currentDate.getFullYear() + 0, 0, 17);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});				
+			});
+		</script> 
+<script type="text/javascript">
+        function validateForm() {
+    var x = document.forms["getnotified"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Please input a valid e-mail address");
+        return false;
+    }
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71475270-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
