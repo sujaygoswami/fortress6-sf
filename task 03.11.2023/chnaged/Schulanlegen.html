@@ -1,0 +1,652 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <div class="table-wrap">
+    <div class="table-cell middle-line">
+        <div class="main-holder-default">
+            <div class="container inset-container-type-three">
+                 <!-- edit module -->
+                <div class="profile-edit-module">
+                <f:if condition="{form_type}==editform">
+                    <f:then>
+                    <f:form action="schulanlegen" id="update_form" controller="Admin" enctype="multipart/form-data">
+                        <input type="hidden" name="tx_schulfoto_schulanlegen[type]" value="updateform">
+                        <input type="hidden" name="tx_schulfoto_schulanlegen[form_type]" value="editform">
+                        <input type="hidden" name="tx_schulfoto_schulanlegen[uid]" value="{data.uid}">
+
+                        <!-- site form -->
+                        <div class="site-form-type-three">
+                            <!-- form row -->
+                            <div class="form-row row element element-gap-default">
+                                <!-- col -->
+                                <div class="field-block col-auto my-col">
+                                    <div class="main-wrap">
+                                        <div class="normal-entry-module headline-placeholder"><h2><strong><f:translate key="student_record" /></strong></h2></div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                                 <!-- col -->
+                                 <div class="field-block col-auto my-col">
+                                    <div class="main-wrap">
+                                        <div class="edit-dp">
+                                            <div class="dp-holder">
+                                                <f:if condition="{data.images}">
+                                                  <f:then>
+                                                    <f:image src="{data.images.uid}" alt="" width="312" treatIdAsReference="1" />
+                                                  </f:then>
+                                                  <f:else>
+                                                    <img src="fileadmin/templates/Images/dp-placeholder.png" width="312">
+                                                  </f:else>
+                                                </f:if>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                            </div>
+                            <!-- form row -->
+                            <!-- form row -->
+                            <div class="form-row row  element element-gap-defaultlg">
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key="class" /></label>
+                                            <div class="the-field select-field">
+                                              <select name="tx_schulfoto_schulanlegen[class]">
+                                                <f:for each="{classdata}" key="key"   as="classdatas">
+                                                  <option value="{classdatas.uid}"     <f:if condition="{classdatas.uid}=={data.klasse.uid}">selected</f:if>>
+                                                    {classdatas.name}
+                                                  </option>
+                                                </f:for>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap pull-text-right">
+                                        <div class="main-field-holder">
+                                            <label class="field-label">Korrekturhinweise</label>
+                                            <div class="the-field">
+                                                <div class="custom-check-wrap">
+                                                    <label>{data.korrekturen}</label>
+                                                    <div class="custom-checkbox">
+                                                        <input type="checkbox" name="tx_schulfoto_schulanlegen[korrekturen]" id="korrekturen" value="1">
+                                                        <div class="clone-check"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <!-- col -->
+                            </div>
+                            <!-- form row -->
+                            <!-- form row -->
+                            <div class="form-row row element element-gap-defaultlg">
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key="vorname" /></label>
+                                            <div class="the-field">
+                                                <input type="text"  class="text-input" name="tx_schulfoto_schulanlegen[fname]" value="{data.firstName}" id="firstname" >
+                                                <div class="form-error"id="firstnameerror"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap pull-text-right">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key="surname" /></label>
+                                            <div class="the-field">
+                                                <input type="text" class="text-input" name="tx_schulfoto_schulanlegen[lname]" value="{data.lastName}" id="lastname" >
+                                                <div class="form-error" id="lastnameerror"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                            </div>
+                            <!-- form row -->
+                            <!-- form row -->
+                            <div class="form-row row element element-gap-defaultlg">
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key="date_of_birth" /></label>
+                                            <div class="the-field date-field">
+                                                <input type="text" name="tx_schulfoto_schulanlegen[dob]" placeholder="TT.MM.JJJJ" value="<f:format.date format='d.m.Y'>{data.dateOfBirth}</f:format.date>" class="text-input datepicker-input" id="birthday">
+                                                <div class="form-error" id="birthdayerror"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap pull-text-right">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key="validity" /></label>
+                                            <div class="the-field date-field">
+                                                <input type="text" name="tx_schulfoto_schulanlegen[validdate]"  placeholder="TT.MM.JJJJ" value="<f:format.date format='d.m.Y'>{data.validdate}</f:format.date>" class="text-input datepicker-input" id="expiryday">
+                                                <div class="form-error" id="expiryerror"></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                            </div>
+                            <!-- form row -->
+                            
+                            <!-- form row -->
+                            <div class="form-row row element element-gap-Extreme">
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key="email_address" /></label>
+                                            <div class="the-field has-specialbutton">
+                                                <input type="email" name="tx_schulfoto_schulanlegen[email]" value="{data.email}"  class="text-input">
+                                                <f:if condition="{data.schulname.checkpass}">
+                                                    <f:if condition="{data.email}">
+                                                        <f:link.action action="schulanlegen" controller="Admin" arguments="{uid:data.uid,type:'passmail',form_type:'editform'}"><button type="button" class="site-btn default-btn type-two-medium dark mini" ><f:translate key="send_id" /></button>
+                                                        <div class="form-error" id="expiryerror"></div>
+                                                        
+                                                        </f:link.action>
+                                                    </f:if>
+
+                                                    <f:if condition="{pass_mail_sucess_message}">
+                                                        <div class="alert alert-success alert-dismissible fade show message" role="alert">
+                                                        <f:translate key="email_sent" />                                 
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                        </div>
+                                                    </f:if>
+                                                    <f:if condition="{pass_mail_emailnull_message}">
+                                                        <div class="alert alert-danger alert-dismissible fade show message" role="alert">
+                                                        <f:translate key="enter_email_address" />                               
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                    </div>
+                                                    </f:if>
+                                                    <f:if condition="{pass_mail_imagenull_message}">
+                                                        <div class="alert alert-danger alert-dismissible fade show message" role="alert">
+                                                            <f:translate key="no_picture" />
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                    </div>
+                                                    </f:if>
+                                                   
+                                                </f:if>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+
+                                   <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap pull-text-right">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key="access_code" /></label>
+                                            <div class="the-field has-specialbutton">
+                                                <input type="text"  value="{data.cpassword}"  class="text-input" readonly>
+                                                <button type="button" class="site-btn default-btn type-two-medium dark mini" data-bs-toggle="modal" data-bs-target="#exampleModal"><f:translate key="show_qr_code" /></button>
+                                                </div>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                    <div class="modal-content qr-code">
+                                                        <div class="modal-header">
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row qr-head-info element-row">
+                                                                <div class="col-6 my-col">
+                                                                    <p>
+                                                                        <span>{data.schulname.name}</span><br>
+                                                                        <f:translate key="digital_student" />:<br>
+                                                                        <strong>{data.firstName} {data.middleName} {data.lastName}</strong>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-6 my-col pull-text-right">
+                                                                    <p>
+                                                                        <f:translate key="class_group" />:<br>
+                                                                        <strong>{data.klasse.name}</strong>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="qr-basic-text element-row">
+                                                               
+                                                                    <p>
+                                                                        <f:translate key="student_info" />
+                                                                    </p>
+                                                                
+                                                            </div>
+                                                            
+                                                            <div class="qr-holder element-row">
+                                                                <div class="row">
+                                                                    <div class="col-3 my-col"><f:if condition="{show_bar_image_url}">
+                                                                        <img src="{show_bar_image_url}">
+                                                                     </f:if></div>
+                                                                    <div class="col-9 my-col">
+                                                                        <div class="primary-info">
+                                                                            <p>
+                                                                                <f:translate key="qr_info" />
+                                                                            </p>
+                                                                        </div>
+                                                                        <div class="secondary-info">
+                                                                            <span>
+                                                                                <p>
+                                                                                <f:translate key="alternativ" />:<strong>{loginurl}</strong><br>
+                                                                                <f:translate key="alternativ_info" />:<br>
+                                                                                <strong>{data.cpassword}</strong>
+                                                                                </p>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="element-row">
+                                                                <p>
+                                                                    <strong><f:translate key="process" />:</strong><br>
+                                                                    <f:translate key="process_info" /><br>
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="pull-text-right">
+                                                                <a href="javascript:void(0)" id="student_print_pdf" class="site-btn default-btn type-two-medium dark"><f:translate key="download_print" /></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                       
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                                   <!-- col -->
+                                
+                                
+                            </div>
+                            <!-- form row -->
+                            <!-- form row -->
+                            <div class="form-row row element element-gap-defaultlg">
+                                <!-- col -->
+                                <f:if condition="{barcodecheck}">
+                                    <div class="field-block col my-col">
+                                        <div class="main-wrap">
+                                            <div class="main-field-holder">
+                                                <label class="field-label"><f:translate key="barcode" /></label>
+                                                <div class="the-field">
+                                                    <input type="text" name="tx_schulfoto_schulanlegen[barcode]" value="{data.barcode}" placeholder="<f:translate key='barcode_label' />" class="text-input mini-placeholder"> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </f:if>
+                                <!-- col -->
+                                <!-- col -->
+                                <f:if condition="{schulverwaltungsidcheck}">
+                                    <div class="field-block col my-col">
+                                        <div class="main-wrap pull-text-right">
+                                            <div class="main-field-holder">
+                                                <label class="field-label"><f:translate key="administration_id" /></label>
+                                                <div class="the-field">
+                                                    <input type="text"  class="text-input mini-placeholder"  name="tx_schulfoto_schulanlegen[studentid]" placeholder="<f:translate key='administration_label' />" value="{data.studentid}">
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </f:if>
+                                <!-- col -->
+                            </div>
+                            <!-- form row -->
+                            <f:if condition="{addresscheck}">
+                                <!-- form row -->
+                            <div class="form-row row element element-gap-defaultlg">
+                                <!-- col -->
+                                    <div class="field-block col my-col">
+                                        <div class="main-wrap">
+                                            <div class="main-field-holder">
+                                                <label class="field-label"><f:translate key="address" /></label>
+                                                <div class="the-field">
+                                                    <textarea name="tx_schulfoto_schulanlegen[address]" placeholder="" class="text-input mini-placeholder">{data.address}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                               
+                                <!-- col -->
+                              
+                            </div>
+                            <!-- form row -->
+                            </f:if>
+                            <!-- form row -->
+                            <div class="form-row row element element-gap-defaultlg">
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap">
+                                        <div class="main-field-holder">
+                                                <f:if condition="{page_called}=='corrections'">
+                                                <f:then>
+                                                    <f:link.page pageUid="{settings.correction_page}"> <button type="button" class="site-btn default-btn type-two-medium dark"><f:translate key="thankyou_back" /></button></f:link.page>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:link.page pageUid="{settings.administration_page}"> <button type="button" class="site-btn default-btn type-two-medium dark"><f:translate key="thankyou_back" /></button></f:link.page>
+                                                </f:else>
+                                                </f:if>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                                 <!-- col -->
+                              <div class="field-block col my-col">
+                                  <div class="main-wrap">
+                                      <div class="main-field-holder">
+                                          <f:if condition="{submit_status}==add">
+                                            <div class="alert alert-success alert-dismissible fade show message" role="alert">
+                                                <f:translate key="student_added" />                                           
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                              </div>
+                                          
+                                            </f:if>
+                                            <f:if condition="{submit_status}=='edit'">
+                                                <div class="alert alert-success alert-dismissible fade show message" role="alert">
+                                                    <f:translate key="student_record_changed" />                    
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                 </div>
+                                            </f:if>
+                                            <f:if condition="{push_token_error}">
+                                                <div class="alert alert-danger alert-dismissible fade show message" role="alert">
+                                                    <f:translate key="no_push" />                              
+                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                            </div>
+                                            </f:if>
+
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- col -->
+                                <!-- col -->
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap pull-text-right">
+                                        <div class="main-field-holder pull-text-right">
+                                            <button type="submit" class="site-btn default-btn type-two-medium"><f:translate key="change" /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- col -->
+                            </div>
+                            <!-- form row -->
+                        </div>
+                        <!-- site form -->
+                      </f:form>
+                      <f:form action="schulanlegen" id="pdf_download_form" controller="Admin" enctype="multipart/form-data">
+                            <input type="hidden" name="tx_schulfoto_schulanlegen[uid]" value="{data.uid}">
+                            <input type="hidden" name="tx_schulfoto_schulanlegen[type]" value="pdf_download">
+                    
+                    </f:form>
+                    </f:then>
+                    <f:else>
+                  <f:form action="schulanlegen" id="new_form" controller="Admin" enctype="multipart/form-data">
+                    <!-- site form -->
+                    <input type="hidden" name="tx_schulfoto_schulanlegen[uname]" value="{next_username}">
+                    <input type="hidden" name="tx_schulfoto_schulanlegen[form_type]" value="editform">
+
+                    <input type="hidden" name="tx_schulfoto_schulanlegen[type]" value="adddata">
+                    <div class="site-form-type-three">
+                        <!-- form row -->
+                        <div class="form-row row">
+                            <!-- col -->
+                            <div class="field-block col-auto my-col">
+                                <div class="main-wrap">
+                                    <div class="normal-entry-module headline-placeholder"><h2><strong><f:translate key="add_student" /></strong></h2></div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                             <!-- col -->
+                            
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                        <!-- form row -->
+                        <div class="form-row row  element element-gap-defaultlg">
+
+                         
+                        <!-- col -->
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key="class" /></label>
+                                        <div class="the-field select-field">
+                                          <select name="tx_schulfoto_schulanlegen[class]">
+                                            <f:for each="{classdata}" key="key"   as="classdatas">
+                                              <option value="{classdatas.uid}">
+                                                {classdatas.name}
+                                              </option>
+                                            </f:for>
+                                          </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                        <div class="form-row row element element-gap-defaultlg">
+
+                          <!-- col -->
+                          <div class="field-block col my-col">
+                            <div class="main-wrap">
+                                <div class="main-field-holder">
+                                    <label class="field-label"><f:translate key="username" /></label>
+                                    <div class="the-field">
+                                        <input type="text" value="{next_username}" readonly class="text-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- form row -->
+                        <div class="form-row row element element-gap-defaultlg">
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key="vorname" /></label>
+                                        <div class="the-field">
+                                            <input type="text" name="tx_schulfoto_schulanlegen[fname]" placeholder="<f:translate key='vorname' />" class="text-input" id="firstname">
+                                            <div class="form-error" id="firstnameerror"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap pull-text-right">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key='surname' /></label>
+                                        <div class="the-field">
+                                            <input type="text" name="tx_schulfoto_schulanlegen[lname]"  placeholder="<f:translate key='surname' />" class="text-input" id="lastname">
+                                            <div  class="form-error" id="lastnameerror"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                        <!-- form row -->
+                        <div class="form-row row element element-gap-defaultlg">
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key='date_of_birth' /></label>
+                                        <div class="the-field date-field">
+                                            <input type="text" name="tx_schulfoto_schulanlegen[dob]"  placeholder="TT.MM.JJJJ" class="text-input datepicker-input" id="birthday">
+                                            <div  class="form-error" id="birthdayerror"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap pull-text-right">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key='validity' /></label>
+                                        <div class="the-field date-field">
+                                            <input type="text"  name="tx_schulfoto_schulanlegen[validdate]" placeholder="TT.MM.JJJJ" class="text-input datepicker-input" id="expiryday">
+                                            <div class="form-error" id="expiryerror"></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                         <!-- form row -->
+                         <div class="form-row row element element-gap-Extreme">
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key='email_address' /></label>
+                                        <div class="the-field">
+                                            <input type="text" name="tx_schulfoto_schulanlegen[email]" placeholder="<f:translate key='email_address' />" class="text-input">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                        <!-- form row -->
+                        <div class="form-row row element element-gap-defaultlg">
+                            <!-- col -->
+                            <f:if condition="{barcodecheck}">
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key='barcode' /></label>
+                                            <div class="the-field">
+                                                <input type="text"  name="tx_schulfoto_schulanlegen[barcode]" placeholder="<f:translate key='barcode_label' />" class="text-input mini-placeholder">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </f:if>
+                            <!-- col -->
+                            <!-- col -->
+                            <f:if condition="{schulverwaltungsidcheck}">
+                                <div class="field-block col my-col">
+                                    <div class="main-wrap pull-text-right">
+                                        <div class="main-field-holder">
+                                            <label class="field-label"><f:translate key='administration_id' /></label>
+                                            <div class="the-field">
+                                                <input type="text" name="tx_schulfoto_schulanlegen[studentid]" placeholder="<f:translate key='administration_label' />" class="text-input mini-placeholder">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </f:if>
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                            
+                        <f:if condition="{addresscheck}">
+                        <!-- form row -->
+                        <div class="form-row row element element-gap-defaultlg">
+                        <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key='address' /></label>
+                                        <div class="the-field">
+                                            <textarea name="tx_schulfoto_schulanlegen[address]" value="" placeholder="" class="text-input"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <!-- col -->
+
+                        </div>
+                        <!-- form row -->
+                        </f:if>
+
+
+                        <!-- form row -->
+                        <div class="form-row row element element-gap-defaultlg">
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap">
+                                    <div class="main-field-holder">
+                                      <f:link.page pageUid="{settings.administration_page}"> <button type="button" class="site-btn default-btn type-two-medium dark"><f:translate key='thankyou_back' /></button></f:link.page>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap pull-text-right">
+                                    <div class="main-field-holder pull-text-right">
+                                        <button type="submit" class="site-btn default-btn type-two-medium"><f:translate key='add' /></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                    </div>
+                    <!-- site form -->
+                  </f:form>
+                  </f:else>
+                  </f:if>
+
+                 
+                </div>
+                 <!-- edit module -->
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(window).load(function() {
+        if (jQuery('.message').length > 0) {
+            jQuery('html, body').animate({
+                scrollTop: jQuery(".message").offset().top
+            });
+        }
+    });
+</script>
+</f:section>
+</html>
