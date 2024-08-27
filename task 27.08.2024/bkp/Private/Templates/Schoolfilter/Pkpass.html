@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <section class="clearfix section-ow element element-gap-medium">
+    <div class="intro-module clearfix">
+       <div class="container-fluid">
+        <div class="intro-header element element-gap-medium">
+          <h1><f:translate key="ex_download_limit" /></h1>
+        </div>
+       </div>
+     </div>
+   </section>
+</f:section>
+</html>

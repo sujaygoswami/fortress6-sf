@@ -1,0 +1,305 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" /> This Template is responsible for creating a table of domain objects. If you modify this template, do not forget to change the overwrite settings in /Configuration/ExtensionBuilder/settings.yaml: Resources: Private: Templates: List.html: keep Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:section name="content">
+
+
+
+    <!-- main -->
+    <main class="centered-grid clearfix">
+        <!-- section -->
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- steps-module -->
+            <div class="steps-module clearfix">
+                <div class="container-fluid">
+                    <div class="row flex-row">
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder current"> <span><f:translate key="started_login" /></span><i><em>1</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder"> <span><f:translate key="started_date" /> <br><f:translate key="started_correctly" /></span><i><em>2</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder"> <span><f:translate key="started_portrait" /> <br><f:translate key="started_upload" /></span><i><em>3</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder"> <span><f:translate key="started_ready" /></span><i><em>4</em></i> </div>
+                        </div>
+                        <!-- col -->
+                    </div>
+                </div>
+            </div>
+            <!-- steps-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+        <f:if condition="{password_form}">
+            <f:then>
+                <section class="clearfix section-ow element element-gap-Exlarge">
+                    <!-- intro module -->
+                    <div class="intro-module clearfix">
+                        <div class="container-fluid">
+                            <div class="intro-header element element-gap-larger">
+                                <h1><f:translate key="started_info_about_you" />:</h1> </div>
+                        </div>
+                    </div>
+                    <!-- intro-module -->
+                </section>
+                <!-- section -->
+                <!-- section -->
+                <section class="clearfix section-ow">
+                    <!-- main-form-module -->
+                    <div class="main-form-module clearfix">
+                        <div class="container-fluid">
+                            <f:form action="filtersearch" id="passwordform" controller="Schoolfilter" enctype="multipart/form-data">
+                                <input type="hidden" name="tx_schulfoto_sfilter[form_type]" value="password">
+
+                                <input type="hidden" name="tx_schulfoto_sfilter[password_param]" value="{password_param}">
+
+                                <!-- site-form-module -->
+                                <div class="site-form-module">
+                                    <!-- field-row -->
+                                    <div class="field-row row clearfix element element-gap-large flex-row center-item">
+
+                                        <div class="col-xs-12 my-col element element-gap-tiny">
+                                            <label><f:translate key="started_dob" />:</label>
+
+                                        </div>
+                                        <div class="col-xs-4 my-col">
+                                            <div class="form-field">
+                                                <select class="text-input geburtsdatum" name="tx_schulfoto_sfilter[day]" id="selectday" data-error="<f:translate key='error_day' />"> 
+                                                    <option value=" "><f:translate key="day_label" /></option>
+                                                    <f:for each="{day_label}" key="key" as="day_labels">
+                                                        <option value="{day_labels}">{day_labels}</option>
+                                                    </f:for>
+
+                                                </select>
+                                                <div class="error-msg" id="dayerror" data-error="<f:translate key='error_day' />"></div>
+                                            </div>
+                                        </div>
+                                         <div class="col-xs-4 my-col">
+
+                                            <div class="form-field">
+                                                <select class="text-input geburtsdatum" name="tx_schulfoto_sfilter[month]" id="selectmonth" data-error="<f:translate key='error_month' />"> 
+                                                    <option value=" "><f:translate key="month_label" /></option>
+                                                     <f:for each="{month_label}" key="key" as="month_labels">
+                                                        <option value="{key}">{month_labels}</option>
+                                                    </f:for>
+                                                </select>
+                                                <div class="error-msg" id="montherror"  data-error="<f:translate key='error_month' />"></div>
+                                            </div>
+                                        </div>
+
+                                         <div class="col-xs-4 my-col">
+
+                                            <div class="form-field">
+                                                <select class="text-input geburtsdatum" name="tx_schulfoto_sfilter[year]" id="selectyear" data-error="<f:translate key='error_year' />"> 
+                                                    <option value=" "><f:translate key="year_label" /></option>
+                                                     <f:for each="{year_label}" key="key" as="year_labels">
+                                                        <option value="{year_labels}">{year_labels}</option>
+                                                    </f:for>
+                                                </select>
+                                                <div class="error-msg" id="yearerror" data-error="<f:translate key='error_year' />"></div>
+                                            </div>
+                                        </div>
+                                         
+                                        
+                                    </div>
+
+                                <f:if condition="{password_param}==false">
+                                    <f:then>
+                                    <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                        <div class="col-xs-12 my-col element element-gap-tiny">
+                                            <label><f:translate key="started_password" />:</label>
+                                        </div>
+                                        <div class="col-xs-12 my-col">
+                                            <div class="form-field">
+                                                <input type="password" class="text-input lpassword" name="tx_schulfoto_sfilter[password]" placeholder="<f:translate key='started_enter_password' />"> 
+                                            </div>
+
+                                            <div class="error-msg" id="passderror" data-error="<f:translate key='error_password' />"></div>
+                                        </div>
+
+                                    </div>                                        
+                                    </f:then>
+                                    <f:else>
+                                        <input type="hidden" class="text-input lpassword" name="tx_schulfoto_sfilter[password]" value="{password_value}"> 
+
+                                    </f:else>
+                                </f:if>
+                               
+                                    <!-- field-row -->
+                                    <!-- field-row -->
+                                    <!-- field-row -->
+                                    
+                                    <f:if condition="{error_code}==1">
+                                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                        <div class="col-xs-12 my-col error-msg">
+                                            <f:translate key="started_image_login_disabled" />
+                                        </div>
+                                        </div>
+                                    </f:if>
+                                    <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                        <div class="col-xs-12 my-col pull-text-center ">
+                                            <button type="submit" class="form-btn" id="passsubmit"><f:translate key="started_further" /></button>
+                                        </div>
+                                    </div>
+                                    <!-- field-row -->
+                                </div>
+                                <!-- site-form-module -->
+                        </div>
+                          </div>
+            <!-- main-form-module -->
+        </section>
+        <!-- section -->
+
+                        </f:form>
+            </f:then>
+            <f:else>
+                <f:if condition="{schoollists}">
+                    <f:then>
+                            <section class="clearfix section-ow element element-gap-Exlarge">
+                                <!-- intro module -->
+                                <div class="intro-module clearfix">
+                                    <div class="container-fluid">
+                                        <div class="intro-header element element-gap-larger">
+                                            <h1><f:translate key="information_about_you" /> :</h1> </div>
+                                        <div class="intro-logo pull-text-center">
+                                            <f:if condition="{school_image}">
+                                                <f:image src="{school_image}" alt="" width="150" /> 
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- intro-module -->
+                            </section>
+                            <!-- section -->
+                            <!-- section -->
+                            <section class="clearfix section-ow">
+                                <!-- main-form-module -->
+                                <div class="main-form-module clearfix">
+                                    <div class="container-fluid">
+                                        <f:form action="filtersearch" id="" controller="Schoolfilter" enctype="multipart/form-data">
+                                            <input type="hidden" name="tx_schulfoto_sfilter[form_type]" value="dropdown_school">
+                                            <input type="hidden" name="tx_schulfoto_sfilter[schoolid]" value="{schoollists.uid}">
+                                            <!-- site-form-module -->
+                                            <div class="site-form-module">
+                                                <!-- field-row -->
+                                                <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                                    <div class="col-xs-5 my-col">
+                                                        <label><f:translate key="schulname" />:</label>
+                                                    </div>
+                                                    <div class="col-xs-7 my-col"><span class="pre-info">{schoollists.name}</span></div>
+                                                </div>
+                                                <!-- field-row -->
+                                                <!-- field-row -->
+                                                <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                                    <div class="col-xs-5 my-col">
+                                                        <label><f:translate key="klasse" />:</label>
+                                                    </div>
+                                                    <div class="col-xs-7 my-col">
+                                                        <div class="form-field select-field">
+                                                            <select name="tx_schulfoto_sfilter[classid]">
+                                                                <option><f:translate key="click_select" /> </option>
+                                                                <f:if condition="{schoollists.sclass}">
+                                                                    <f:for each="{schoollists.sclass}" as="sclass">
+                                                                        <option value="{sclass.uid}"> {sclass.name} </option>
+                                                                    </f:for>
+                                                                </f:if>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- field-row -->
+                                                <!-- field-row -->
+                                                <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                                    <div class="col-xs-12 my-col">
+                                                        <label><f:translate key="vorname" />:</label>
+                                                    </div>
+                                                    <div class="col-xs-12 my-col">
+                                                        <div class="form-field">
+                                                            <input type="text" class="text-input" name="tx_schulfoto_sfilter[fname]" placeholder="<f:translate key='pls_first_name' />" required oninvalid="this.setCustomValidity('<f:translate key="error_password" />')" oninput="setCustomValidity('')"> </div>
+                                                    </div>
+                                                </div>
+                                                <!-- field-row -->
+                                                <!-- field-row -->
+                                                <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                                    <div class="col-xs-12 my-col">
+                                                        <label><f:translate key="surname" />:</label>
+                                                    </div>
+                                                    <div class="col-xs-12 my-col">
+                                                        <div class="form-field">
+                                                            <input type="text" class="text-input" name="tx_schulfoto_sfilter[lname]" placeholder="<f:translate key='pls_first_name' />" required oninvalid="this.setCustomValidity('<f:translate key="error_password" />')" oninput="setCustomValidity('')"> </div>
+                                                    </div>
+                                                </div>
+                                                <!-- field-row -->
+                                                <!-- field-row -->
+                                                <f:if condition="{error_code}==1">
+                                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                        <div class="col-xs-12 my-col error-msg">
+                                            <f:translate key="received_an_image" />
+                                        </div>
+                                        </div>
+                                    </f:if>
+                                                <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                                    <div class="col-xs-12 my-col pull-text-center">
+                                                        <button type="submit" class="form-btn"><f:translate key="started_further" /></button>
+                                                    </div>
+                                                </div>
+                                                <!-- field-row -->
+                                            </div>
+                                            <!-- site-form-module -->
+                                    </div>
+                                      </div>
+                                        <!-- main-form-module -->
+                                    </section>
+                                    <!-- section -->
+
+                                    </f:form>
+                        
+                    </f:then>
+                    <f:else>
+                        <h1><f:translate key="nofound1" /><h1>
+                        <p><f:translate key="nofound2" /><br>
+                            <f:translate key="nofound3" /> <br>
+                            <f:translate key="nofound4" /> </p>
+                    </f:else>
+                </f:if>
+            </f:else>
+
+        </f:if>
+
+        <f:cObject typoscriptObjectPath="lib.languageMenu" />
+          
+
+    </main>
+    <!-- main -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        yearRange:"-500:+500",
+        monthNames: ['Januar','Februar','März','April','Mai','Juni',
+        'Juli','August','September','Oktober','November','Dezember'],
+        monthNamesShort: ['Jan','Feb','Mär','Apr','Mai','Jun',
+        'Jul','Aug','Sep','Okt','Nov','Dez'],
+        dayNames: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
+        dayNamesShort: ['So','Mo','Di','Mi','Do','Fr','Sa'],
+        dayNamesMin: ['So','Mo','Di','Mi','Do','Fr','Sa'],
+        dateFormat: 'dd.mm.yy',
+        firstDay: 1
+    });
+  });
+  </script>
+
+</f:section>
+</html>

@@ -1,0 +1,336 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <f:if condition="{flag}">
+    <f:then>
+    <main class="my-row">
+
+       <div id="demo_image_div">
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- steps-module -->
+            <div class="steps-module clearfix">
+                <div class="container-fluid">
+                    <div class="row flex-row">
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed"> <span><f:translate key="started_login" /></span><i><em>1</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed"> <span><f:translate key="started_date" /> <br><f:translate key="started_correctly" /></span><i><em>2</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder current"> <span><f:translate key="started_portrait" /> <br><f:translate key="started_upload" /></span><i><em>3</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder"> <span><f:translate key="started_ready" /></span><i><em>4</em></i> </div>
+                        </div>
+                        <!-- col -->
+                    </div>
+                </div>
+            </div>
+            <!-- steps-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+        <section class="clearfix section-ow element element-gap-medium">
+            <!-- intro module -->
+            <div class="intro-module clearfix">
+                <div class="container-fluid">
+                    <div class="intro-header element element-gap-medium">
+                        <h1>
+                            <f:translate key="photo_note" />
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- intro-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+        <section class="clearfix section-ow">
+            <!-- main-form-module -->
+            <div class="main-form-module clearfix">
+                <div class="container-fluid">
+
+                    <!-- instruction-module -->
+                    <div class="instruction-module element element-gap-Lgmedium">
+                        <div class="row clearfix">
+                            <!-- col -->
+                            <div class="col-xs-6 my-col">
+                                <div class="main-wrap">
+                                    <div class="img-holder">
+                                        <img src="/fileadmin/Images/schulfoto/instruction-dp-one.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="col-xs-6 my-col">
+                                <div class="main-wrap">
+                                    <div class="img-holder">
+                                        <img src="/fileadmin/Images/schulfoto/instruction-dp-two.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="col-xs-6 my-col">
+                                <div class="main-wrap">
+                                    <div class="img-holder">
+                                        <img src="/fileadmin/Images/schulfoto/instruction-dp-three.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="col-xs-6 my-col">
+                                <div class="main-wrap">
+                                    <div class="img-holder">
+                                        <img src="/fileadmin/Images/schulfoto/instruction-dp-four.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="col-xs-6 my-col">
+                                <div class="main-wrap">
+                                    <div class="img-holder">
+                                        <img src="/fileadmin/Images/schulfoto/instruction-dp-five.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                            <!-- col -->
+                            <div class="col-xs-6 my-col">
+                                <div class="main-wrap">
+                                    <div class="img-holder">
+                                        <img src="/fileadmin/Images/schulfoto/instruction-dp-six.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                    </div>
+                    <!-- instruction-module -->
+                    <!-- site-form-module -->
+                    <div class="site-form-module">
+                        <!-- field-row -->
+                        <div class="field-row row clearfix">
+                            <div class="col-xs-12 my-col pull-text-center"><button type="button" class="form-btn" id="show_image_fieldbutton"><f:translate key="photo_under" /></button></div>
+                        </div>
+                        <!-- field-row -->
+                    </div>
+                    <!-- site-form-module -->
+
+                </div>
+            </div>
+            <!-- main-form-module -->
+        </section>
+        <!-- section -->
+      </div>
+    <div id="upload_form_div" style="display:none;">
+      
+        <!-- section -->
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- steps-module -->
+            <div class="steps-module clearfix">
+                <div class="container-fluid">
+                    <div class="row flex-row">
+                         <!-- col -->
+                         <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed"> <span><f:translate key="started_login" /></span><i><em>1</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder passed"> <span><f:translate key="started_date" /> <br><f:translate key="started_correctly" /></span><i><em>2</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder current"> <span><f:translate key="started_portrait" /> <br><f:translate key="started_upload" /></span><i><em>3</em></i> </div>
+                        </div>
+                        <!-- col -->
+                        <!-- col -->
+                        <div class="col-xs-3 my-col">
+                            <div class="main-step-holder"> <span><f:translate key="started_ready" /></span><i><em>4</em></i> </div>
+                        </div>
+                        <!-- col -->
+                    </div>
+                </div>
+            </div>
+            <!-- steps-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+        <section class="clearfix section-ow element element-gap-medium">
+            <!-- intro module -->
+            <div class="intro-module clearfix">
+                <div class="container-fluid">
+                    <div class="intro-header element element-gap-medium">
+                        <h1>
+                            <f:translate key="photo_good_note" /></h1>
+                    </div>
+                </div>
+            </div>
+            <!-- intro-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+        <section class="clearfix section-ow">
+            <!-- main-form-module -->
+            <div class="main-form-module clearfix">
+                
+            <f:form action="filtersubmit" id="finalform"  controller="Schoolfilter" enctype="multipart/form-data">
+                <div class="container-fluid">
+                 <input type="hidden" name="tx_schulfoto_eactivation[type]" value="imageupload" />
+                 <input type="hidden" name="tx_schulfoto_eactivation[crop]" value="0" id="crop_image" />
+                   <input type="hidden" name="tx_schulfoto_eactivation[userid]" value="{userdetail.uid}" />
+                      <f:if condition="{userdetail.images}">
+                         <f:then>
+                           <input type="hidden" name="tx_schulfoto_eactivation[imageid]" value="{userdetail.images.uid}"  />
+                         </f:then>
+                         <f:else>
+                           <input type="hidden" name="tx_schulfoto_eactivation[imageid]" value="0" />
+                        </f:else>
+                        </f:if>
+                    <!-- instruction-module -->
+                    <div class="instruction-module element element-gap-tiny">
+                        <div class="row clearfix">
+                            <!-- col -->
+                            <div class="col-xs-12 my-col">
+                                <div class="main-wrap">
+                                    <div class="img-holder perfect-shot">
+                                        <img src="/fileadmin/Images/schulfoto/perfect-shot.jpg" id="img_show">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                    </div>
+                    <!-- instruction-module -->
+                    <!-- site-form-module -->
+                    <div class="site-form-module">
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+
+                            <div class="col-xs-12 my-col">
+                                <div class="form-note"><f:translate key="accepted_formats" />: JPEG, PNG, HEIC, HEIF, JPG, BMP<br> <f:translate key="maximum_file_size" />: 5 MB</div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                       
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-tiny flex-row center-item">
+
+                            <div class="col-xs-12 my-col">
+                                <p><f:translate key="no_portrait_photo" /></p>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <input type="hidden" name="tx_schulfoto_eactivation[selfi_value]" value="" id="seli_mode" />
+                        <input type="hidden" name="tx_schulfoto_eactivation[upload_mode]" value="" id="upload_mode" />
+
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-12 my-col pull-text-center"><button type="button" class="form-btn iconic" id="open-cam"><i class="fa fa-camera"></i><span><f:translate key="take_a_selfeie" /></span></button></div>
+                        </div>
+                        <!-- field-row -->
+                         <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-12 my-col pull-text-center"><button type="button" class="form-btn iconic btn-dark hidden-upload" id="trigger_file_upload"><i><img src="/fileadmin/Images/schulfoto/Icon-material-file-upload.svg"  width="17"></i><span><f:translate key="upload_a_portrait" /></span></button></div>
+                        </div>
+                        <div class="error-msg" id="imgtyperror"></div>
+                        <div class="error-msg" id="imgsizeerror"></div>
+
+
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item" id="submitb" style="display: none;">
+                            <div class="col-xs-12 my-col pull-text-center"><button type="submit" class="form-btn iconic btn-success"><i class="fa fa-check"></i><span><f:translate key="upload_Save" /></span></button></div>
+                        </div>
+                    </div>
+                </div>
+                    </f:form>
+                    <input type="file" name="tx_schulfoto_eactivation[file]" accept=".jpg, .jpeg, .png, .heic, .heif, .bmp" id="img_upload" style="display: none;">
+                        <!-- custom selfie -->
+                        <div id='camcam'>
+                                    <div id="wrap">
+
+                                        <div id='cont'>
+
+                                            <div id="vid" class='son'>
+                                                <video id='video' autoplay playsinline width="480" height="640"></video>
+                                            </div>
+
+                                            <div id="capture" class='son'>
+                                                <canvas id='canvas' class="d-none"></canvas>
+                                                <canvas id='blank' style='display:none;'></canvas>
+                                            </div>
+
+                                            <div id="control">
+                                                <div class="container">
+                                                    <div class="row flex-row">
+
+                                                        <div class="col-md-4 my-col"><a id='snap' class='btn m-1 hov'><f:translate key="record" /></a></div>
+
+
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+
+                                         <f:if condition="{userdetail.schulname.checkpass}">
+                                            <f:then>
+                                                <div id="face-frame" class="overlay-1">
+                                                </div>
+                                            </f:then>
+                                            <f:else>
+                                                <div id="face-frame" class ="overlay-2">
+                                                </div>
+                                            </f:else>
+                                        </f:if>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                        <!-- custom selfie -->
+
+                </div>
+            <!-- main-form-module -->
+        </section>
+        <!-- section -->
+
+
+      </div>
+    </main>
+   </f:then>
+   <f:else>
+     <h1><f:translate key="email_already_confirmed" /></h1>
+   </f:else>
+  </f:if>
+
+</f:section>
+</html>

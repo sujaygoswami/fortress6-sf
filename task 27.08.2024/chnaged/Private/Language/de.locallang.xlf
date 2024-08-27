@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+
+	<file target-language="de" source-language="en" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="schulfoto">
+		<header/>
+		<body>
+			<trans-unit id="started_login">
+				<source>Security Check</source>
+                <target>Verifizierung</target>
+			</trans-unit>
+			<trans-unit id="started_date">
+               <source>Data</source>
+			   <target>Daten</target>
+           </trans-unit>
+		   <trans-unit id="started_correctly">
+               <source>correct?</source>
+			   <target>korrekt?</target>
+           </trans-unit>
+		   <trans-unit id="started_ready">
+               <source>Done</source>
+			   <target>Fertig</target>
+           </trans-unit>
+		   <trans-unit id="started_upload">
+               <source>Upload</source>
+			   <target>Upload</target>
+           </trans-unit>
+		   <trans-unit id="started_portrait">
+               <source>Portrait</source>
+			   <target>Portrait</target>
+           </trans-unit>
+
+			<trans-unit id="started_info_about_you">
+               <source>Security Check</source>
+			   <target>Sicherheitsüberprüfung</target>
+           </trans-unit>
+		   <trans-unit id="started_dob">
+               <source>Please Enter Your Date of Birth</source>
+			   <target>Bitte Geburtsdatum eingeben</target>
+           </trans-unit>
+		   <trans-unit id="started_password">
+               <source>password</source>
+			   <target>Passwort</target>
+           </trans-unit>
+		   <trans-unit id="started_further">
+               <source>FURTHER</source>
+			   <target>WEITER</target>
+           </trans-unit>
+			<trans-unit id="started_image_login_disabled">
+               <source>We have already received an image - this login is disabled.</source>
+			   <target>Wir haben bereits ein Bild erhalten - dieser Login ist deaktiviert.</target>
+           </trans-unit>
+		   <trans-unit id="started_enter_password">
+               <source>Enter your password</source>
+			   <target>Geben Sie Ihr Passwort ein</target>
+           </trans-unit>
+		    <trans-unit id="day_label">
+               <source>Day</source>
+			   <target>Tag</target>
+           </trans-unit>
+            <trans-unit id="month_label">
+               <source>Month</source>
+			   <target>Monat</target>
+           </trans-unit>
+            <trans-unit id="year_label">
+               <source>Year</source>
+			   <target>Jahr</target>
+           </trans-unit>
+			<trans-unit id="error_password">
+               <source>This field is mandatory!</source>
+			    <target>Dieses Feld muss ausgefüllt werden!</target>
+           </trans-unit>
+            <trans-unit id="school_confirm_error">
+               <source>Please read and accept the privacy policy</source>
+               <target>Bitte Datenschutzerklärung lesen &amp; akzeptieren</target>
+           </trans-unit>
+           <trans-unit id="error_year">
+		    	 <source>Enter year</source>
+				 <target>Jahr eingeben</target>
+            </trans-unit>
+           <trans-unit id="error_month">
+               <source>Enter month</source>
+			    <target>Monat eingeben</target>
+           </trans-unit>
+           <trans-unit id="error_day">
+               <source>Enter day</source>
+			    <target>Tag eingeben</target>
+			</trans-unit>
+			 <trans-unit id="information_about_you">
+               <source>Information about you</source>
+			    <target>Angaben zu Ihnen</target>
+			</trans-unit>
+			    <trans-unit id="schulname">
+               <source>School name</source>
+			    <target>Schulname</target>
+           </trans-unit>
+			 <trans-unit id="klasse">
+               <source>Class</source>
+			    <target>Klasse</target>
+           </trans-unit>
+		    <trans-unit id="click_select">
+               <source>Click and select</source>
+			    <target>Klicken und auswählen</target>
+           </trans-unit>
+		   <trans-unit id="vorname">
+               <source>First Name</source>
+			     <target>Vorname(n)</target>
+           </trans-unit>
+		    <trans-unit id="pls_first_name">
+               <source>Please enter all first names.</source>
+			   <target>Bitte tragen Sie alle Vorname(n) ein.</target>
+           </trans-unit>
+           <trans-unit id="surname">
+               <source>Last Name(s)</source>
+			   <target>Nachname(n)</target>
+           </trans-unit>
+		   <trans-unit id="pls_surname">
+               <source>Please enter all last names.</source>
+			   <target>Bitte tragen Sie alle Nachnamen(n) ein.</target>
+           </trans-unit>
+		    <trans-unit id="received_an_image">
+               <source>We have already received an image - this login is disabled.</source>
+			   <target>Wir haben bereits ein Bild erhalten - dieser Login ist deaktiviert.</target>
+           </trans-unit>
+		    <trans-unit id="kundennummer">
+               <source>Customer ID</source>
+			    <target>Kundennummer</target>
+           </trans-unit>
+		    <trans-unit id="required_fields">
+               <source>Required fields</source>
+			    <target>Pflichtfelder</target>
+           </trans-unit>
+		    <trans-unit id="date_of_birth">
+               <source>Date of Birth</source>
+			     <target>Geburtsdatum</target>
+           </trans-unit>
+		     <trans-unit id="email">
+               <source>Email</source>
+			   <target>E-Mail</target>
+           </trans-unit>
+		   <trans-unit id="notes">
+               <source>Energy-Imaging uses the email address you provide here solely for the purpose of creating your student ID. You can, of course, object to this use at any time.</source>
+				 <target>Energy-Imaging verwendet Ihre hier angegebene E-Mail-Adresse ausschließlich, um Ihren Schülerausweis zu erstellen. Sie können dieser Verwendung jederzeit widersprechen.</target>
+		   </trans-unit>
+		   <trans-unit id="korrekturen">
+               <source>Corrections</source>
+			   <target>Korrekturen</target>
+           </trans-unit>
+		    <trans-unit id="correction_text">
+               <source>Please enter corrections here. If none are needed, please leave this field blank.</source>
+				 <target>Geben Sie bitte eventuelle Korrekturen hier ein. Wenn keine notwendig sind, lassen Sie dieses Feld bitte leer.</target>
+		  </trans-unit>
+             <trans-unit id="photo_note">
+               <source>Please do not use inappropriate ID photos as shown here.</source>
+			    <target>Verwenden Sie bitte keine ungeeigneten Ausweisfotos, wie sie hier dargestellt sind.</target>
+           </trans-unit>
+		    <trans-unit id="photo_under">
+               <source>UNDERSTOOD</source>
+			    <target>VERSTANDEN</target>
+           </trans-unit>
+		    <trans-unit id="photo_good_note">
+               <source>This is an example of a good portrait. You can now upload an existing one or take a selfie with your smartphone.</source>
+				<target>Dies ist ein Muster für ein gutes Porträt. Sie können entweder ein bereits vorhandenes Bild hochladen oder mit Ihrem Smartphone ein Selfie machen.</target>
+		   </trans-unit>
+		     <trans-unit id="accepted_formats">
+               <source>Accepted file formats</source>
+			   <target>Erlaubte Dateiformate</target>
+           </trans-unit>
+		   <trans-unit id="maximum_file_size">
+               <source>Maximum file size</source>
+			    <target>Maximale Dateigröße</target>
+           </trans-unit>
+
+		    <trans-unit id="take_a_selfeie">
+               <source>TAKE A SELFIE NOW</source>
+			   <target>Selfie jetzt aufnehmen</target>
+           </trans-unit>
+
+        <trans-unit id="upload_a_portrait">
+        <source> UPLOAD A PORTRAIT</source>
+		<target>PORTRAIT HOCHLADEN</target>
+        </trans-unit>
+		<trans-unit id="upload_Save">
+        <source> Save</source>
+		<target>Speichern</target>
+        </trans-unit>
+		 <trans-unit id="no_portrait_photo">
+        <source> No portrait photo at hand?</source>
+			<target>Gerade kein Portraitfoto zur Hand?</target>
+        </trans-unit>
+
+		   <trans-unit id="nofound1">
+        <source> No record found</source>
+		<target>Keinen Datensatz gefunden</target>
+        </trans-unit>
+        <trans-unit id="nofound2">
+        <source> Did you choose the right class?</source>
+		<target>Haben Sie die richtige Klasse ausgewählt?</target>
+        </trans-unit>
+    <trans-unit id="nofound3">
+        <source> Have you entered all of your first names?</source>
+		<target>Haben Sie alle Vornamen eingetragen?</target>
+        </trans-unit>
+    <trans-unit id="nofound4">
+        <source>Have you entered all last names?</source>
+		<target>Haben Sie alle Nachnamen eingetragen?</target>
+        </trans-unit>
+
+          <trans-unit id="confirm_email">
+        <source>Please confirm your email</source>
+        <target>Bitte bestätigen Sie Ihre E-Mail</target>
+        </trans-unit>
+        
+
+ <trans-unit id="confirm_email_text1">
+        <source>Please check your emails and confirm them.</source>
+         <target>Schauen Sie in Ihre E-Mails und bestätigen Sie sie bitte.</target>
+        </trans-unit>
+     <trans-unit id="confirm_email_text2">
+        <source>OnlOnly then can you upload your photo for the student ID.</source>
+         <target>Erst danach können Sie Ihr Foto für den Schülerausweis hochladen.</target>
+        </trans-unit>
+         <trans-unit id="confirm_email_text3">
+        <source>If the email is not in your main inbox, please check the spam folder.</source>
+        <target>Wenn Sie die E-Mail nicht in Ihrem Posteingang finden, schauen Sie bitte im Spam-Ordner nach.</target>
+        </trans-unit>
+ <trans-unit id="email_already_confirmed">
+        <source>Your email has already been confirmed.</source>
+         <target>Ihre E-Mail wurde bereits bestätigt.</target>
+</trans-unit>
+
+ <trans-unit id="filter_review_your_details">
+        <source>Review your details</source>
+        <target>Sind Ihre Daten richtig?</target>
+        
+        </trans-unit>
+
+        <trans-unit id="accept_term_1">
+        <source>I have read and accepted the</source>
+        <target> Ich habe die</target>
+        </trans-unit>
+         <trans-unit id="accept_term_2">
+        <source>privacy policy</source>
+        <target>  Datenschutzerklärung</target>
+        </trans-unit>
+         <trans-unit id="accept_term_3">
+        <source>and</source>
+        <target> und</target>
+        </trans-unit>
+         <trans-unit id="accept_term_4">
+        <source>data protection</source>
+        <target>  Datenschutzbestimmungen</target>
+        </trans-unit>
+         <trans-unit id="accept_term_5">
+        <source>regulations.</source>
+        <target> gelesen und akzeptiert.</target>
+        </trans-unit>
+<trans-unit id="thankyou_save_digital">
+        <source>Save your digital student ID now!</source>
+        <target> Speichern Sie den digitalen Schülerausweis jetzt!</target>
+        </trans-unit>
+        <trans-unit id="thankyou_importpicture">
+        <source>Your This ID picture will be used shortly. Once submitted, you won't be able to change it. If you want to change it, click on 'Back'.</source>
+        <target> Dieses Ausweisbild wird in Kürze verwendet. Nach dem Absenden können Sie es nicht mehr ändern. Wenn Sie es ändern möchten, klicken Sie auf 'Zurück'.</target>
+        </trans-unit>
+<trans-unit id="thankyou_back">
+        <source>Back</source>
+         <target> Zurück</target>
+        </trans-unit>
+        <trans-unit id="uploading_images_error">
+        <source>Something went wrong while uploading images.</source>
+         <target> Beim Hochladen von Bildern ist etwas schief gelaufen.</target>
+        </trans-unit>
+        <trans-unit id="uploading_thank_you_successfully">
+        <source>Thank you - your data has been successfully transmitted.</source>
+         <target> Vielen Dank - Ihre Daten wurden erfolgreich übermittelt.</target>
+        </trans-unit>
+        <trans-unit id="uploading_thank_uploaded_image">
+        <source>Your uploaded image</source>
+         <target> Dein hochgeladenes Bild</target>
+        </trans-unit>
+
+        <trans-unit id="uploading_thank_image_change1">
+        <source>If you want to change the image, please click Back.</source>
+         <target>Wenn Sie das Bild ändern möchten, klicken Sie bitte auf Zurück.</target>
+        </trans-unit>
+
+         <trans-unit id="uploading_thank_image_change2">
+        <source>We produce the student ID card i.d. Usually between 5-7 working days. You will then receive this from the school.</source>
+         <target>Wir fertigen den Schülerausweis i.d. Regel zwischen 5-7 Werktagen. Diesen erhalten Sie dann über die Schule.</target>
+        </trans-unit>
+
+        <trans-unit id="uploading_thank_image_change3">
+        <source>You can now close the application.</source>
+         <target>Sie können die Anwendung jetzt schließen.</target>
+        </trans-unit>
+
+    <trans-unit id="uploading_thank_image_change4">
+        <source>Something went wrong while uploading images.</source>
+         <target>Wenn Sie das Bild ändern möchten, klicken Sie bitte auf Zurück.</target>
+        </trans-unit>
+
+        <trans-unit id="click_add_apple_wallet">
+        <source>Click "Add to Apple Wallet."</source>
+         <target>Auf "Hinzufügen zu Apple Wallet" klicken</target>
+        </trans-unit>
+         <trans-unit id="for_ios">
+        <source>Add to Apple Wallet</source>
+         <target>Für iOS</target>
+        </trans-unit>
+         <trans-unit id="for_ios_1">
+        <source>Click on 'Add to Apple Wallet,' then a preview will be shown. The digital student ID will only be saved when you click 'Add' at the top right corner of the preview.</source>
+         <target>Klicken Sie auf 'Hinzufügen zu Apple Wallet', dann wird eine Vorschau angezeigt. Der digitale Schülerausweis wird erst gespeichert, wenn Sie in der Vorschau oben rechts auf 'Hinzufügen' klicken.
+</target>
+        </trans-unit>
+        <trans-unit id="for_android">
+        <source>For Android</source>
+         <target>Für Android</target>
+        </trans-unit>
+
+        <trans-unit id="for_android_1">
+        <source>You can choose between the Google Wallet app and the PassWallet app.</source>
+         <target>Sie haben die Wahl zwischen der Google Wallet App und der PassWallet-App.</target>
+        </trans-unit>
+
+
+        <trans-unit id="for_android_4">
+        <source>The </source>
+        <target>Die</target>
+        </trans-unit>
+         <trans-unit id="for_android_5">
+        <source>Google Wallet app </source>
+        <target>Google Wallet app </target>
+        </trans-unit>
+
+         <trans-unit id="for_android_2">
+        <source> offers the best user experience. Google Wallet cards are stored on servers and synchronized across users' Google accounts on all devices where the Google Wallet app is installed. Alternatively, you can also use the</source>
+         <target> bietet die beste Nutzererfahrung. Google Wallet-Karten werden auf Servern gespeichert und über das Google-Konto der Benutzer auf allen Geräten synchronisiert, auf denen die Google Wallet App installiert ist. Als Alternative zur Google Wallet App können Sie auch die</target>
+        </trans-unit>
+         <trans-unit id="for_android_6">
+        <source>PassWallet app </source>
+         <target>PassWallet app </target>
+        </trans-unit>
+        <trans-unit id="for_android_7">
+        <source>, although we cannot automatically update student IDs here. However, you can trigger an update manually.</source>
+        <target>verwenden (Beachten Sie jedoch, dass wir die Schülerausweise hier nicht automatisch aktualisieren können. Sie können jedoch eine Aktualisierung manuell initiieren.)</target>
+        </trans-unit>
+
+        <trans-unit id="for_android_3">
+        <source>You have also received the new digital student ID in your email.</source>
+         <target>Wir haben Ihnen auch den neuen digitalen Schülerausweis per E-Mail geschickt.</target>
+        </trans-unit>
+
+        <trans-unit id="for_open_map">
+        <source>Open the map.</source>
+         <target>Die Karte öffnen.</target>
+        </trans-unit>
+
+        <trans-unit id="for_open_map1">
+        <source>After opening the map, a preview of the map will be displayed. Only by clicking on “Add to Wallet” will the card be saved in the wallet app.</source>
+         <target>Nach dem Öffnen der Karte wird eine Vorschau der Karte angezeigt. Erst ein Klick auf "Zu Wallet hinzufügen" speichert die Karte in der Wallet-App.</target>
+        </trans-unit>
+        
+         <trans-unit id="for_open_map2">
+        <source>Check the wallet app on your smartphone. Whenever the wallet app is opened, the new digital student ID card can be displayed. The back of the student ID card can be opened by clicking on the three dots.</source>
+         <target>Die Wallet-App am Smartphone prüfen. Immer dann, wenn die Wallet-App geöffnet wird, kann der neue digitale Schülerausweis angezeigt werden. Die Rückseite des Schülerausweises kann geöffnet werden, indem auf die drei Punkte geklickt wird.</target>
+        </trans-unit>
+
+        <trans-unit id="for_open_map3">
+        <source>At the same time, you have also received the new digital student ID card sent to your email.</source>
+         <target>Sie haben parallel den neuen digitalen Schülerausweis auch an Ihre E-Mail geschickt bekommen.  </target>
+        </trans-unit>
+
+
+
+         <trans-unit id="ex_download_limit">
+        <source>Die haben Ihr Downloadlimit für diesen Ausweis überschritten. Sollten Sie den Pass auf einem neuen Gerät installieren wollen, wenden Sie sich bitte an den Support.</source>
+        <target>Die haben Ihr Downloadlimit für diesen Ausweis überschritten. Sollten Sie den Pass auf einem neuen Gerät installieren wollen, wenden Sie sich bitte an den Support. </target>
+        </trans-unit>
+          <trans-unit id="address_of_the">
+        <source>Anschrift der Schule / address of the school / adresse de l'école:</source>
+        <target>Anschrift der Schule / address of the school / adresse de l'école:</target>
+        </trans-unit>      
+        <trans-unit id="below_sample">
+        <source>Nachfolgend sehen Sie ein Muster des Schülerausweises dieser Schule / Below is a sample of this school’s student ID card / Vous trouverez ci-dessous un exemple de la carte d’étudiant de cette école:</source>
+        <target>Nachfolgend sehen Sie ein Muster des Schülerausweises dieser Schule / Below is a sample of this school’s student ID card / Vous trouverez ci-dessous un exemple de la carte d’étudiant de cette école:</target>
+       </trans-unit>    
+     <trans-unit id="click_qr_code">
+        <source>Click to scan QR-Code</source>
+         <target>Click to scan QR-Code</target>
+        </trans-unit>
+        
+ <trans-unit id="wallet_language">
+        <source>Ihre Wallet-App zeigt jetzt den Schülerausweis in der neuen Sprache an.</source>
+        <target>Ihre Wallet-App zeigt jetzt den Schülerausweis in der neuen Sprache an.</target>
+        </trans-unit>
+         <trans-unit id="language_selection_student">
+        <source>Sprachauswahl Schülerausweis</source>
+        <target>Sprachauswahl Schülerausweis</target>
+        </trans-unit>
+         <trans-unit id="change_language">
+        <source>Sprache ändern</source>
+        <target>Sprache ändern</target>
+        </trans-unit>
+         <trans-unit id="profile_student_issued">
+        <source>Dieser Schülerausweis ist ausgestellt für</source>
+        <target>Dieser Schülerausweis ist ausgestellt für</target>
+        </trans-unit>
+         <trans-unit id="profile_name">
+        <source>Name / name / Nom</source>
+        <target>Name / name / Nom</target>
+        </trans-unit>
+          <trans-unit id="profile_fname">
+        <source>Vorname / Christian name / Prénom</source>
+        <target>Vorname / Christian name / Prénom</target>
+        </trans-unit>
+         <trans-unit id="profile_dob">
+        <source>Geboren am / date of birth / Date de naissance</source>
+        <target>Geboren am / date of birth / Date de naissance</target>
+        </trans-unit>
+         <trans-unit id="profile_photo">
+        <source>Foto / Photo / Photo</source>
+        <target>Foto / Photo / Photo</target>
+        </trans-unit>
+         <trans-unit id="profile_sample_id">
+        <source>Nachfolgend sehen Sie ein Muster des Schülerausweises dieser Schule / Below is a sample of this school’s student ID card / Vous trouverez ci-dessous un exemple de la carte d’étudiant de cette école</source>
+        <target>Nachfolgend sehen Sie ein Muster des Schülerausweises dieser Schule / Below is a sample of this school’s student ID card / Vous trouverez ci-dessous un exemple de la carte d’étudiant de cette école</target>
+        </trans-unit>
+         <trans-unit id="profile_add_school">
+        <source>Anschrift der Schule / address of the school / adresse de l’école</source>
+        <target>Anschrift der Schule / address of the school / adresse de l’école</target>
+        </trans-unit>
+         <trans-unit id="profile_geburtsdatum">
+        <source>Geburtsdatum</source>
+        <target>Geburtsdatum</target>
+        </trans-unit>
+         <trans-unit id="profile_tag">
+        <source>Tag</source>
+        <target>Tag</target>
+        </trans-unit>
+         <trans-unit id="profile_monat">
+        <source>Monat</source>
+        <target>Monat</target>
+        </trans-unit>
+         <trans-unit id="profile_jahr">
+        <source>Jahr</source>
+        <target>Jahr</target>
+        </trans-unit>
+         <trans-unit id="profile_weiter">
+        <source>Weiter</source>
+        <target>Weiter</target>
+        </trans-unit>
+         <trans-unit id="profile_lang_refresh">
+        <source>Die Spracheinstellungen können erst nach einem Ausweis-Refresh vorgenommen werden.</source>
+        <target>Die Spracheinstellungen können erst nach einem Ausweis-Refresh vorgenommen werden.</target>
+        </trans-unit>
+
+        <trans-unit id="student_record_changed">
+        <source>Schülerdatensatz geändert</source>
+        <target>Schülerdatensatz geändert</target>
+        </trans-unit>
+        <trans-unit id="class">
+        <source>Klasse</source>
+        <target>Klasse</target>
+        </trans-unit>
+        <trans-unit id="class_option">
+        <source>Klasse auswählen</source>
+        <target>Klasse auswählen</target>
+        </trans-unit>
+        <trans-unit id="all_classes">
+        <source>Alle Klassen</source>
+        <target>Alle Klassen</target>
+        </trans-unit>
+        <trans-unit id="remove_image">
+        <source>Bild entfernen</source>
+        <target>Bild entfernen</target>
+        </trans-unit>
+        <trans-unit id="remove_image_heading">
+        <source>Möchten Sie dieses Bild wirklich löschen?</source>
+        <target>Möchten Sie dieses Bild wirklich löschen?</target>
+        </trans-unit>
+        <trans-unit id="yes">
+        <source>Ja</source>
+        <target>Ja</target>
+        </trans-unit>
+        <trans-unit id="no">
+        <source>Nein</source>
+        <target>Nein</target>
+        </trans-unit>
+        <trans-unit id="delete">
+        <source>Löschen</source>
+        <target>Löschen</target>
+        </trans-unit>
+        <trans-unit id="delete_student">
+        <source>Wollen Sie diese(n) Schüler*in wirklich löschen?</source>
+        <target>Wollen Sie diese(n) Schüler*in wirklich löschen?</target>
+        </trans-unit>
+        <trans-unit id="image_removed">
+        <source>Das Bild wurde entfernt.</source>
+        <target>Das Bild wurde entfernt.</target>
+        </trans-unit>
+        <trans-unit id="ok">
+        <source>OK</source>
+        <target>OK</target>
+        </trans-unit>
+        <trans-unit id="invitations">
+        <source>Download für Einladungen</source>
+        <target>Download für Einladungen</target>
+        </trans-unit>
+        <trans-unit id="include_all_students">
+        <source>Alle Schüler einbeziehen (mit Fotos)</source>
+        <target>Alle Schüler einbeziehen (mit Fotos)</target>
+        </trans-unit>
+        <trans-unit id="download_pdf">
+        <source>Download PDF</source>
+        <target>Download PDF</target>
+        </trans-unit>
+        <trans-unit id="invalid_otp">
+        <source>Invalid Otp</source>
+        <target>Invalid Otp</target>
+        </trans-unit>
+        <trans-unit id="otp_sent">
+        <source>Otp Sent</source>
+        <target>Otp Sent</target>
+        </trans-unit>
+        <trans-unit id="one_time_password">
+        <source>One-Time-Passwort</source>
+        <target>One-Time-Passwort</target>
+        </trans-unit>
+        <trans-unit id="enter_code">
+        <source>Code eingeben</source>
+        <target>Code eingeben</target>
+        </trans-unit>
+        <trans-unit id="confirm">
+        <source>Bestätigen</source>
+        <target>Bestätigen</target>
+        </trans-unit>
+        <trans-unit id="resend">
+        <source>Resend</source>
+        <target>Resend</target>
+        </trans-unit>
+        <trans-unit id="edit">
+        <source>Bearbeiten</source>
+        <target>Bearbeiten</target>
+        </trans-unit>
+        <trans-unit id="no_student_found">
+        <source>Es konnte kein(e) Schüler*innen gefunden werden.</source>
+        <target>Es konnte kein(e) Schüler*innen gefunden werden.</target>
+        </trans-unit>
+        <trans-unit id="search_students">
+        <source>Suche nach Schüler*innen</source>
+        <target>Suche nach Schüler*innen</target>
+        </trans-unit>
+        <trans-unit id="search_by_birth">
+        <source>Suche nach Geburtsdatum</source>
+        <target>Suche nach Geburtsdatum</target>
+        </trans-unit>
+        <trans-unit id="search">
+        <source>Suchen</source>
+        <target>Suchen</target>
+        </trans-unit>
+        <trans-unit id="no_school">
+        <source>No school Assigned.</source>
+        <target>No school Assigned.</target>
+        </trans-unit>
+        <trans-unit id="student_record">
+        <source>Schülerdatensatz</source>
+        <target>Schülerdatensatz</target>
+        </trans-unit>
+        <trans-unit id="validity">
+        <source>Gültigkeit</source>
+        <target>Gültigkeit</target>
+        </trans-unit>
+        <trans-unit id="email_address">
+        <source>E-Mail-Adresse</source>
+        <target>E-Mail-Adresse</target>
+        </trans-unit>
+        <trans-unit id="send_id">
+        <source>Ausweis senden</source>
+        <target>Ausweis senden</target>
+        </trans-unit>
+        <trans-unit id="email_sent">
+        <source>E-Mail wurde versendet</source>
+        <target>E-Mail wurde versendet</target>
+        </trans-unit>
+        <trans-unit id="enter_email_address">
+        <source>E-Mail-Adresse eingeben</source>
+        <target>E-Mail-Adresse eingeben</target>
+        </trans-unit>
+        <trans-unit id="no_picture">
+        <source>Es liegt kein Bild vor</source>
+        <target>Es liegt kein Bild vor</target>
+        </trans-unit>
+        <trans-unit id="access_code">
+        <source>Zugangs-Code</source>
+        <target>Zugangs-Code</target>
+        </trans-unit>
+        <trans-unit id="show_qr_code">
+        <source>QR-Code anzeigen</source>
+        <target>QR-Code anzeigen</target>
+        </trans-unit>
+        <trans-unit id="digital_student">
+        <source>Digitaler Schülerausweis für</source>
+        <target>Digitaler Schülerausweis für</target>
+        </trans-unit>
+        <trans-unit id="class_group">
+        <source>Klasse / Gruppe</source>
+        <target>Klasse / Gruppe</target>
+        </trans-unit>
+        <trans-unit id="student_info">
+        <source>Erhalten Sie jetzt den offiziellen digitalen Schülerausweis Ihrer Schule. Sie können den Schülerausweis.. </source>
+        <target>Erhalten Sie jetzt den offiziellen digitalen Schülerausweis Ihrer Schule. Sie können den Schülerausweis.. </target>
+        </trans-unit>
+        <trans-unit id="qr_info">
+        <source>Einfach QR-Code mit dem &lt;br /&gt;Smartphone einscannen und jetzt&lt;br /&gt; den digitalen Schülerausweis erhalten.</source>
+        <target>Einfach QR-Code mit dem &lt;br /&gt;Smartphone einscannen und jetzt&lt;br /&gt; den digitalen Schülerausweis erhalten.</target>
+        </trans-unit>
+        <trans-unit id="alternativ">
+        <source>alternativ</source>
+        <target>alternativ</target>
+        </trans-unit>
+        <trans-unit id="alternativ_info">
+        <source>geben Sie dann Ihern persönlichen Zugangascode ein</source>
+        <target>geben Sie dann Ihern persönlichen Zugangascode ein</target>
+        </trans-unit>
+        <trans-unit id="process">
+        <source>Informationen zum Ablauf</source>
+        <target>Informationen zum Ablauf</target>
+        </trans-unit>
+        <trans-unit id="process_info">
+        <source>Sie müssen zunächst Ihr Geburtsdatum eingeben. Dann gelangen Sie zum Schülerausweis-Foto-Upload..</source>
+        <target>Sie müssen zunächst Ihr Geburtsdatum eingeben. Dann gelangen Sie zum Schülerausweis-Foto-Upload..</target>
+        </trans-unit>
+        <trans-unit id="download_print">
+        <source>Download Print PDF</source>
+        <target>Download Print PDF</target>
+        </trans-unit>
+        <trans-unit id="barcode">
+        <source>Barcode</source>
+        <target>Barcode</target>
+        </trans-unit>
+        <trans-unit id="barcode_label">
+        <source>Statt QR-Verify die Bibliothek - oder Mensanummer als Barcode128.</source>
+        <target>Statt QR-Verify die Bibliothek - oder Mensanummer als Barcode128.</target>
+        </trans-unit>
+        <trans-unit id="administration_id">
+        <source>Schulverwaltungs ID</source>
+        <target>Schulverwaltungs ID</target>
+        </trans-unit>
+        <trans-unit id="administration_label">
+        <source>Eindeutige SchülerID aus Ihrem Schulverwaltungsprogramm.</source>
+        <target>Eindeutige SchülerID aus Ihrem Schulverwaltungsprogramm.</target>
+        </trans-unit>
+        <trans-unit id="address">
+        <source>Adresse</source>
+        <target>Adresse</target>
+        </trans-unit>
+        <trans-unit id="student_added">
+        <source>Schüler*in hinzugefügt</source>
+        <target>Schüler*in hinzugefügt</target>
+        </trans-unit>
+        <trans-unit id="no_push">
+        <source>Die Geräteinformationen sind unvollständig. Es wurde kein Push ausgelöst.</source>
+        <target>Die Geräteinformationen sind unvollständig. Es wurde kein Push ausgelöst.</target>
+        </trans-unit>
+        <trans-unit id="change">
+        <source>Ändern</source>
+        <target>Ändern</target>
+        </trans-unit>
+        <trans-unit id="add_student">
+        <source>Schüler*in hinzufügen</source>
+        <target>Schüler*in hinzufügen</target>
+        </trans-unit>
+        <trans-unit id="username">
+        <source>Username</source>
+        <target>Username</target>
+        </trans-unit>
+        <trans-unit id="add">
+        <source>Hinzufügen</source>
+        <target>Hinzufügen</target>
+        </trans-unit>
+        <trans-unit id="record">
+        <source>Aufnehmen</source>
+        <target>Aufnehmen</target>
+        </trans-unit>
+
+         <trans-unit id="admin_school_label">
+        <source>Please select school</source>
+        <target>Zwischen den Ausweisen auswählen</target>
+        </trans-unit>
+        <trans-unit id="admin_school_btn">
+        <source>Save</source>
+        <target>Speichern</target>
+        </trans-unit>
+
+ <trans-unit id="rcorrection_ignore">
+        <source>Ignore</source>
+        <target>Ignorieren</target>
+        </trans-unit>
+ <trans-unit id="rcorrection_heading">
+        <source>Correction notes from your students</source>
+         <target>Korrekturhinweise Ihrer SchülerInnen</target>
+        </trans-unit>
+         <trans-unit id="rcorrection_subheading">
+        <source>Please also incorporate the corrections you accepted into your school management software so that they are included in future automated updates. Otherwise, future updates would revert these changes to student IDs.</source>
+         <target>Bitte übernehmen Sie die von Ihnen akzeptierten Korrekturen ebenfalls in Ihre Schulverwaltungs-Software, damit diese in zukünftigen automatisierten Updates ebenfalls enthalten sind. Andernfalls würden zukünftige Updates diese Änderungen an den Schülerausweisen wieder rückgängig machen.</target>
+        </trans-unit>
+ <trans-unit id="pwd_not_match">
+        <source>Passwords do NOT match!</source>
+        <target>Die Passwörter stimmen nicht überein</target>
+       </trans-unit>    
+ <trans-unit id="new_pwd">
+        <source>New Password</source>
+        <target>Neues Passwort</target>
+        </trans-unit> 
+         <trans-unit id="confirm_pwd">
+        <source>Confirm Password</source>
+        <target>Neues Passwort bestätigen</target>
+        </trans-unit> 
+         <trans-unit id="submit_pwd">
+        <source>Submit</source>
+        <target>Einreichen</target>
+        </trans-unit>   
+         <trans-unit id="chpwd_message_notes">
+        <source>Bitte vergeben Sie ein Password mit mindestens 16 Zeichen. Darin muss mindestens je eine Zahl, ein kleiner Buchstabe, ein Großbuchstabe und ein Sonderzeichen enthalten sein. Bitte wählen Sie nur aus den folgenden Sonderzeichen:</source>
+        <target>Bitte vergeben Sie ein Password mit mindestens 16 Zeichen. Darin muss mindestens je eine Zahl, ein kleiner Buchstabe, ein Großbuchstabe und ein Sonderzeichen enthalten sein. Bitte wählen Sie nur aus den folgenden Sonderzeichen:</target>
+       </trans-unit> 
+
+
+    <trans-unit id="chpwd_message_error1">
+        <source>Bitte benutzen Sie mindestens einen Kleinbuchstaben.</source>
+        <target>Bitte benutzen Sie mindestens einen Kleinbuchstaben.</target>
+        </trans-unit> 
+        <trans-unit id="chpwd_message_error2">
+        <source>Bitte benutzen Sie mindestens einen Großbuchstaben.</source>
+         <target>Bitte benutzen Sie mindestens einen Großbuchstaben.</target>
+        </trans-unit> 
+        <trans-unit id="chpwd_message_error3">
+        <source>Bitte benutzen Sie mindestens eine Zahl.</source>
+         <target>Bitte benutzen Sie mindestens eine Zahl.</target>
+        </trans-unit> 
+        <trans-unit id="chpwd_message_error4">
+        <source>Bitte benutzen Sie mindestens eines der folgenden Sonderzeichen:</source>
+         <target>Bitte benutzen Sie mindestens eines der folgenden Sonderzeichen:</target>
+        </trans-unit>   
+        <trans-unit id="chpwd_message_error5">
+        <source>Bitte benutzen Sie mindestens 16 Zeichen.</source>
+        <target>Bitte benutzen Sie mindestens 16 Zeichen.</target>
+        </trans-unit>   
+        
+
+		</body>
+        
+	</file>
+</xliff>

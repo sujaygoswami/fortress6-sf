@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schulfoto</title>
+
+</head>
+
+
+    <table cellpadding="0" cellspacing="0" style="border: 0px; max-width: 600px; margin: 0 auto; font-family: Arial; padding: 30px;width:600px">
+        <tbody>
+            
+                <tr>
+                        <td style="padding: 0 0 20px; margin: 0px;">
+                                <p style="line-height: 23px;">Run ID: {pushruncode}</p>
+                                <p style="line-height: 23px;">School Name: {schoolname}</p>
+                                <p style="line-height: 23px;">Record: {recordno}</p>
+                                <p style="line-height: 23px;">Successful Push: {srecord}</p>
+                                <p style="line-height: 23px;">Failed Push: {frecord}</p>
+                        </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;">
+                    <table cellpadding="0" cellspacing="0" style="border: 0px; max-width: 600px; margin: 0 auto; font-family: Arial; padding: 30px;width:600px">
+                        <tbody>
+                                <tr>
+                                    <td  style="width:20%">ID</td>
+                                    <td style="width:40%">Status</td>
+                                    <td style="width:40%">Message</td>
+                                </tr>
+                                <f:for each="{listData}"  as="datas" iteration="fooIterator">
+                                <tr>
+                                    <td>{datas.customernumber}</td>
+                                    <td>{datas.status}</td>
+                                    <td>{datas.message}</td>
+                                </tr>
+                            </f:for> 
+                            </tbody>
+                    </table> 
+                </td>
+    </tr>
+        </tbody>
+    </table>
+
+
+
+</html>

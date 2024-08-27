@@ -1,0 +1,273 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+  <main class="centered-grid clearfix">  
+    <f:switch expression="{view_section}">
+        
+        <f:case value="update">
+    
+     <!-- section -->
+     <section class="clearfix section-row element element-gap-medium">
+        <!-- varification module -->
+        <div class="verificatio-module clearfix step-one">
+            <div class="container-fluid">
+
+                <!-- strip -->
+                <div class="verification-strip success element element-gap-large">
+                    <p class="pull-text-center"><img src="/fileadmin/Images/schulfoto/valid-text-img.png"></p>
+                </div>
+
+                <!-- strip -->
+                 <!-- section -->
+                 <section class="clearfix section-ow element element-gap-large">
+                    <!-- main-form-module -->
+                    <div class="main-form-module clearfix">
+                        <div class="container-fluid">
+                            <f:form action="search" id="search" controller="Profile" enctype="multipart/form-data">
+                                <input type="hidden" name="tx_schulfoto_usprofile[form_type]" value="update">
+                                <input type="hidden" name="tx_schulfoto_usprofile[ckm]" value="{checksum}">
+                                <!-- site-form-module -->
+                                <div class="site-form-module">
+                                    <!-- field-row -->
+                                    <f:if condition="{lang_updated} == '1'"> 
+                                    <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                        <div class="col-xs-12 my-col"><f:translate key="wallet_language" />
+                                        </div></div>
+                                    </f:if>
+                                
+                                    <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                        <div class="col-xs-12 my-col element element-gap-tiny">
+                                            <label><f:translate key="language_selection_student" />:</label>
+                                        </div>
+                                        <div class="col-xs-12 my-col">
+                                            <div class="form-field">
+
+     <select name="tx_schulfoto_usprofile[lang]" id="countries" is="ms-dropdown" data-child-height="315">
+    <f:for each="{lanuage}" key="key" as="day_labels">
+    <option value="{key}" data-image-css="flag {key}" data-title="{day_labels}" <f:if condition="{key}=={user_lang}">selected </f:if> >{day_labels}</option>
+    </f:for>
+    </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>                                        
+                                    
+                               
+                                    <!-- field-row -->
+                                    <!-- field-row -->
+                                    <!-- field-row -->
+                                    
+                                    
+                                    <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                                        <div class="col-xs-12 my-col pull-text-center ">
+                                            <button type="submit" class="form-btn" id="passsubmit"><f:translate key="change_language" /></button>
+                                        </div>
+                                    </div>
+                                    <!-- field-row -->
+                                </div>
+                                <!-- site-form-module -->
+                            </f:form>
+                        </div>
+                          </div>
+            <!-- main-form-module -->
+        </section>
+        <!-- section -->
+              <f:for each="{data}" key="key" as="datas" iteration="fooIterator">
+                <!-- info -->
+                <f:if condition="{fooIterator.index}==0">
+                 <!-- info -->
+                <div class="verification-info element element-gap-large">
+                    <p class="pull-text-center title"><strong><f:translate key="profile_student_issued" /></strong></p>
+                    <p><f:translate key="profile_name" />:<br><strong>{datas.lastName}</strong></p>
+                    <p><f:translate key="profile_fname" />:<br><strong>{datas.firstName}</strong></p>
+                    <p><f:translate key="profile_dob" />:<br><strong>  <f:if condition="{datas.dateOfBirth}"><f:format.date format="d.m.Y">{datas.dateOfBirth}</f:format.date></f:if></strong></p>
+                    <p><f:translate key="profile_photo" />:</p><br>
+                    <p class="pull-text-center">     
+                      <f:if condition="{datas.images}">
+                        <f:then>
+                           <img src="{studentlogo}">
+                        </f:then>
+                        <f:else>
+                          N/A
+                        </f:else>
+                      </f:if>
+                    </p>
+                    <p><f:translate key="profile_sample_id" />:</p>
+                    <p class="pull-text-center">
+                           <f:if condition="{datas.schulname.sampleimage}">
+                            <f:then>
+                               <f:image   image="{datas.schulname.sampleimage}" alt="" width="640" />
+                            </f:then>
+                            <f:else>
+                              N/A
+                            </f:else>
+                            </f:if>
+                    </p>
+                    <p><f:translate key="profile_add_school" />:<br>
+                        <strong><f:format.nl2br>{datas.schulname.description}</f:format.nl2br></strong></p>
+                </div>
+                 <!-- info -->
+
+
+               
+        
+
+              </f:if>
+              </f:for>
+
+            </div>
+        </div>
+        <!-- varification module -->
+    </section>
+    <!-- section -->
+
+
+        </f:case>
+        <f:case value="dob">
+
+        <f:form action="search" id="search" controller="Profile" enctype="multipart/form-data">
+            <input type="hidden" name="tx_schulfoto_usprofile[form_type]" value="dob">
+            <input type="hidden" name="tx_schulfoto_usprofile[ckm]" value="{checksum}">
+<!-- section -->
+<section class="clearfix section-ow">
+<!-- main-form-module -->
+<div class="main-form-module clearfix">
+    <div class="container-fluid">
+        
+          <!-- site-form-module -->
+            <div class="site-form-module">
+                <!-- field-row -->
+                <div class="field-row row clearfix element element-gap-large flex-row center-item">
+
+                    <div class="col-xs-12 my-col element element-gap-tiny">
+                        <label><f:translate key="profile_geburtsdatum" />:</label>
+
+                    </div>
+                    <div class="col-xs-4 my-col">
+                        <div class="form-field">
+                            <select class="text-input geburtsdatum" name="tx_schulfoto_usprofile[day]" id="selectday"> 
+                                <option value=" "><f:translate key="profile_tag" /></option>
+                                <f:for each="{day_label}" key="key" as="day_labels">
+                                    <option value="{day_labels}">{day_labels}</option>
+                                </f:for>
+
+                            </select>
+                            <div class="error-msg" id="dayerror"></div>
+                        </div>
+                    </div>
+                     <div class="col-xs-4 my-col">
+
+                        <div class="form-field">
+                            <select class="text-input geburtsdatum" name="tx_schulfoto_usprofile[month]" id="selectmonth"> 
+                                <option value=" "><f:translate key="profile_monat" /></option>
+                                 <f:for each="{month_label}" key="key" as="month_labels">
+                                    <option value="{key}">{month_labels}</option>
+                                </f:for>
+                            </select>
+                            <div class="error-msg" id="montherror"></div>
+                        </div>
+                    </div>
+
+                     <div class="col-xs-4 my-col">
+
+                        <div class="form-field">
+                            <select class="text-input geburtsdatum" name="tx_schulfoto_usprofile[year]" id="selectyear"> 
+                                <option value=" "><f:translate key="profile_jahr" /></option>
+                                 <f:for each="{year_label}" key="key" as="year_labels">
+                                    <option value="{year_labels}">{year_labels}</option>
+                                </f:for>
+                            </select>
+                            <div class="error-msg" id="yearerror"></div>
+                        </div>
+                    </div>
+                     
+                    
+                </div>
+                <!-- field-row -->
+                
+                <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                    <div class="col-xs-12 my-col pull-text-center ">
+                        <button type="submit" class="form-btn" id="dob_submit"><f:translate key="profile_weiter" /></button>
+                    </div>
+                </div>
+                <!-- field-row -->
+            </div>
+            <!-- site-form-module -->
+    </div>
+      </div>
+<!-- main-form-module -->
+</section>
+<!-- section -->
+</f:form>
+
+        </f:case>
+        <f:case value="expire">
+
+                 <!-- section -->
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- varification module -->
+            <div class="verificatio-module clearfix step-one">
+                <div class="container-fluid">
+  
+                    <!-- strip -->
+                    <div class="verification-strip failed element element-gap-Largest pull-text-center">
+                        <p class="pull-text-center"><f:translate key="profile_lang_refresh" /></p>
+                    </div>
+                    <!-- strip -->
+  
+                    <!-- info -->
+                    <div class="verification-info element element-gap-large pull-text-center">
+                        <p><img src="/fileadmin/Images/schulfoto/failed-cross.png" width="220"></p>
+                    </div>
+                    <!-- info -->
+  
+                </div>
+            </div>
+            <!-- varification module -->
+        </section>
+        <!-- section -->
+
+        </f:case>
+        <f:defaultCase>
+
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- varification module -->
+            <div class="verificatio-module clearfix step-one">
+                <div class="container-fluid">
+  
+                    <!-- strip -->
+                    <div class="verification-strip failed element element-gap-Largest pull-text-center">
+                        <p class="pull-text-center"><f:translate key="profile_lang_refresh" /></p>
+                    </div>
+                    <!-- strip -->
+  
+                    <!-- info -->
+                    <div class="verification-info element element-gap-large pull-text-center">
+                        <p><img src="/fileadmin/Images/schulfoto/failed-cross.png" width="220"></p>
+                    </div>
+                    <!-- info -->
+  
+                </div>
+            </div>
+            <!-- varification module -->
+        </section>
+        <!-- section -->
+
+        </f:defaultCase>
+    </f:switch>
+  </main>
+</f:section>
+</html>

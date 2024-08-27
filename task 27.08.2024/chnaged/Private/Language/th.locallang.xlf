@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+
+	<file target-language="th" source-language="en" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="schulfoto">
+		<header/>
+		<body>
+			<trans-unit id="started_login">
+				<source>Security Check</source>
+                <target>การตรวจสอบความปลอดภัย</target>
+			</trans-unit>
+            <trans-unit id="started_date">
+               <source>Data</source>
+			   <target>ข้อมูล</target>
+           </trans-unit>
+		   <trans-unit id="started_correctly">
+               <source>correct?</source>
+			   <target>ถูกต้อง?</target>
+           </trans-unit>
+		   <trans-unit id="started_ready">
+               <source>Done</source>
+			   <target>เสร็จสิ้น</target>
+           </trans-unit>
+		   <trans-unit id="started_upload">
+               <source>Upload</source>
+			   <target>อัปโหลด</target>
+           </trans-unit>
+		   <trans-unit id="started_portrait">
+               <source>Portrait</source>
+			   <target>การถ่ายภาพบุคคล</target>
+           </trans-unit>
+
+			<trans-unit id="started_info_about_you">
+               <source>Security Check</source>
+			   <target>การตรวจสอบความปลอดภัย</target>
+           </trans-unit>
+		   <trans-unit id="started_dob">
+               <source>Please Enter Your Date of Birth</source>
+			   <target>โปรดใส่วันเกิด</target>
+           </trans-unit>
+		   <trans-unit id="started_password">
+               <source>password</source>
+			   <target>รหัสผ่าน</target>
+           </trans-unit>
+		   <trans-unit id="started_further">
+               <source>FURTHER</source>
+			   <target>ต่อไป</target>
+           </trans-unit>
+			<trans-unit id="started_image_login_disabled">
+               <source>We have already received an image.</source>
+			   <target>เราได้รับรูปภาพแล้ว</target>
+           </trans-unit>
+		   <trans-unit id="started_enter_password">
+               <source>Enter your password</source>
+			   <target>กรุณาใส่รหัสผ่านของคุณ</target>
+           </trans-unit>
+		    <trans-unit id="day_label">
+               <source>Day</source>
+			   <target>วัน</target>
+           </trans-unit>
+            <trans-unit id="month_label">
+               <source>Month</source>
+			   <target>เดือน</target>
+           </trans-unit>
+            <trans-unit id="year_label">
+               <source>Year</source>
+			   <target>ปี</target>
+           </trans-unit>
+			<trans-unit id="error_password">
+               <source>This field is mandatory!</source>
+			    <target>กรุณากรอกข้อมูลในช่องนี้</target>
+           </trans-unit>
+            <trans-unit id="school_confirm_error">
+               <source>Please read and accept the privacy policy</source>
+               <target>โปรดอ่านนโยบายความเป็นส่วนตัว &amp; ยอมรับ</target>
+           </trans-unit>
+           <trans-unit id="error_year">
+		    	 <source>Enter year</source>
+				 <target>กรุณาใส่ปีเกิด</target>
+            </trans-unit>
+           <trans-unit id="error_month">
+               <source>Enter month</source>
+			    <target>กรุณาใส่เดือน</target>
+           </trans-unit>
+           <trans-unit id="error_day">
+               <source>Enter day</source>
+			    <target>กรุณาใส่วัน</target>
+			</trans-unit>
+			 <trans-unit id="information_about_you">
+               <source>Information about you</source>
+			    <target>ข้อมูลของคุณ</target>
+			</trans-unit>
+			    <trans-unit id="schulname">
+               <source>School name</source>
+			    <target>ชื่อโรงเรียน</target>
+           </trans-unit>
+			 <trans-unit id="klasse">
+               <source>Class</source>
+			    <target>ชั้นเรียน</target>
+           </trans-unit>
+		    <trans-unit id="click_select">
+               <source>Click and select</source>
+			    <target>คลิกและเลือก"</target>
+           </trans-unit>
+		   <trans-unit id="vorname">
+               <source>First Name</source>
+			     <target>ชื่อ</target>
+           </trans-unit>
+		    <trans-unit id="pls_first_name">
+               <source>Please enter your first name and middle (if have middle name)</source>
+			   <target>กรุณาใส่ชื่อของคุณ และชื่อกลาง(ถ้ามี)</target>
+           </trans-unit>
+           <trans-unit id="surname">
+               <source>Last Name(s)</source>
+			   <target>นามสกุล</target>
+           </trans-unit>
+		   <trans-unit id="pls_surname">
+               <source>Please enter all last names.</source>
+			   <target>โปรดกรอกนามสกุล(หรือนามสกุลทั้งหลาย)</target>
+           </trans-unit>
+		    <trans-unit id="received_an_image">
+                <source>We have already received an image.</source>
+                <target>เราได้รับรูปภาพแล้ว</target>
+           </trans-unit>
+		    <trans-unit id="kundennummer">
+               <source>Customer ID</source>
+			    <target>หมายเลขลูกค้า</target>
+           </trans-unit>
+		    <trans-unit id="required_fields">
+               <source>Required fields</source>
+			    <target>ช่องที่ต้องระบุ</target>
+           </trans-unit>
+		    <trans-unit id="date_of_birth">
+               <source>Date of Birth</source>
+			     <target>วันเกิด</target>
+           </trans-unit>
+		     <trans-unit id="email">
+               <source>Email</source>
+			   <target>อีเมล</target>
+           </trans-unit>
+		   <trans-unit id="notes">
+               <source>School Portraits (Thailand) Co., Ltd. uses the email address you provide here solely for the purpose of creating your student ID. You can, of course, object to this use at any time.</source>
+				 <target>บริษัท School Portraits (Thailand) Co., Ltd. จะใช้ที่อยู่อีเมลที่ท่านให้ไว้เพื่อสร้างบัตรนักเรียนของท่านเท่านั้น ท่านสามารถปฏิเสธการให้ข้อมูลนี้ได้ตลอดเวลา</target>
+		   </trans-unit>
+		   <trans-unit id="korrekturen">
+               <source>Corrections</source>
+			   <target>แก้ไข</target>
+           </trans-unit>
+		    <trans-unit id="correction_text">
+               <source>Please enter corrections here. If none are needed, please leave this field blank.</source>
+				 <target>กรุณาป้อนการแก้ไขที่เป็นไปได้ที่นี่ หากไม่มีการแก้ไข โปรดปล่อยให้ช่องนี้ว่าง</target>
+		  </trans-unit>
+             <trans-unit id="photo_note">
+               <source>Please do not use inappropriate ID photos as shown here.</source>
+			    <target>กรุณาอย่าใช้รูปบัตรประชาชนที่ไม่เหมาะสม เช่น ที่แสดงไว้ที่นี้</target>
+           </trans-unit>
+		    <trans-unit id="photo_under">
+               <source>UNDERSTOOD</source>
+			    <target>รับทราบ</target>
+           </trans-unit>
+		    <trans-unit id="photo_good_note">
+               <source>This is an example of a good portrait. You can upload an existing one or take a selfie with your smartphone.</source>
+				<target>นี้คือตัวอย่างภาพถ่ายที่ดี คุณสามารถอัปโหลดรูปที่มีอยู่แล้วหรือถ่ายรูปเซลฟีด้วยสมาร์ทโฟนของคุณ</target>
+		   </trans-unit>
+		     <trans-unit id="accepted_formats">
+               <source>Accepted file formats</source>
+			   <target>ไฟล์ที่ยอมรับ</target>
+           </trans-unit>
+		   <trans-unit id="maximum_file_size">
+               <source>Maximum file size</source>
+			    <target>ขนาดไฟล์สูงสุด</target>
+           </trans-unit>
+
+		    <trans-unit id="take_a_selfeie">
+               <source>TAKE A SELFIE NOW</source>
+			   <target>ถ่ายรูปเซลฟี</target>
+           </trans-unit>
+
+        <trans-unit id="upload_a_portrait">
+        <source> UPLOAD A PORTRAIT</source>
+		<target>อัปโหลดภาพถ่าย</target>
+        </trans-unit>
+		<trans-unit id="upload_Save">
+        <source> Save</source>
+		<target>"บันทึก</target>
+        </trans-unit>
+		 <trans-unit id="no_portrait_photo">
+        <source> No portrait photo at hand?</source>
+			<target>คุณไม่มีรูปถ่ายใบหน้าในขณะนี้ใช่ไหม?</target>
+        </trans-unit>
+
+		   <trans-unit id="nofound1">
+        <source> No record found</source>
+		<target>ไม่พบข้อมูล</target>
+        </trans-unit>
+        <trans-unit id="nofound2">
+        <source> Did you choose the right class?</source>
+		<target>คุณได้เลือกชั้นเรียนที่ถูกต้องหรือไม่?</target>
+        </trans-unit>
+    <trans-unit id="nofound3">
+        <source> Have you entered all of your first names?</source>
+		<target>คุณได้กรอกชื่อจริงทั้งหมดหรือไม่?</target>
+        </trans-unit>
+    <trans-unit id="nofound4">
+        <source>Have you entered all last names?</source>
+		<target>คุณได้กรอกนามสกุลทั้งหมดหรือยัง?</target>
+        </trans-unit>
+
+          <trans-unit id="confirm_email">
+        <source>Please confirm your email</source>
+        <target>โปรดยืนยันอีเมลของคุณ</target>
+        </trans-unit>
+        
+
+ <trans-unit id="confirm_email_text1">
+        <source>Please check your emails and confirm them.</source>
+         <target>โปรดตรวจสอบอีเมลของคุณและยืนยัน</target>
+        </trans-unit>
+     <trans-unit id="confirm_email_text2">
+        <source>OnlOnly then can you upload your photo for the student ID.</source>
+         <target>หลังจากนั้นคุณสามารถอัปโหลดรูปภาพสำหรับบัตรนักเรียนได้</target>
+        </trans-unit>
+         <trans-unit id="confirm_email_text3">
+        <source>If the email is not in your main inbox, please check the spam folder.</source>
+        <target>ถ้าคุณไม่พบอีเมลในกล่องขาเข้า กรุณาตรวจสอบในโฟลเดอร์สแปมด้วย</target>
+        </trans-unit>
+ <trans-unit id="email_already_confirmed">
+        <source>Your email has already been confirmed.</source>
+         <target>ท่านได้ทำการยืนยันอีเมล</target>
+</trans-unit>
+
+ <trans-unit id="filter_review_your_details">
+        <source>Review your details</source>
+        <target>คุณตรวจสอบข้อมูลของคุณถูกต้องหรือไม่?</target>
+        
+        </trans-unit>
+
+        <trans-unit id="accept_term_1">
+        <source>I have read and accepted the</source>
+        <target>ฉันได้อ่านและยอมรับ</target>
+        </trans-unit>
+         <trans-unit id="accept_term_2">
+        <source>privacy policy</source>
+        <target>นโยบายความเป็นส่วนตัว</target>
+        </trans-unit>
+         <trans-unit id="accept_term_3">
+        <source>and</source>
+        <target>และ</target>
+        </trans-unit>
+         <trans-unit id="accept_term_4">
+        <source>data protection</source>
+        <target>  นโยบายความเป็นส่วนตัว</target>
+        </trans-unit>
+         <trans-unit id="accept_term_5">
+        <source>regulations.</source>
+        <target> อ่านและยอมรับ</target>
+        </trans-unit>
+<trans-unit id="thankyou_save_digital">
+        <source>Save your digital student ID now!</source>
+        <target> บันทึกบัตรนักเรียนดิจิทัลตอนนี้!</target>
+        </trans-unit>
+        <trans-unit id="thankyou_importpicture">
+        <source>Your This ID picture will be used shortly. Once submitted, you won't be able to change it. If you want to change it, click on 'Back'.</source>
+        <target> รูปบัตรนี้จะถูกใช้ในไม่ช้านี้ หลังจากที่คุณได้ทำการส่ง คุณจะไม่สามารถแก้ไขได้อีก หากคุณต้องการแก้ไข โปรดคลิก 'ย้อนกลับ.</target>
+        </trans-unit>
+<trans-unit id="thankyou_back">
+        <source>Back</source>
+         <target> ย้อนกลับ</target>
+        </trans-unit>
+        <trans-unit id="uploading_images_error">
+        <source>Something went wrong while uploading images.</source>
+         <target> การอัปโหลดรูปภาพผิดพลาดบางอย่าง</target>
+        </trans-unit>
+        <trans-unit id="uploading_thank_you_successfully">
+        <source>Thank you - your data has been successfully transmitted.</source>
+         <target> ขอบคุณมากครับ/ค่ะ - ข้อมูลของคุณถูกส่งเรียบร้อยแล้ว</target>
+        </trans-unit>
+        <trans-unit id="uploading_thank_uploaded_image">
+        <source>Your uploaded image</source>
+         <target>ภาพที่คุณอัปโหลด</target>
+        </trans-unit>
+
+        <trans-unit id="uploading_thank_image_change1">
+        <source>If you want to change the image, please click Back.</source>
+         <target>ถ้าคุณต้องการเปลี่ยนรูปภาพ โปรดคลิก 'ย้อนกลับ'</target>
+        </trans-unit>
+
+         <trans-unit id="uploading_thank_image_change2">
+        <source>We produce the student ID card i.d. Usually between 5-7 working days. You will then receive this from the school.</source>
+         <target>เราจะทำบัตรนักเรียนภายใน 5-7 วันทำการ และคุณจะได้รับบัตรนักเรียนผ่านทางโรงเรียน</target>
+        </trans-unit>
+
+        <trans-unit id="uploading_thank_image_change3">
+        <source>You can now close the application.</source>
+         <target>คุณสามารถปิดแอปพลิเคชันได้เดี๋ยวนี้</target>
+        </trans-unit>
+
+    <trans-unit id="uploading_thank_image_change4">
+        <source>Something went wrong while uploading images.</source>
+         <target>ถ้าคุณต้องการเปลี่ยนรูปภาพ กรุณาคลิก 'ย้อนกลับ'</target>
+        </trans-unit>
+
+        <trans-unit id="click_add_apple_wallet">
+        <source>Click "Add to Apple Wallet."</source>
+         <target>คลิกที่ "เพิ่มลงใน Apple Wallet"</target>
+        </trans-unit>
+         <trans-unit id="for_ios">
+        <source>Add to Apple Wallet</source>
+         <target>สำหรับ iOS:</target>
+        </trans-unit>
+         <trans-unit id="for_ios_1">
+        <source>Click on 'Add to Apple Wallet,' then a preview will be shown. The digital student ID will only be saved when you click 'Add' at the top right corner of the preview.</source>
+         <target>คลิกที่ 'เพิ่มลงใน Apple Wallet' จากนั้นจะปรากฏหน้าต่างตัวอย่าง บัตรนักเรียนดิจิทัลจะถูกบันทึกเมื่อคุณคลิกที่ 'เพิ่ม' ที่มุมบนขวาของหน้าต่างตัวอย่าง
+</target>
+        </trans-unit>
+        <trans-unit id="for_android">
+        <source>For Android</source>
+         <target>สำหรับ Android:</target>
+        </trans-unit>
+
+        <trans-unit id="for_android_1">
+        <source>Please download the Google Wallet app from the Google Play Store if it is not yet installed on your device.</source>
+         <target>กรุณาดาวน์โหลดแอป Google Wallet จาก Google Play Store ในกรณีที่ยังไม่ได้ติดตั้งในอุปกรณ์ของท่าน</target>
+        </trans-unit>
+
+
+        <trans-unit id="for_android_4">
+        <source>The </source>
+        <target></target>
+        </trans-unit>
+         <trans-unit id="for_android_5">
+        <source>Google Wallet app </source>
+        <target>แอป Google Wallet</target>
+        </trans-unit>
+
+         <trans-unit id="for_android_2">
+        <source> offers the best user experience. Google Wallet cards are stored on servers and synchronized across users' Google accounts on all devices where the Google Wallet app is installed. Alternatively, you can also use the</source>
+         <target> bietet die beste Nutzererfahrung. Google Wallet-Karten werden auf Servern gespeichert und über das Google-Konto der Benutzer auf allen Geräten synchronisiert, auf denen die Google Wallet App installiert ist. Als Alternative zur Google Wallet App können Sie auch die</target>
+        </trans-unit>
+         <trans-unit id="for_android_6">
+        <source>PassWallet app </source>
+         <target>PassWallet app </target>
+        </trans-unit>
+        <trans-unit id="for_android_7">
+        <source>, although we cannot automatically update student IDs here. However, you can trigger an update manually.</source>
+        <target>verwenden (Beachten Sie jedoch, dass wir die Schülerausweise hier nicht automatisch aktualisieren können. Sie können jedoch eine Aktualisierung manuell initiieren.)</target>
+        </trans-unit>
+
+        <trans-unit id="for_android_3">
+        <source>You have also received the new digital student ID in your email.</source>
+         <target>We have also sent you the new digital student ID via email.</target>
+        </trans-unit>
+
+        <trans-unit id="for_open_map">
+        <source>Open the student ID.</source>
+         <target>เปิดใช้งานบัตรนักเรียน</target>
+        </trans-unit>
+
+        <trans-unit id="for_open_map1">
+        <source>After opening the map, a preview of the map will be displayed. Only by clicking on â€œAdd to Walletâ€ will the card be saved in the wallet app.</source>
+         <target>หลังจากเปิดใช้งานบัตรนักเรียน จะปรากฏหน้าต่างตัวอย่าง คลิก "เพิ่มลงใน Wallet" จะทำการบันทึกลงในแอป Wallet </target>
+        </trans-unit>
+        
+         <trans-unit id="for_open_map2">
+        <source>Check the wallet app on your smartphone. Whenever the wallet app is opened, the new digital student ID card can be displayed. The back of the student ID card can be opened by clicking on the three dots.</source>
+         <target>ตรวจสอบแอป Wallet ในโทรศัพท์ของคุณ ทุกครั้งที่เปิดแอป Wallet บัตรนักเรียนดิจิทัลสามารถแสดงได้ ส่วนหลังของบัตรนักเรียนสามารถเปิดได้โดยการคลิกที่สามจุด</target>
+        </trans-unit>
+
+        <trans-unit id="for_open_map3">
+        <source>At the same time, you have also received the new digital student ID card sent to your email.</source>
+         <target>ในเวลาเดียวกัน คุณจะได้รับบัตรนักเรียนดิจิทัลใหม่ทางอีเมล</target>
+        </trans-unit>
+         
+         <trans-unit id="ex_download_limit">
+        <source>You have exceeded your download limit for this ID. If you wish to install the pass on a new device, please contact support.</source>
+        <target>คุณได้เกินขีดจำกัดการดาวน์โหลดสำหรับบัตรนี้แล้ว หากคุณต้องการติดตั้งบัตรนี้ในอุปกรณ์ใหม่ โปรดติดต่อฝ่ายสนับสนุน </target>
+        </trans-unit>
+          <trans-unit id="address_of_the">
+        <source>Address of the school / ที่อยู่ของโรงเรียน</source>
+        <target>Address of the school / ที่อยู่ของโรงเรียน</target>
+        </trans-unit>
+        <trans-unit id="below_sample">
+        <source>Below is a sample of this school’s student ID card / ด้านล่างนี้คือตัวอย่างบัตรนักเรียนของโรงเรียนนี้:</source>
+        <target>Below is a sample of this school’s student ID card / ด้านล่างนี้คือตัวอย่างบัตรนักเรียนของโรงเรียนนี้:</target>
+       </trans-unit>
+     <trans-unit id="click_qr_code">
+        <source>Click to scan QR-Code</source>
+         <target>คลิกเพื่อสแกน QR-Code</target>
+        </trans-unit>
+        
+ <trans-unit id="wallet_language">
+        <source>Your wallet app now displays the student ID card in the new language.</source>
+        <target>แอปพลิเคชันของคุณในกระเป๋าเงินตอนนี้แสดงบัตรนักเรียนในภาษาใหม่</target>
+        </trans-unit>
+         <trans-unit id="language_selection_student">
+        <source>Language Selection for Student ID / การเลือกภาษาสำหรับบัตรนักเรียน</source>
+        <target>Language Selection for Student ID / การเลือกภาษาสำหรับบัตรนักเรียน</target>
+        </trans-unit>
+         <trans-unit id="change_language">
+        <source>Change language</source>
+        <target>เปลี่ยนภาษา</target>
+        </trans-unit>
+         <trans-unit id="profile_student_issued">
+        <source>This student ID is issued for</source>
+        <target>บัตรนักเรียนนี้ถูกออกให้สำหรับ</target>
+        </trans-unit>
+         <trans-unit id="profile_name">
+        <source>Surname / นามสกุล</source>
+        <target>Surname / นามสกุล</target>
+        </trans-unit>
+          <trans-unit id="profile_fname">
+        <source>First name / ชื่อ</source>
+        <target>First name / ชื่อ</target>
+        </trans-unit>
+         <trans-unit id="profile_dob">
+        <source>Date of birth / เกิดเมื่อ</source>
+        <target>Date of birth / เกิดเมื่อ</target>
+        </trans-unit>
+         <trans-unit id="profile_photo">
+        <source>Photo / ภาพถ่าย</source>
+        <target>Photo / ภาพถ่ายo</target>
+        </trans-unit>
+         <trans-unit id="profile_sample_id">
+        <source>Below is a sample of this school’s student ID card / ด้านล่างนี้คือตัวอย่างบัตรนักเรียนของโรงเรียนนี้</source>
+        <target>Below is a sample of this school’s student ID card / ด้านล่างนี้คือตัวอย่างบัตรนักเรียนของโรงเรียนนี้</target>
+        </trans-unit>
+         <trans-unit id="profile_add_school">
+        <source>Address of the school / ที่อยู่ของโรงเรียน</source>
+        <target>Address of the school / ที่อยู่ของโรงเรียน</target>
+        </trans-unit>
+         <trans-unit id="profile_geburtsdatum">
+        <source>Date of Birth</source>
+        <target>วันเกิด</target>
+        </trans-unit>
+         <trans-unit id="profile_tag">
+        <source>Day</source>
+        <target>วัน</target>
+        </trans-unit>
+         <trans-unit id="profile_monat">
+        <source>Month</source>
+        <target>เดือน</target>
+        </trans-unit>
+         <trans-unit id="profile_jahr">
+        <source>Year</source>
+        <target>ปี</target>
+        </trans-unit>
+         <trans-unit id="profile_weiter">
+        <source>Next</source>
+        <target>ต่อไป</target>
+        </trans-unit>
+         <trans-unit id="profile_lang_refresh">
+        <source>Language settings can only be changed after an ID refresh</source>
+        <target>การตั้งค่าภาษาสามารถทำได้เท่านั้นหลังจากทำการรีเฟรชบัตร</target>
+        </trans-unit>
+
+        <trans-unit id="student_record_changed">
+        <source>Student record updated.</source>
+        <target>บันทึกข้อมูลนักเรียนถูกปรับปรุงแล้ว</target>
+        </trans-unit>
+        <trans-unit id="class">
+        <source>Class</source>
+        <target>ชั้นเรียน</target>
+        </trans-unit>
+        <trans-unit id="class_option">
+        <source>Select class</source>
+        <target>เลือกระดับชั้น"</target>
+        </trans-unit>
+        <trans-unit id="all_classes">
+        <source>All classes</source>
+        <target>ทุกระดับชั้น</target>
+        </trans-unit>
+        <trans-unit id="remove_image">
+        <source>Remove image</source>
+        <target>ลบรูป</target>
+        </trans-unit>
+        <trans-unit id="remove_image_heading">
+        <source>Do you really want to delete this image?</source>
+        <target>คุณต้องการลบรูปนี้ใช่หรือไม่?</target>
+        </trans-unit>
+        <trans-unit id="yes">
+        <source>Yes</source>
+        <target>ใช่</target>
+        </trans-unit>
+        <trans-unit id="no">
+        <source>No</source>
+        <target>ไม่</target>
+        </trans-unit>
+        <trans-unit id="delete">
+        <source>Delete</source>
+        <target>ลบ</target>
+        </trans-unit>
+        <trans-unit id="delete_student">
+        <source>Do you really want to delete this student?</source>
+        <target>คุณต้องการลบนักเรียนนี้ใช่หรือไม่?</target>
+        </trans-unit>
+        <trans-unit id="image_removed">
+        <source>The image has been removed.</source>
+        <target>รูปถูกลบออกแล้ว</target>
+        </trans-unit>
+        <trans-unit id="ok">
+        <source>OK</source>
+        <target>โอเค</target>
+        </trans-unit>
+        <trans-unit id="invitations">
+        <source>Download for Invitations</source>
+        <target>ดาวน์โหลดสำหรับเชิญเชิญ</target>
+        </trans-unit>
+        <trans-unit id="include_all_students">
+        <source>Include all students (with photos)</source>
+        <target>รวมนักเรียนทั้งหมด (พร้อมรูปภาพ)</target>
+        </trans-unit>
+        <trans-unit id="download_pdf">
+        <source>Download PDF</source>
+        <target>ดาวน์โหลด PDF</target>
+        </trans-unit>
+        <trans-unit id="invalid_otp">
+        <source>Invalid OTP</source>
+        <target>OTP ไม่ถูกต้อง</target>
+        </trans-unit>
+        <trans-unit id="otp_sent">
+        <source>OTP Sent</source>
+        <target>OTP  ถูกส่งแล้ว</target>
+        </trans-unit>
+        <trans-unit id="one_time_password">
+        <source>One-Time-Passwort (OTP)</source>
+        <target>รหัสผ่านชั่วคราว (OTP)"</target>
+        </trans-unit>
+        <trans-unit id="enter_code">
+        <source>Enter code</source>
+        <target>ใส่รหัส</target>
+        </trans-unit>
+        <trans-unit id="confirm">
+        <source>Confirm</source>
+        <target>ยืนยัน</target>
+        </trans-unit>
+        <trans-unit id="resend">
+        <source>Resend</source>
+        <target>ส่งอีกครั้ง</target>
+        </trans-unit>
+        <trans-unit id="edit">
+        <source>Edit</source>
+        <target>แก้ไข</target>
+        </trans-unit>
+        <trans-unit id="no_student_found">
+        <source>No student(s) could be found.</source>
+        <target>ไม่พบนักเรียน</target>
+        </trans-unit>
+        <trans-unit id="search_students">
+        <source>Search for students</source>
+        <target>ค้นหานักเรียน</target>
+        </trans-unit>
+        <trans-unit id="search_by_birth">
+        <source>Search by Date of Birth</source>
+        <target>ค้นหาตามวันเกิด</target>
+        </trans-unit>
+        <trans-unit id="search">
+        <source>Search</source>
+        <target>ค้นหา</target>
+        </trans-unit>
+        <trans-unit id="no_school">
+        <source>No school Assigned.</source>
+        <target>ไม่มีโรงเรียนที่กำหนด</target>
+        </trans-unit>
+        <trans-unit id="student_record">
+        <source>Student Record</source>
+        <target>บันทึกข้อมูลนักเรียน</target>
+        </trans-unit>
+        <trans-unit id="validity">
+        <source>Validity</source>
+        <target>ความถูกต้อง</target>
+        </trans-unit>
+        <trans-unit id="email_address">
+        <source>E-Mail Address</source>
+        <target>ที่อยู่อีเมล</target>
+        </trans-unit>
+        <trans-unit id="send_id">
+        <source>Send ID</source>
+        <target>ส่งบัตร</target>
+        </trans-unit>
+        <trans-unit id="email_sent">
+        <source>Email has been sent</source>
+        <target>Eอีเมลถูกส่งแล้ว</target>
+        </trans-unit>
+        <trans-unit id="enter_email_address">
+        <source>Enter email address</source>
+        <target>ป้อนที่อยู่อีเมล</target>
+        </trans-unit>
+        <trans-unit id="no_picture">
+        <source>No image available</source>
+        <target>ไม่มีรูปภาพ</target>
+        </trans-unit>
+        <trans-unit id="access_code">
+        <source>Access Code</source>
+        <target>รหัสการเข้าถึง</target>
+        </trans-unit>
+        <trans-unit id="show_qr_code">
+        <source>Display QR Code</source>
+        <target>แสดงรหัส QR</target>
+        </trans-unit>
+        <trans-unit id="digital_student">
+        <source>Digital Student ID for</source>
+        <target>บัตรนักเรียนดิจิทัลสำหรับ</target>
+        </trans-unit>
+        <trans-unit id="class_group">
+        <source>Class / Group</source>
+        <target>ชั้นเรียน / กลุ่ม</target>
+        </trans-unit>
+        <trans-unit id="student_info">
+        <source>Receive your official digital student ID card from your school now. You can use the student ID card. </source>
+        <target>ได้รับบัตรนักเรียนดิจิทัลทางการจากโรงเรียนของคุณเดี๋ยวนี้ คุณสามารถใช้บัตรนักเรียนได้ </target>
+        </trans-unit>
+        <trans-unit id="qr_info">
+        <source>Simply scan the QR code with your smartphone and receive your digital student ID card now.</source>
+        <target>แค่สแกน QR-Code ด้วยสมาร์ทโฟนของคุณ และรับบัตรนักเรียนดิจิทัลได้ทันที</target>
+        </trans-unit>
+        <trans-unit id="alternativ">
+        <source>alternative</source>
+        <target>ทางเลือก</target>
+        </trans-unit>
+        <trans-unit id="alternativ_info">
+        <source>then enter your personal access code</source>
+        <target>จากนั้นให้ป้อนรหัสเข้าใช้ส่วนตัวของคุณ</target>
+        </trans-unit>
+        <trans-unit id="process">
+        <source>Information about the process</source>
+        <target>ข้อมูลเกี่ยวกับกระบวนการ</target>
+        </trans-unit>
+        <trans-unit id="process_info">
+        <source>You must first enter your date of birth. Then you will proceed to the student ID photo upload.</source>
+        <target>คุณต้องป้อนวันเกิดของคุณก่อน จากนั้นคุณจะไปยังการอัปโหลดรูปบัตรนักเรียน</target>
+        </trans-unit>
+        <trans-unit id="download_print">
+        <source>Download Print PDF</source>
+        <target>ดาวน์โหลดไฟล์ PDF เพื่อพิมพ์</target>
+        </trans-unit>
+        <trans-unit id="barcode">
+        <source>Barcode</source>
+        <target>บาร์โค้ด</target>
+        </trans-unit>
+        <trans-unit id="barcode_label">
+        <source>Instead of QR-Verify, use the library or canteen number as Barcode128.</source>
+        <target>แทน QR-Verify ใช้หมายเลขห้องสมุดหรือหมายเลขโรงอาหารเป็นบาร์โค้ด 128</target>
+        </trans-unit>
+        <trans-unit id="administration_id">
+        <source>School Administration ID</source>
+        <target>รหัสการบริหารโรงเรียน</target>
+        </trans-unit>
+        <trans-unit id="administration_label">
+        <source>Unique student ID from your school administration system.</source>
+        <target>รหัสนักเรียนที่ไม่ซ้ำจากระบบบริหารโรงเรียนของคุณ</target>
+        </trans-unit>
+        <trans-unit id="address">
+        <source>Address</source>
+        <target>ที่อยู่</target>
+        </trans-unit>
+        <trans-unit id="student_added">
+        <source>Student added</source>
+        <target>นักเรียนถูกเพิ่มเข้าสู่ระบบแล้ว</target>
+        </trans-unit>
+        <trans-unit id="no_push">
+        <source>Device information is incomplete. No push has been triggered.</source>
+        <target>ข้อมูลอุปกรณ์ไม่สมบูรณ์ ไม่มีการส่งการแจ้งเตือน</target>
+        </trans-unit>
+        <trans-unit id="change">
+        <source>Change</source>
+        <target>เปลี่ยน</target>
+        </trans-unit>
+        <trans-unit id="add_student">
+        <source>Add student</source>
+        <target>เพิ่มนักเรียน</target>
+        </trans-unit>
+        <trans-unit id="username">
+        <source>Username</source>
+        <target>ชื่อผู้ใช้</target>
+        </trans-unit>
+        <trans-unit id="add">
+        <source>Add</source>
+        <target>เพิ่ม</target>
+        </trans-unit>
+        <trans-unit id="record">
+        <source>Record</source>
+        <target>บันทึก</target>
+        </trans-unit>
+			
+        <trans-unit id="admin_school_label">
+        <source>Please select school</source>
+        <target>Zwischen den Ausweisen auswählen</target>
+        </trans-unit>
+        <trans-unit id="admin_school_btn">
+        <source>Save</source>
+        <target>Speichern</target>
+        </trans-unit>
+                       
+
+ <trans-unit id="rcorrection_ignore">
+        <source>Ignore</source>
+        <target>Ignorieren</target>
+        </trans-unit>   
+ <trans-unit id="rcorrection_heading">
+        <source>Correction notes from your students</source>
+         <target>Korrekturhinweise Ihrer SchülerInnen</target>
+        </trans-unit>
+         <trans-unit id="rcorrection_subheading">
+        <source>Please also incorporate the corrections you accepted into your school management software so that they are included in future automated updates. Otherwise, future updates would revert these changes to student IDs.</source>
+         <target>Bitte übernehmen Sie die von Ihnen akzeptierten Korrekturen ebenfalls in Ihre Schulverwaltungs-Software, damit diese in zukünftigen automatisierten Updates ebenfalls enthalten sind. Andernfalls würden zukünftige Updates diese Änderungen an den Schülerausweisen wieder rückgängig machen.</target>
+        </trans-unit>
+
+
+       <trans-unit id="pwd_not_match">
+        <source>Passwords do NOT match!</source>
+        <target>Passwords do NOT match!</target>
+        </trans-unit>                      
+		 <trans-unit id="new_pwd">
+        <source>New Password</source>
+        <target>New Password</target>
+        </trans-unit> 
+         <trans-unit id="confirm_pwd">
+        <source>Confirm Password</source>
+        <target>Confirm Password</target>
+        </trans-unit> 
+         <trans-unit id="submit_pwd">
+        <source>Submit</source>
+             <target>Submit</target>
+        </trans-unit>   
+        
+         <trans-unit id="chpwd_message_notes">
+        <source>Bitte vergeben Sie ein Password mit mindestens 16 Zeichen. Darin muss mindestens je eine Zahl, ein kleiner Buchstabe, ein Großbuchstabe und ein Sonderzeichen enthalten sein. Bitte wählen Sie nur aus den folgenden Sonderzeichen:</source>
+        <target>Bitte vergeben Sie ein Password mit mindestens 16 Zeichen. Darin muss mindestens je eine Zahl, ein kleiner Buchstabe, ein Großbuchstabe und ein Sonderzeichen enthalten sein. Bitte wählen Sie nur aus den folgenden Sonderzeichen:</target>
+        </trans-unit> 
+        <trans-unit id="chpwd_message_error1">
+        <source>Bitte benutzen Sie mindestens einen Kleinbuchstaben.</source>
+        <target>Bitte benutzen Sie mindestens einen Kleinbuchstaben.</target>
+        </trans-unit> 
+        <trans-unit id="chpwd_message_error2">
+        <source>Bitte benutzen Sie mindestens einen Großbuchstaben.</source>
+         <target>Bitte benutzen Sie mindestens einen Großbuchstaben.</target>
+        </trans-unit> 
+        <trans-unit id="chpwd_message_error3">
+        <source>Bitte benutzen Sie mindestens eine Zahl.</source>
+         <target>Bitte benutzen Sie mindestens eine Zahl.</target>
+        </trans-unit> 
+        <trans-unit id="chpwd_message_error4">
+        <source>Bitte benutzen Sie mindestens eines der folgenden Sonderzeichen:</source>
+         <target>Bitte benutzen Sie mindestens eines der folgenden Sonderzeichen:</target>
+        </trans-unit>   
+        <trans-unit id="chpwd_message_error5">
+        <source>Bitte benutzen Sie mindestens 16 Zeichen.</source>
+        <target>Bitte benutzen Sie mindestens 16 Zeichen.</target>
+        </trans-unit>   
+        
+        </body>
+        
+	</file>
+</xliff>

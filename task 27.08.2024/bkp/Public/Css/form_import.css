@@ -1,0 +1,54 @@
+.custom-be-layout-parent #typo3-docbody {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.custom-be-layout-parent input[type="datetime-local"] {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+.custom-be-layout-parent .small-width-aside-form-element label {
+  width: 100px;
+}
+.custom-be-layout-parent .small-width-aside-form-element label + div {
+  width: 150px;
+}
+.custom-be-layout-parent .card .card-header {
+  border-bottom: inherit;
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.custom-be-layout-parent .docheader-funcmenu .form-select {
+  width: 200px;
+}
+.custom-be-layout-parent .form-check-input {
+  margin-top: 0.25em !important;
+}
+.custom-be-layout-parent #typo3-docheader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.custom-be-layout-parent #typo3-docheader > div {
+  flex-grow: 1;
+}
+.custom-be-layout-parent #typo3-docheader .typo3-docheader-buttons {
+  position: absolute;
+  right: 10px;
+}
+.custom-be-layout-parent #typo3-docheader .typo3-docheader-functions {
+  padding: 15px 55px 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.custom-be-layout-parent #typo3-docheader .typo3-docheader-functions > div {
+  flex-grow: 1;
+}
+.custom-be-layout-parent #typo3-docheader .typo3-docheader-functions > div.right {
+  text-align: right;
+}
+.custom-be-layout-parent .excel_table_list select.column_options {
+  min-width: 100px;
+}

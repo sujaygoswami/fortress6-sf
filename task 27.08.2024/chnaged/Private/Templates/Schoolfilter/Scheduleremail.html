@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schulfoto</title>
+  <base href="{base_url}" target="_blank">
+
+</head>
+
+
+    <table cellpadding="0" cellspacing="0" style="border: 0px; max-width: 600px; margin: 0 auto; font-family: Arial; padding: 30px;">
+        <tbody>
+            <tr>
+                <td><img src="{base_url}/fileadmin/Images/primary-logo.png" alt="NextGENeration Logo" width="200"></td>
+                <td align="right"><img src="{base_url}/fileadmin/Images/secondary-logo.png" alt="Energy Imaging Logo" width="70"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <p><f:if condition="{schoolimage}">
+                                      <f:then>
+                                          <img src="{base_url}fileadmin{schoolimage.identifier}" alt="" width="150" />
+                                      </f:then>
+                                      <f:else>
+                                        N/A
+                                      </f:else>
+                                   </f:if></p>
+                </td>
+            </tr>
+                <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                        <p style="line-height: 23px;">Erhalten Sie jetzt den offiziellen Schülerausweis Ihrer Schule - Sie können den Schülerausweis direkt online erstellen und auf Ihrem Smartphone speichern. Wir rechnen direkt mit der Schule ab.
+                        </p>
+                        <p style="line-height: 23px;"><strong>Informationen zum Ablauf:</strong></p>
+                        <p style="line-height: 23px;">Sie müssen zunächst Ihr Geburtsdatum eingeben. Dann gelangen Sie zum Schülerausweis-Foto-Upload. Sie können entweder ein geeignetes vorhandenes Portrait hochladen oder mit dem Smartphone ein Selfie aufnehmen.</p>
+                        <p style="line-height: 23px;">Bitte kopieren Sie sich Ihr persönliches Passwort:</p>
+                        <p style="line-height: 23px;"><strong>{password}</strong></p>
+                        <p style="line-height: 23px;">Klicken Sie auf den Link “Schülerausweis jetzt erstellen”.</p>
+                        <p style="line-height: 23px;"> <a href="{login_url}" target="_blank"> Schülerausweis jetzt erstellen</a></p>
+                        <p style="line-height: 23px;">(Alternativ können Sie auch die nachfolgende Zeile in Ihren Browser kopieren: {login_url})</p>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">
+                        <strong>Hinweis zum Datenschutz:</strong><br>Der Schutz Ihrer persönlichen Daten hat einen hohen Stellenwert. Der digitale Schülerausweis wird DSGVO-konform auf Grundlage des europäischen Datenschutzgesetzes durchgeführt. Detaillierte Informationen dazu unter <a href="https://energy-imaging.de/Datenschutz.html" target="_blank">Datenschutzerklärung</a>.
+                    </p>
+                </td>
+            </tr>
+
+        
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">
+                        <strong>Manuelle Löschung Ihrer Daten:</strong><br> Alternativ haben Sie die Möglichkeit, jederzeit manuell Ihre Daten mit dem digitalen Schülerausweis zu löschen. Beachten Sie bitte, dass Sie diesen Service zukünftig nicht
+                        mehr nutzen können. Schreiben Sie uns bitte mit Ihrer Kundennummer an <a href="mailto:datenschutz@energy-imaging.de">datenschutz@energy-imaging.de</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                  <p style="line-height: 23px; padding: 20px; background-color: #eee; font-size: 14px;">
+                        <strong>Energy-Imaging: Die Experten für Schulmarketing<br> Susanne Henkel Fotografie<br>Schubertstraße 21<br> 40699 Erkrath</strong><br> <a href="mailto:www.schülerausweis.de">www.schülerausweis.de</a><br> <a href="mailto: support@schülerausweis.de">support@schülerausweis.de</a>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</html>

@@ -1,0 +1,95 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<div class="custom-be-layout"></div>
+		    <f:if condition="{flag}">
+		     Update Successfull
+		    </f:if>
+
+             <f:if condition="{school}">
+              <f:then>
+		  		<table cellpadding="0" cellspacing="0" border="0" style="border:0; border-spacing:0; border-bottom:#f2f5f7 solid 1px; padding:0; margin:0; width:100%; font-size:18px; font-weight:300; text-align:left; vertical-align:middle;">
+               		<thead style="color:#f2f5f7;">
+                    <tr>
+                      <th style="background:#005192; padding:5px 10px; font-weight:300; border-right:#fff solid 5px;">SchulName</th>
+                      <th style="background:#005192; padding:5px 10px; font-weight:300; border-right:#fff solid 5px;">Action</th>
+					  <th style="background:#005192; padding:5px 10px; font-weight:300; border-right:#fff solid 5px;">Pass Notifiaction</th>                      
+                      
+                    </tr>
+                   </thead>
+                  <tbody>
+                
+                  <f:for each="{school}" key="key" as="schools">
+                  	<tr>
+                      <td style="background:#f2f5f7; padding:10px;">{schools.name}</td>
+                      <td style="background:#f2f5f7; padding:10px;"><f:link.action action="rinvitation"  class="btn btn-primary" arguments="{uid:schools.uid,time:time}">Resend Invitations</f:link.action></td>
+					  <td style="background:#f2f5f7; padding:10px;">
+
+						<f:link.action id="sent_btn_{schools.uid}" data="{'trigger':'{added_school_data.{schools.uid}}'}" action="upassnotification" class="btn btn-primary  send_pass_notification <f:if condition=\"{added_school_data.{schools.uid}} == 'yes'\">btn_clicked</f:if>" arguments="{uid:schools.uid,time:time}">Sent Pass Notification</f:link.action>
+						
+						<br><span class="sent_message" id="sent_message_{schools.uid}"></span>
+					</td>
+
+                    </tr>
+                  </f:for>
+                  
+                  </tbody>
+               </table>
+               </f:then>
+               <f:else>
+               	No Data Found
+               </f:else>
+             </f:if>
+
+			<style type="text/css">
+				  .f3-widget-paginator {
+				padding: 10px 0 20px 0;
+				margin: 0;
+				}
+				.f3-widget-paginator li{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				display: inline-block;
+				}
+				.f3-widget-paginator li a{
+				display: block;
+				padding: 5px 10px;
+				background: #f2f2f2;
+				}
+				.f3-widget-paginator li.current{
+				padding: 5px 10px;
+				background: #d0d0d0;
+				}
+				.btn_clicked{
+					background-color:black !important
+				}
+			</style>
+			<script  src="{f:uri.resource(path: 'Js/jquery.js')}"></script>
+			<script  src="{f:uri.resource(path: 'Js/form_import.js')}"></script>
+
+<script>
+	jQuery(document).ready(function(){
+		jQuery('.custom-be-layout').parents('.typo3-fullDoc').addClass('custom-be-layout-parent');
+
+		jQuery('.custom-be-layout-parent > div').addClass('clearfix container-fluid');
+
+		jQuery('.custom-be-layout-parent .docheader-funcmenu select').addClass('form-select');
+	});
+</script>
+	</f:section>
+
+
+</html>

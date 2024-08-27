@@ -1,0 +1,238 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This template displays a NEW form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        New.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+ 
+
+
+
+    <!-- main -->
+    <main class="my-row">
+
+        <!-- section -->
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- steps-module -->
+            <div class="steps-module clearfix">
+                <div class="container-fluid">
+                    <div class="row flex-row">
+                        <!-- col -->
+                       <div class="col-xs-3 my-col">
+                        <div class="main-step-holder passed"> <span><f:translate key="started_login" /></span><i><em>1</em></i> </div>
+                      </div>
+                    <!-- col -->
+                    <!-- col -->
+                    <div class="col-xs-3 my-col">
+                        <div class="main-step-holder current"> <span><f:translate key="started_date" /> <br><f:translate key="started_correctly" /></span><i><em>2</em></i> </div>
+                    </div>
+                    <!-- col -->
+                    <!-- col -->
+                    <div class="col-xs-3 my-col">
+                        <div class="main-step-holder"> <span><f:translate key="started_portrait" /> <br><f:translate key="started_upload" /></span><i><em>3</em></i> </div>
+                    </div>
+                    <!-- col -->
+                    <!-- col -->
+                    <div class="col-xs-3 my-col">
+                        <div class="main-step-holder"> <span><f:translate key="started_ready" /></span><i><em>4</em></i> </div>
+                    </div>
+                    <!-- col -->
+                    </div>
+                </div>
+            </div>
+            <!-- steps-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+
+        <section class="clearfix section-ow element element-gap-medium">
+            <!-- intro module -->
+            <div class="intro-module clearfix">
+                <div class="container-fluid">
+                    <div class="intro-header element element-gap-larger">
+                        <h1><f:translate key="filter_review_your_details" /></h1>
+                    </div>
+                </div>
+            </div>
+            <!-- intro-module -->
+        </section>
+        <!-- section -->
+        <!-- section -->
+        <section class="clearfix section-ow">
+            <!-- main-form-module -->
+            <div class="main-form-module clearfix">
+                <div class="container-fluid">
+                  <f:for each="{finduser}" key="key" as="findusers">
+                    <f:form action="filtersubmit" id="data-form-school"  controller="Schoolfilter" enctype="multipart/form-data">
+                     <input type="hidden" name="tx_schulfoto_sfilter[type]" value="fieldinsert" />
+                     <input type="hidden" name="tx_schulfoto_sfilter[uid]" value="{findusers.uid}" />
+                     <f:if condition="{findusers.email} && {findusers.doiconfirmation} && {findusers.emailvalid}">
+                        <f:then>
+                            <input type="hidden" name="tx_schulfoto_sfilter[form_type]" value="withoutmail" />
+                        </f:then>
+                        <f:else>
+                            <input type="hidden" name="tx_schulfoto_sfilter[form_type]" value="mail" />
+                        </f:else>
+                     </f:if>
+
+                    <!-- site-form-module -->
+                    <div class="site-form-module">
+
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+
+                            <div class="col-xs-12 my-col">
+                                <div class="form-note">*<f:translate key="required_fields" /></div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-5 my-col"><label><f:translate key="kundennummer" />:</label></div>
+                            <div class="col-xs-7 my-col">
+                                <div class="form-field">
+                                    <input type="text" class="text-input" value=" {findusers.customernumber}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-5 my-col"><label><f:translate key="schulname" />:</label></div>
+                            <div class="col-xs-7 my-col">
+                                <div class="form-field">
+                                    <input type="text" class="text-input" value="{findusers.schulname.name}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-5 my-col"><label><f:translate key="klasse" />:</label></div>
+                            <div class="col-xs-7 my-col">
+                                <div class="form-field">
+                                    <input type="text" class="text-input" value="{findusers.klasse.name}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-5 my-col"><label><f:translate key="vorname" />:</label></div>
+                            <div class="col-xs-7 my-col">
+                                <div class="form-field">
+                                    <input type="text" class="text-input" value="{findusers.firstName}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-5 my-col"><label><f:translate key="surname" />:</label></div>
+                            <div class="col-xs-7 my-col">
+                                <div class="form-field">
+                                    <input type="text" class="text-input" value="{findusers.lastName}" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-5 my-col"><label><f:translate key="date_of_birth" />:</label></div>
+                            <div class="col-xs-7 my-col">
+                                <div class="form-field">
+                                    <input type="text" class="text-input" value='<f:format.date format="d.m.Y">{findusers.dateOfBirth}</f:format.date>' readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <f:if condition="{findusers.importpicture}==0">
+                       
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-5 my-col"><label><f:translate key="email" />*:</label></div>
+                            <f:if condition="{findusers.email} && {findusers.doiconfirmation} && {findusers.emailvalid}">
+                                <f:then>
+                                    <div class="col-xs-7 my-col">
+                                        <div class="form-field">
+                                            <input type="email" class="text-input"  name="tx_schulfoto_sfilter[email]"   value="{findusers.email}" readonly>
+                                        </div>
+                                    </div>
+                                </f:then>
+                                <f:else>
+                                     <div class="col-xs-7 my-col">
+                                        <div class="form-field">
+                                            <input type="email" class="text-input"  name="tx_schulfoto_sfilter[email]" required  oninvalid="this.setCustomValidity('<f:translate key="error_password" />')"  value="{findusers.email}"  oninput="setCustomValidity('')" placeholder="ihre-email@beispiel.de" >
+                                        </div>
+                                    </div>
+                                   
+                                </f:else>
+                            </f:if>
+                            <div class="col-xs-12 my-col">
+                                <div class="form-note"><f:translate key="notes" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row">
+                            <div class="col-xs-5 my-col"><label><f:translate key="korrekturen" />:</label></div>
+                            <div class="col-xs-7 my-col">
+                                <div class="form-field textarea-field">
+                                    <textarea name="tx_schulfoto_sfilter[korren]" placeholder="<f:translate key='correction_text' />"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- field-row -->
+                        </f:if>
+                        <f:if condition="{findusers.dsgvoeinwilligung} && {findusers.agbeinwilligung}">
+                        <!-- field-row -->
+                        <f:then>
+                        </f:then>
+                        <f:else>
+                            <div class="field-row row clearfix element element-gap-large flex-row">
+
+                                <div class="col-xs-12 my-col">
+                                    <div class="custom-check-ield">
+                                        <div class="custom-check-block">
+                                            <input type="checkbox" id="school_confirm" data-error="<f:translate key='school_confirm_error' />">
+                                            <div class="clone-check"></div>
+                                        </div>
+                                        <label class="custom-check-label">
+                                            <f:translate key="accept_term_1" /> <f:link.typolink parameter="13"><f:translate key="accept_term_2" /></f:link.typolink> <f:translate key="accept_term_3" /> <a href="https://app.hubspot.com/documents/6667688/view/241256092?accessId=42f87d"><f:translate key="accept_term_4" /> </a> <f:translate key="accept_term_5" /></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </f:else>
+                        <!-- field-row -->
+                        </f:if>
+                        <!-- field-row -->
+                        <div class="field-row row clearfix element element-gap-large flex-row center-item">
+                            <div class="col-xs-12 my-col pull-text-center"><button type="submit" class="form-btn"><f:translate key="started_further" /></button></div>
+                        </div>
+                        <!-- field-row -->
+                    </div>
+                    <!-- site-form-module -->
+                    </f:form>
+                  </f:for>
+
+                </div>
+            </div>
+            <!-- main-form-module -->
+        </section>
+        <!-- section -->
+   
+    </main>
+    <!-- main -->
+</f:section>
+</html>

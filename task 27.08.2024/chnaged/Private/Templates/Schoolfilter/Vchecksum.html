@@ -1,0 +1,94 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+   <main class="centered-grid clearfix">   
+    
+  <f:if condition="{data}">
+    <f:then>
+
+           <!-- section -->
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- varification module -->
+            <div class="verificatio-module clearfix step-one">
+                <div class="container-fluid">
+
+                    <!-- strip -->
+                    <div class="verification-strip success element element-gap-large">
+                        <p class="pull-text-center"><img src="/fileadmin/Images/schulfoto/valid-text-img.png"></p>
+                    </div>
+                    <!-- strip -->
+                  <f:for each="{data}" key="key" as="datas" iteration="fooIterator">
+                    <!-- info -->
+                    <f:if condition="{fooIterator.index}==0">
+
+                    <div class="verification-info element element-gap-large">
+                        <p><f:translate key="below_sample" /></p>
+                        <p class="pull-text-center">
+                               <f:if condition="{datas.schulname.sampleimage}">
+                                <f:then>
+                                    <f:image   image="{datas.schulname.sampleimage}" alt="" width="640" />
+                                </f:then>
+                                <f:else>
+                                  N/A
+                                </f:else>
+                                </f:if>
+                        </p>
+                        <p><f:translate key="address_of_the" /><br>
+                            <strong>{datas.schulname.description}</strong></p>
+                    </div>
+                    <!-- info -->
+                  </f:if>
+                  </f:for>
+
+                </div>
+            </div>
+            <!-- varification module -->
+        </section>
+        <!-- section -->
+
+     
+
+
+    </f:then>
+    <f:else>
+                  <!-- section -->
+        <section class="clearfix section-row element element-gap-medium">
+            <!-- varification module -->
+            <div class="verificatio-module clearfix step-one">
+                <div class="container-fluid">
+
+                    <!-- strip -->
+                    <div class="verification-strip failed element element-gap-Largest pull-text-center">
+                        <p class="pull-text-center"><img src="/fileadmin/Images/schulfoto/invalid-text-img.png"></p>
+                    </div>
+                    <!-- strip -->
+
+                    <!-- info -->
+                    <div class="verification-info element element-gap-large pull-text-center">
+                        <p><img src="/fileadmin/Images/schulfoto/failed-cross.png" width="220"></p>
+                    </div>
+                    <!-- info -->
+
+                </div>
+            </div>
+            <!-- varification module -->
+        </section>
+        <!-- section -->
+       
+    </f:else>
+  </f:if>
+</main>
+</f:section>
+</html>

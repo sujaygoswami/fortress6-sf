@@ -1,0 +1,150 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+<div class="custom-be-layout"></div>
+	
+  <h1>School List</h1>
+  <f:if condition="{school}">
+
+
+	<f:then>
+		<table cellpadding="0" cellspacing="0" border="0" style="border:0; border-spacing:0; border-bottom:#f2f5f7 solid 1px; padding:0; margin:0; width:100%; font-size:18px; font-weight:300; text-align:left; vertical-align:middle;">
+			 <thead style="color:#f2f5f7;">
+		  <tr>
+			<th style="background:#005192; padding:5px 10px; font-weight:300; border-right:#fff solid 5px;">School Name
+			</th>
+			<th style="background:#005192; padding:5px 10px; font-weight:300; border-right:#fff solid 5px;">Action
+			</th>
+			
+		  </tr>
+		 </thead>
+		<tbody>
+	  	<f:for each="{school}" key="key" as="schools">
+			
+			<tr>
+			<td style="background:#f2f5f7; padding:10px;">{schools.name} </td>
+			<td style="background:#f2f5f7; padding:10px;">
+				<div class="generatepdfpop">
+				<button data-fancybox="dialog" class="btn btn-primary"  data-src="#dialog-content_{schools.uid}">
+				<f:if condition="{schools.apidomain}">
+				    <f:then>Show Code</f:then>
+					<f:else>Add Domain</f:else>
+				</f:if>
+				</button>
+
+
+				  
+			<div id="dialog-content_{schools.uid}" class="dialog-content"style="display:none;max-width:500px;">
+				<div class="table-wrap"><div class="table-cell middle-line">
+				<div class="main_wrap">
+				<h2>{schools.name}</h2>
+				<f:if condition="{schools.apidomain}">
+				    <f:then>
+
+				<p>
+					<strong>Verify-API Domain :</strong> {schools.apidomain}
+				</p>
+				<p>
+					<strong>Verify-API Redirect URL :</strong> {schools.verifyurl}
+				</p>
+				
+				<p>
+					<strong>JavaScript for Header:</strong> <<span></span>script<span></span>>
+      (function (d, t, g) {
+         var url = location.href;
+         var hostname = window.location.hostname;
+         var name = 'checksum';
+          name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+          var regexS = "[\\?&]"+name+"=([^&#]*)";
+          var regex = new RegExp( regexS );
+          var h = regex.exec( url );
+          h = (h == null) ? null : h[1];
+        var checksum = (h==null)?"":"&checksum="+h;
+        var ph    = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        ph.type   = 'text/javascript';
+        ph.async   = true;
+        ph.charset = 'UTF-8';
+        ph.src     = g + '&scid={schools.uid}&callback=checksum{schools.uid}&v=' + (new Date()).getTime()+checksum+'&h='+hostname;
+        s.parentNode.insertBefore(ph, s);
+        window.checksum{schools.uid} = function(d) {
+          document.getElementById("checksum{schools.uid}").innerHTML = d.html;
+        }
+      })(document, 'script', '{base_url}?eID=verifyStudent');
+    <<span></span>/<span></span>script<span></span>>
+				</p>
+				<p>
+					<strong>HTML for Content:</strong> <<span></span>div id="checksum{schools.uid}"<span></span>><<span></span>/<span></span>div<span></span>>
+				</p>
+				</f:then>
+					<f:else>
+						 <f:form action="verifyapi" controller="Backend" enctype="multipart/form-data" >
+  		<input type="hidden" name="tx_schulfoto_web_schulfotobackend[type]" value="save_domain">
+  		<input type="hidden" name="tx_schulfoto_web_schulfotobackend[uid]" value="{schools.uid}">
+  		
+						<p>
+							<div class="form-check">
+					<label class="form-check-label">Verify-API Domain :</label></strong><input type="text" class="form-control" name="tx_schulfoto_web_schulfotobackend[apidomain]" value="">
+				</div>
+						</p>
+						<p>
+							<div class="form-check">
+					<label class="form-check-label">Verify-API Redirect URL :</label></strong><input type="text" class="form-control" name="tx_schulfoto_web_schulfotobackend[verifyurl]" value="">
+				</div>
+						</p>
+						<div class="form-check">
+						<button type="submit" class="btn btn-primary" value="save">Save</button>
+					</div>
+					</f:form>
+					</f:else>
+				</f:if>
+
+
+
+				<i class="close"></i>
+				</div>
+			</div></div>
+				
+			  </div>
+			  </div>
+			</td>			  
+		  </tr>
+		   
+		</f:for>
+		</tbody>
+	 </table>
+	 </f:then>
+	 <f:else>
+		 No Data Found
+	 </f:else>
+   </f:if>
+<script  src="{f:uri.resource(path: 'Js/jquerycdn.js')}"></script>
+<script  src="{f:uri.resource(path: 'Js/modal.js')}"></script>
+<link rel="stylesheet" href="{f:uri.resource(path: 'Css/modal.css')}">
+ <script>
+	jQuery(document).ready(function(){
+		jQuery('.custom-be-layout').parents('.typo3-fullDoc').addClass('custom-be-layout-parent');
+
+		jQuery('.custom-be-layout-parent > div').addClass('clearfix container-fluid');
+
+		jQuery('.custom-be-layout-parent .docheader-funcmenu select').addClass('form-select');
+	});
+</script>
+ 
+</f:section>
+
+
+
+
+</html>

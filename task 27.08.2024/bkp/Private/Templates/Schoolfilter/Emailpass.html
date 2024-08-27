@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schulfoto Pass Download</title>
+  <base href="{base_url}" target="_blank">
+</head>
+
+ <table cellpadding="0" cellspacing="0" style="border: 0px; max-width: 600px; margin: 0 auto; font-family: Arial; padding: 30px;">
+        <tbody>
+            <tr>
+                <td><img src="fileadmin/Images/primary-logo.png" width="200"></td>
+                <td align="right"><img src="fileadmin/Images/secondary-logo.png" width="70"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Speichern Sie den digitalen Schülerausweis jetzt!</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <p>   <f:if condition="{school_image}">
+                                      <f:then>
+                                          <f:image src="{school_image}" alt="" width="150"  />
+                                      </f:then>
+                                      <f:else>
+                                        N/A
+                                      </f:else>
+                                   </f:if></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="margin: 0px; padding: 0px;" colspan="2">
+                    <span style="padding: 20px; background-color: #eee; line-height: 23px; display: block;">
+                        1) Auf “Hinzufügen zu Apple Wallet” klicken<br>
+                        <f:if condition="{apple_path}">
+                        <span style="display: block;"><em>Für Apple:</em><br><a href="{apple_path}" target="_blank"><img src="fileadmin/Images/Add_to_Apple_Wallet_rgb.svg" alt="" height="35" style="width: auto; height: 35px;"></a></span>
+                    </f:if>
+                    <f:if condition="{android_path}">
+                        <span style="display: block;margin-top: 5px;">
+                            <em>Für Android:</em><br>
+                            <a href="{google_wallet}" target="_blank"><img src="fileadmin/Images/google-wallet.svg" alt="" height="35" style="width: auto; height: 35px; margin-right: 10px;"></a> 
+                            <a href="{android_path}" target="_blank"><img src="fileadmin/Images/andr-PassWallet.svg" alt="" height="35" style="width: auto; height: 35px;"></a>
+                            <br>
+                            <p style="margin-top: 10px;">
+                                Die <strong>Google Wallet App</strong> bietet die bestmöglichste Benutzererfahrung. Google Wallet Karten werden auf Servern gespeichert und über das Google-Konto der Nutzer*innen auf allen Geräten synchronisiert, die die Google Wallet App installiert haben.<br>
+                                Alternativ zur Google Wallet App können Sie auch die <strong>PassWallet-App</strong> nutzen (allerdings können wir hier die Schülerausweise nicht automatisch aktualisieren. Sie können eine Aktualisierung jedoch manuell auslösen.)
+                            </p>
+                        </span>
+                    </f:if>    
+                   
+                        <span style="display: block;"><em>Wenn Sie den Pass nicht mit den obenstehenden Tasten herunterladen können oder wenn die Tasten nicht richtig angezeigt werden, können Sie die Datei über diesen Link herunterladen:</em>'
+                            <br><a href="{android_path}" target="_blank"> Download Schülerausweis</a></span>
+                          <br> 2) Die Karte öffnen.<br><br> 3) Nach dem Öffnen der Karte wird eine Vorschau der Karte angezeigt. Erst ein Klick auf “Zu Wallet hinzufügen” speichert die Karte in der Wallet-App.<br><br>                        4) Die Wallet-App am Smartphone prüfen.
+                </span>
+                    <p style="line-height: 23px;">Immer dann, wenn die Wallet-App geöffnet wird, kann der neue digitale Schülerausweis angezeigt werden. Die Rückseite des Schülerausweises kann geöffnet werden, indem auf die drei Punkte geklickt wird.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">
+                        <strong>Manuelle Löschung Ihrer Daten:</strong><br> Alternativ haben Sie die Möglichkeit, jederzeit Ihre Daten für den digitalen Schülerausweis löschen zu lassen. Beachten Sie bitte, dass Sie diesen Service dann zukünftig nicht mehr nutzen können. Schreiben Sie uns bitte mit Ihrer Kundennummer an <a href="mailto:datenschutz@energy-imaging.de">datenschutz@energy-imaging.de</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                       <p style="line-height: 23px; padding: 20px; background-color: #eee; font-size: 14px;">
+                        <strong>Energy-Imaging: Die Experten für Schulmarketing<br> Susanne Henkel Fotografie<br>Schubertstraße 21<br> 40699 Erkrath</strong><br> <a href="mailto:www.schülerausweis.de">www.schülerausweis.de</a><br> <a href="{base_url}/support">Anleitungen / Support</a>
+                    </p>
+                </td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td><img src="fileadmin/Images/primary-logo.png" width="200"></td>
+                <td align="right"><img src="fileadmin/Images/secondary-logo.png" width="70"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h2>Save your digital student ID now!</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <p>   <f:if condition="{school_image}">
+                                      <f:then>
+                                        <f:image src="{school_image}" alt="" width="150"  />
+                                      </f:then>
+                                      <f:else>
+                                        N/A
+                                      </f:else>
+                                   </f:if></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="margin: 0px; padding: 0px;" colspan="2">
+                    <span style="padding: 20px; background-color: #eee; line-height: 23px; display: block;">
+                        1) Click "Add to Apple Wallet."<br>
+                        <f:if condition="{apple_path}">
+                        <span style="display: block;"><em>Add to Apple Wallet:</em><br><a href="{apple_path}" target="_blank"><img src="fileadmin/Images/Add_to_Apple_Wallet_rgb.svg" alt="" height="35" style="width: auto; height: 35px;"></a></span>
+                    </f:if>
+                    <f:if condition="{android_path}">
+                        <span style="display: block;margin-top: 5px;">
+                            <em>For Android:</em><br>
+                            <a href="{google_wallet}" target="_blank"><img src="fileadmin/Images/google-wallet.svg" alt="" height="35" style="width: auto; height: 35px; margin-right: 10px;"></a> 
+                            <a href="{android_path}" target="_blank"><img src="fileadmin/Images/andr-PassWallet.svg" alt="" height="35" style="width: auto; height: 35px;"></a>
+                            <br>
+                            <p style="margin-top: 10px;">
+                                The <strong>Google Wallet app</strong> offers the best user experience. Google Wallet cards are stored on servers and synchronized across users' Google accounts on all devices where the Google Wallet app is installed. Alternatively, you can also use the <strong>PassWallet app</strong>, although we cannot automatically update student IDs here. However, you can trigger an update manually. 
+                            </p>
+                        </span>
+                    </f:if>    
+                   
+                        <span style="display: block;"><em>If you cannot download the pass using the buttons above or if the buttons do not display correctly, you can download the file via this link:</em>'
+                            <br><a href="{android_path}" target="_blank"> Download student ID card</a></span>
+                          <br> 2) Open the map.<br><br> 3) After opening the map, a preview of the map will be displayed. Only by clicking on “Add to Wallet” will the card be saved in the wallet app.<br><br>                      
+                            4) Check the wallet app on your smartphone.
+                </span>
+                    <p style="line-height: 23px;">Whenever the wallet app is opened, the new digital student ID card can be displayed. The back of the student ID card can be opened by clicking on the three dots.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">
+                        <strong>Manual deletion of your data:</strong><br> Alternatively, you have the option of having your data for the digital student ID deleted at any time. Please note that you will no longer be able to use this service in the future. Please write to us with your customer number <a href="mailto:datenschutz@energy-imaging.de">datenschutz@energy-imaging.de</a>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                   <p style="line-height: 23px; padding: 20px; background-color: #eee; font-size: 14px;">
+                        <strong>Energy-Imaging: Die Experten für Schulmarketing<br> Susanne Henkel Fotografie<br>Schubertstraße 21<br> 40699 Erkrath</strong><br> <a href="mailto:www.schülerausweis.de">www.schülerausweis.de</a><br> <a href="{base_url}/en/support">Anleitungen / Support</a>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</html>

@@ -1,0 +1,156 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+This Template is responsible for displaying a single view for a domain object
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:section name="content">
+            <div class="main-holder-default">
+                <f:if condition="{user_deactiveflag}">
+                    <p class="pull-text-center lg"><f:translate key="student_record_changed" /></p>
+               </f:if>
+             
+                <div class="container inset-container-type-two">
+                    <div class="site-form-type-three element element-gap-default">
+                        <f:form action="adminclass" id="class_form" controller="Admin" enctype="multipart/form-data">
+                          <!-- form row -->
+                          <div class="form-row row element element-gap-default">
+                            <!-- col -->
+                            <div class="field-block col my-col">
+                                <div class="main-wrap">
+                                    <div class="main-field-holder">
+                                        <label class="field-label"><f:translate key="class" /></label>
+                                        <div class="the-field select-field">
+                                          <select name="tx_schulfoto_adminclass[class_id]" id="class_value">
+                                            <option value=""><f:translate key="class_option" /></option>
+                                            <f:for each="{classdata}" key="key"   as="classdatas">
+                                              <option value="{classdatas.uid}"     <f:if condition="{classdatas.uid}=={selected_class_id}">selected</f:if>>
+                                                {classdatas.name}
+                                              </option>
+                                            </f:for>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- col -->
+                        </div>
+                        <!-- form row -->
+                        </f:form>
+                    </div>
+                    <!-- search result list -->
+                   <div class="search-result-list table-responsive">
+                       <table cellpadding="0" cellspacing="0">
+                           <tbody>
+                            <f:for each="{searchresult}" key="key" as="results">
+                               <tr>
+                                   <td class="student-dp">
+                                    <f:if condition="{results.images}">
+                                      <f:then>
+                                        <f:image src="{results.images}" class="dp" width="92c"  maxWidth="{img_max_size}"/>
+                                      </f:then>
+                                      <f:else>
+                                        <img src="fileadmin/templates/Images/dp-placeholder.png" class="dp">
+                                      </f:else>
+                                    </f:if>
+                                    </td> 
+                                   <td>{results.klasse}</td>
+                                   <td>{results.firstName} {results.lastName}</td>
+                                   <td><f:format.date format="d.m.Y">{results.dateOfBirth}</f:format.date></td>
+                                   <td><f:if condition="{results.validdate}">
+                                    <f:then>
+                                  <f:format.date format="d.m.Y">{results.validdate}</f:format.date>
+                                  </f:then>
+                                  <f:else>
+                                    N/A
+                                    </f:else>
+                                    </f:if></td>
+                                   <td class="pull-text-right action">
+                                    <button type="button" class="site-btn default-btn mini" href="#" data-bs-toggle="modal" data-bs-target="#student-{results.uid}-removepic-modal" <f:if condition="!{results.images}">disabled</f:if>><f:translate key="remove_image" /></button>
+                                    <!-- Remove Picture Modal Strat -->
+                                     <div class="modal fade" id="student-{results.uid}-removepic-modal" tabindex="-1" aria-labelledby="student-1-removepic-modalLabel" aria-hidden="true">
+                                         <div class="modal-dialog">
+                                         <div class="modal-content">
+                                             
+                                             <div class="modal-body pull-text-center">
+                                                <p class="sm"><f:translate key="remove_image_heading" /></p>                                             
+                                            </div>
+                                             <div class="modal-footer">
+                                               <f:form action="adminclass" controller="Admin" enctype="multipart/form-data">
+                                                 <input type="hidden" name="tx_schulfoto_adminclass[type]" value="remove_pic">
+                                                 <input type="hidden" name="tx_schulfoto_adminclass[image_uid]" value="{results.image_uid}">
+                                                 <input type="hidden" name="tx_schulfoto_adminclass[uid]" value="{results.uid}">
+                                                 <input type="hidden" name="tx_schulfoto_adminclass[class_id]" value="{selected_class_id}">
+                                                   <button type="submit" class="btn btn-danger" id=""><f:translate key="yes" /></button>
+                                               </f:form>
+                                             <button type="button" class="btn btn-success" data-bs-dismiss="modal"><f:translate key="no" /></button>
+                                             </div>
+                                         </div>
+                                         </div>
+                                     </div>
+                                     <!--Remove Picture Modal End -->                                       
+                                     <div class="clearfix"></div>
+                                       <button type="button" class="site-btn default-btn mini" href="#" data-bs-toggle="modal" data-bs-target="#student-{results.uid}-delete-modal"><f:translate key="delete" /></button>
+                                       <!-- Delete Modal Strat -->
+                                        <div class="modal fade" id="student-{results.uid}-delete-modal" tabindex="-1" aria-labelledby="student-1-delete-modalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                
+                                                <div class="modal-body pull-text-center">
+                                                <p class="sm"><f:translate key="delete_student" /></p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <f:form action="adminclass" controller="Admin" enctype="multipart/form-data">
+                                                    <input type="hidden" name="tx_schulfoto_adminclass[type]" value="user_deactive">
+                                                    <input type="hidden" name="tx_schulfoto_adminclass[uid]" value="{results.uid}">
+                                                      <button type="submit" class="btn btn-danger" id=""><f:translate key="yes" /></button>
+                                                  </f:form>
+                                                <button type="button" class="btn btn-success" data-bs-dismiss="modal"><f:translate key="no" /></button>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <!--Delete Modal End -->
+                                   </td>
+                               </tr>
+                               <tr><td colspan="6" class="gap-td">&nbsp;</td></tr>
+                               </f:for>
+                           </tbody>
+                       </table>
+                       
+                   </div>
+                    <!-- search result list -->
+                </div>
+            </div>
+
+            <div class="modal fade" id="image_remove_messagemodal" tabindex="-1" aria-labelledby="student-1-delete-modalLabel" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <div class="modal-body pull-text-center">
+                    <p class="sm"><f:translate key="image_removed" /></p>
+                    </div>
+                    <div class="modal-footer">
+            
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal"><f:translate key="ok" /></button>
+                </div>
+                    
+                </div>
+                </div>
+            </div>
+            <f:if condition="{image_removeflag}==1">
+                <script>
+                    $(window).load(function(){
+    
+                    $('#image_remove_messagemodal').modal('show');
+                    
+    
+                    });
+                </script>
+            </f:if>
+</f:section>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schulfoto</title>
+  <base href="{base_url}" target="_blank">
+
+</head>
+<body style="margin: 0px; padding: 0px;">
+
+    <!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <table cellpadding="0" cellspacing="0" style="border: 0px; max-width: 600px; margin: 0 auto; font-family: Arial; padding: 30px;">
+        <tbody>
+            <tr>
+                <td><img src="fileadmin/Images/primary-logo.png" width="200"></td>
+                <td align="right"><img src="fileadmin/Images/secondary-logo.png" width="70"></td>
+            </tr>
+            <tr>
+                 <td colspan="2" align="center">
+                    <p>   <f:if condition="{school_image}">
+                                      <f:then>
+                                          <f:image src="{school_image}" alt="" width="150"  />
+                                      </f:then>
+                                      <f:else>
+                                        N/A
+                                      </f:else>
+                                   </f:if></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">Hallo,</p>
+                    <p style="line-height: 23px;">Wir danken Ihnen herzlich, dass Sie unseren Service verwenden, um Ihren neuen Schülerausweis schnell und einfach zu erhalten.</p>
+                    <p style="line-height: 23px;">Bitte bestätigen Sie jetzt Ihre E-Mail-Adresse.</p>
+                    <p style="line-height: 23px;"><a href="{base_url}/email-activation?user={user_uid}&customernumber={customernumber}" target="_blank"><b>E-Mail bestätigen</b></a></p>
+                    <p style="line-height: 23px;">Energy-Imaging verwendet Ihre hier angegebene E-Mail-Adresse ausschließlich, um Ihren Schülerausweis zu erstellen. Weder wir noch andere Unternehmen werden Ihnen Werbung senden. Sie können dieser Verwendung natürlich jederzeit widersprechen.</p>
+                </td>
+            </tr>
+              <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">
+                        Nachdem Sie auf die Bestätigung geklickt haben, gelangen Sie direkt zurück in unser System, um Ihr Porträtfoto hochzuladen und den Bestellvorgang abzuschließen. Wenn Sie den Bestätigungslink nicht anklicken können, kopieren Sie bitte den folgenden Link in Ihr Browserfenster: <a href="{base_url}/email-activation?user={user_uid}&customernumber={customernumber}" target="_blank">{base_url}/email-activation?user={user_uid}&customernumber={customernumber}</a></p>
+                      <p style="line-height: 23px;">Mit freundlichen Grüßen,<br>
+                        Ihr Energy-Imaging-Team</p>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                   <p style="line-height: 23px; padding: 20px; background-color: #eee; font-size: 14px;">
+                        <strong>Energy-Imaging: Die Experten für Schulmarketing<br> Susanne Henkel Fotografie<br>Schubertstraße 21<br> 40699 Erkrath</strong><br> <a href="mailto:www.schülerausweis.de">www.schülerausweis.de</a><br> <a href="{base_url}/support">Anleitungen / Support</a>
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">Hello,</p>
+                    <p style="line-height: 23px;">Thank you for using our service to quickly and easily obtain your new student ID.</p>
+                    <p style="line-height: 23px;">Please confirm your email now.</p>
+                    <p style="line-height: 23px;"><a href="{base_url}/en/email-activation?user={user_uid}&customernumber={customernumber}" target="_blank"><b>Confirm email address</b></a></p>
+                    <p style="line-height: 23px;">Energy-Imaging uses your provided email address solely for the purpose of creating your student ID. Of course, you can object to this use at any time.</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 0 0 20px; margin: 0px;" colspan="2">
+                    <p style="line-height: 23px;">
+                        After clicking on the confirmation, you will be taken directly back to our system to upload your portrait photo and complete the order process. If you cannot click the confirmation link, please copy the following link into your browser window: <a href="{base_url}/en/email-activation?user={user_uid}&customernumber={customernumber}" target="_blank">{base_url}/en/email-activation?user={user_uid}&customernumber={customernumber}</a></p>
+                      <p style="line-height: 23px;">With kind regards,<br>
+                        Your Energy-Imaging Team</p>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="2">
+                   <p style="line-height: 23px; padding: 20px; background-color: #eee; font-size: 14px;">
+                        <strong>Energy-Imaging: Die Experten für Schulmarketing<br> Susanne Henkel Fotografie<br>Schubertstraße 21<br> 40699 Erkrath</strong><br> <a href="mailto:www.schülerausweis.de">www.schülerausweis.de</a><br> <a href="{base_url}/en/support">Anleitungen / Support</a>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

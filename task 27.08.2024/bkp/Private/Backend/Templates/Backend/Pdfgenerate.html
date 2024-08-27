@@ -1,0 +1,124 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+	<div class="custom-be-layout"></div>
+  <h1>School List</h1>
+  <f:if condition="{message}">
+	  {message}
+ </f:if>
+  <f:if condition="{school}">
+
+	<f:then>
+		<table cellpadding="0" cellspacing="0" border="0" style="border:0; border-spacing:0; border-bottom:#f2f5f7 solid 1px; padding:0; margin:0; width:100%; font-size:18px; font-weight:300; text-align:left; vertical-align:middle;">
+			 <thead style="color:#f2f5f7;">
+		  <tr>
+			<th style="background:#005192; padding:5px 10px; font-weight:300; border-right:#fff solid 5px;">School Name
+			</th>
+			<th style="background:#005192; padding:5px 10px; font-weight:300; border-right:#fff solid 5px;">Action</th>                      
+		  </tr>
+		 </thead>
+		<tbody>
+	  	<f:for each="{school}" key="key" as="school">
+			
+			<tr>
+			<td style="background:#f2f5f7; padding:10px;">{school.name} </td>
+			<td style="background:#f2f5f7; padding:10px;">
+			<div class="generatepdfpop">
+				<button data-fancybox="dialog" class="btn btn-primary"  data-src="#dialog-content_{school.uid}">Generate PDF</button>
+
+
+				  
+			<div id="dialog-content_{school.uid}" class="dialog-content"style="display:none;max-width:500px;">
+				<div class="table-wrap"><div class="table-cell middle-line">
+				<div class="main_wrap">
+				<h2>{school.name}</h2>
+				<f:form action="pdfgenerate" id="imageform"  controller="Backend" enctype="multipart/form-data">
+				<p>
+				 <input type="file" class="form-control" name="tx_schulfoto_web_schulfotobackend[bgimage]" value="" accept="image/*" id="imageupload_{school.uid}" />
+				 <input type="hidden" name="tx_schulfoto_web_schulfotobackend[uid]" value="{school.uid}" />
+				 <input type="hidden" name="tx_schulfoto_web_schulfotobackend[type]" value="pdfgenerate" />
+
+				</p>
+				<p>
+					Filter by Date:<br>
+					From:<input type="datetime-local" name="tx_schulfoto_web_schulfotobackend[from_date]" value="" placeholder="YYYY-mm-dd h:m" />
+					To:<input type="datetime-local" name="tx_schulfoto_web_schulfotobackend[to_date]" value="" placeholder="YYYY-mm-dd h:m"/>
+				</p>
+				<p>
+					Filter by Klasse:<br>
+					<select name="tx_schulfoto_web_schulfotobackend[klasse]">
+						<option value="0"></option>
+						<f:for each="{class_array.{school.uid}}" as="sclass">
+							<option value="{sclass.uid}">{sclass.name}</option>
+						</f:for>
+					</select>
+				</p>
+				<p>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox"  name="tx_schulfoto_web_schulfotobackend[studentimagechecktype]" value="1"  id="flexCheckDefault">
+						<label class="form-check-label" for="flexCheckDefault">
+							Include Students with Pics
+						</label>
+					  </div>
+
+				</p>
+				<p>
+					<button type="submit"class="btn btn-primary"  value="withoutimage" name="tx_schulfoto_web_schulfotobackend[bgimagetype]">Without BB-Img</button>
+					<button type="submit"class="btn btn-primary" id="withimage_{school.uid}"  value="withimage" name="tx_schulfoto_web_schulfotobackend[bgimagetype]">With BG-Img</button>
+				</p>
+				</f:form>
+				<i class="close"></i>
+				</div>
+			</div></div>
+				
+			  </div>
+			  </div>
+			</td>
+
+			 
+
+			
+			  
+		  </tr>
+		   
+		</f:for>
+		</tbody>
+	 </table>
+	 </f:then>
+	 <f:else>
+		 No Data Found
+	 </f:else>
+   </f:if>
+
+  
+
+<script  src="{f:uri.resource(path: 'Js/jquerycdn.js')}"></script>
+<script  src="{f:uri.resource(path: 'Js/modal.js')}"></script>
+<link rel="stylesheet" href="{f:uri.resource(path: 'Css/modal.css')}">
+ <script>
+	jQuery(document).ready(function(){
+		jQuery('.custom-be-layout').parents('.typo3-fullDoc').addClass('custom-be-layout-parent');
+
+		jQuery('.custom-be-layout-parent > div').addClass('clearfix container-fluid');
+
+		jQuery('.custom-be-layout-parent .docheader-funcmenu select').addClass('form-select');
+	});
+</script>
+</f:section>
+
+
+
+
+</html>

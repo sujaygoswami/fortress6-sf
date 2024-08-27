@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:schulfoto/Resources/Private/Language/locallang_db" date="2020-11-24T06:15:36Z" product-name="schulfoto">
+		<header/>
+		<body>
+			<trans-unit id="tx_schulfoto_domain_model_school" resname="tx_schulfoto_domain_model_school">
+				<source>Schul</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.name" resname="tx_schulfoto_domain_model_school.name">
+				<source>Schulname</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.logo" resname="tx_schulfoto_domain_model_school.logo">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.glogo" resname="tx_schulfoto_domain_model_school.glogo">
+				<source>Google Wallet Logo</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.description" resname="tx_schulfoto_domain_model_school.description">
+				<source>Full Address</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.name" resname="tx_schulfoto_domain_model_school.name">
+				<source>Schulname</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.abbreviation" resname="tx_schulfoto_domain_model_school.abbreviation">
+				<source>Kürzel</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.slug" resname="tx_schulfoto_domain_model_school.slug">
+				<source>Slug</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_sclass" resname="tx_schulfoto_domain_model_sclass">
+				<source>Sclass</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_sclass.name" resname="tx_schulfoto_domain_model_sclass.name">
+				<source>Name</source>
+			</trans-unit>
+
+	     	<trans-unit id="tx_schulfoto_domain_model_school.sclass" resname="tx_schulfoto_domain_model_school.sclass">
+				<source>Klasse</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.notes" resname="tx_schulfoto_domain_model_school.notes">
+				<source>Notes</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_schulfoto_list.name" resname="tx_schulfoto_list.name">
+				<source>list</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_list.description" resname="tx_schulfoto_list.description">
+				<source></source>
+			</trans-unit>
+
+			<trans-unit id="feuser.cpassword">
+				<source>Access Code</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.cpassword" resname="feuser.cpassword">
+				<source>Access Code</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.customernumber">
+				<source>Customer Number</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.klasse">
+				<source>Klasse</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.schulname">
+				<source>Default Schul Name</source>
+			</trans-unit>
+			<trans-unit id="feuser.mschulname">
+				<source>Assign School</source>
+			</trans-unit>
+			<trans-unit id="feuser.images">
+				<source>ID Picture</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.korrekturen">
+				<source>Korrekturen</source>
+			</trans-unit>
+			<trans-unit id="feuser.barcode">
+				<source>Barcode</source>
+			</trans-unit>
+			<trans-unit id="feuser.studentid">
+				<source>StudentID (from School)</source>
+			</trans-unit>
+			<trans-unit id="feuser.extra1">
+				<source>Extra 1</source>
+			</trans-unit>
+			<trans-unit id="feuser.extra2">
+				<source>Extra 2</source>
+			</trans-unit>
+			<trans-unit id="feuser.ipnumber">
+				<source>Ip Number</source>
+			</trans-unit>
+			<trans-unit id="feuser.checksum">
+				<source>Verify URL Code</source>
+			</trans-unit>
+			<trans-unit id="feuser.validdate">
+				<source>Valid Date</source>
+			</trans-unit>
+			<trans-unit id="feuser.dsgvoeinwilligung">
+				<source>DSGVO-Einwilligung</source>
+			</trans-unit>
+			<trans-unit id="feuser.agbeinwilligung">
+				<source>SA-Wallet Einwilligung</source>
+			</trans-unit>
+			<trans-unit id="feuser.datenaustauscheinwilligung">
+				<source>Datenaustausch-Einwilligung</source>
+			</trans-unit>
+			<trans-unit id="feuser.doiconfirmation">
+				<source>DOI-Confirmation</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.emailvalidationdate">
+				<source>Email Valid Check Date</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.emailvalid">
+				<source>Email Valid </source>
+			</trans-unit>
+			<trans-unit id="feuser.pwdemail">
+				<source>E-Mail Invitation successful</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.demail">
+				<source>E-Mail Invitation</source>
+			</trans-unit>
+			<trans-unit id="task.email.title">
+				<source>Schulfoto Email</source>
+			</trans-unit>
+
+			<trans-unit id="task.email.description">
+				<source>Schulfoto Email</source>
+			</trans-unit>
+
+			<trans-unit id="task.email.formemail">
+				<source>Sender Email</source>
+			</trans-unit>
+
+			<trans-unit id="task.email.emailsubject">
+				<source>Email Subject</source>
+			</trans-unit>
+
+
+			<trans-unit id="task.email.loginurl">
+				<source>Login Url</source>
+			</trans-unit>
+			<trans-unit id="task.email.no_of_email">
+				<source>Number Of Email </source>
+			</trans-unit>
+			<trans-unit id="task.email.baseurl">
+				<source>Base Url </source>
+			</trans-unit>
+			<trans-unit id="task.email.sendername">
+				<source>Sender Name </source>
+			</trans-unit>
+			<trans-unit id="task.email.maximummailbounce">
+				<source>Maximum Mailbounce Time</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.city" resname="tx_schulfoto_domain_model_school.city">
+				<source>City of School for Pass</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.labelcolor" resname="tx_schulfoto_domain_model_school.labelcolor">
+				<source>Labelcolor</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.backgroundcolor" resname="tx_schulfoto_domain_model_school.backgroundcolor">
+				<source>Backgroundcolor</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.checkpass" resname="tx_schulfoto_domain_model_school.checkpass">
+				<source>Checkpass</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.foregroundcolor" resname="tx_schulfoto_domain_model_school.foregroundcolor">
+				<source>Foregroundcolor</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.pschoolname" resname="tx_schulfoto_domain_model_school.pschoolname">
+				<source>Schoolname for Pass</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.sampleimage" resname="tx_schulfoto_domain_model_school.sampleimage">
+				<source>Sample Card Image</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.passauthenticationtoken" resname="feuser.passauthenticationtoken">
+				<source>Pass Authenticationtoken</source>
+			</trans-unit>
+			<trans-unit id="feuser.passcounter" resname="feuser.passcounter">
+				<source>No Of Download Pass</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.text1" resname="tx_schulfoto_domain_model_school.text1">
+				<source>Text1</source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_school.text2" resname="tx_schulfoto_domain_model_school.text2">
+				<source>Text2</source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_school.pheaderfield" resname="tx_schulfoto_domain_model_school.pheaderfield">
+				<source>Header Field Value</source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_school.pprimaryfield" resname="tx_schulfoto_domain_model_school.pprimaryfield">
+				<source>Primary Field Label</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.originalimage" resname="feuser.originalimage">
+				<source>Original Image</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.passdeviceid" resname="feuser.passdeviceid">
+				<source>Pass Device Id</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_schulfoto_domain_model_passdeviceid" resname="tx_schulfoto_domain_model_passdeviceid">
+				<source>Pass Device </source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_passdeviceid.pushtoken" resname="tx_schulfoto_domain_model_passdeviceid.pushtoken">
+				<source>Push Token</source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_schulfoto_domain_model_passdeviceid.deviceid" resname="tx_schulfoto_domain_model_passdeviceid.deviceid">
+				<source>Device Id </source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_passdeviceid.devicetype" resname="tx_schulfoto_domain_model_passdeviceid.devicetype">
+				<source>Device Type </source>
+			</trans-unit>
+
+
+			<trans-unit id="tx_schulfoto_domain_model_passdeviceid.devicetext" resname="tx_schulfoto_domain_model_passdeviceid.devicetext">
+				<source>Device Text </source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_school.basicdescription" resname="tx_schulfoto_domain_model_school.basicdescription">
+				<source>Basic Description</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.schulverwaltungsidcheck" resname="tx_schulfoto_domain_model_school.schulverwaltungsidcheck">
+				<source>StudentID editierbar in Schuladmin</source>
+			</trans-unit>	
+			<trans-unit id="tx_schulfoto_domain_model_school.barcodecheck" resname="tx_schulfoto_domain_model_school.barcodecheck">
+				<source>Barcode editierbar in Schuladmin</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.addresscheck" resname="tx_schulfoto_domain_model_school.addresscheck">
+				<source>Adresse editierbar in Schuladmin</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.mailbounce" resname="feuser.mailbounce">
+				<source>No Of  Scheduler Mail Bounce</source>
+			</trans-unit>
+			<trans-unit id="feuser.otpexpire" resname="feuser.otpexpire">
+				<source>Otp Expiry Time</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.otp" resname="feuser.otp">
+				<source>Otp</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.importpicture" resname="feuser.importpicture">
+				<source>ID pic from picture day</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.iosdownloadlink" resname="feuser.iosdownloadlink">
+				<source>pkPass Download Link</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.sendnotification" resname="feuser.sendnotification">
+				<source>Send Notifications</source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_school.sendnotification" resname="tx_schulfoto_domain_model_school.sendnotification">
+				<source>Send Notifications</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.walletdownloadlink" resname="tx_schulfoto_domain_model_school.walletdownloadlink">
+				<source>Wallet Download Link</source>
+			</trans-unit>	
+			<trans-unit id="tx_schulfoto_domain_model_school.apidomain" resname="tx_schulfoto_domain_model_school.apidomain">
+				<source>Api Domain</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.verifyurl" resname="tx_schulfoto_domain_model_school.verifyurl">
+				<source>Api verify url</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.walletdownloadlink" resname="feuser.walletdownloadlink">
+				<source>googleWallet Link</source>
+			</trans-unit>
+
+			<trans-unit id="feuser.protopexp" resname="feuser.protopexp">
+				<source>Profile Otp Expire</source>
+			</trans-unit>
+			<trans-unit id="feuser.protop" resname="feuser.protop">
+				<source>Profile Otp</source>
+			</trans-unit>
+			<trans-unit id="feuser.plang" resname="feuser.plang">
+				<source>Profile Language</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.lanfield" resname="tx_schulfoto_domain_model_school.lanfield">
+				<source>Language Field</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_school.demoschool" resname="tx_schulfoto_domain_model_school.demoschool">
+				<source>Demo Version</source>
+			</trans-unit>
+			<trans-unit id="feuser.pwdexpire" resname="feuser.pwdexpire">
+				<source>Password Expire Date</source>
+			</trans-unit>
+			<trans-unit id="feuser.pwdexpireset" resname="feuser.pwdexpireset">
+				<source>Password Reset Date</source>
+			</trans-unit>
+			<trans-unit id="feuser.forcepwd" resname="feuser.forcepwd">
+				<source>Forced Password Change</source>
+			</trans-unit>
+			<trans-unit id="task.noofpush" resname="task.noofpush">
+				<source>Number of Push</source>
+			</trans-unit>
+			<trans-unit id="task.adminemail" resname="task.adminemail">
+				<source>Admin emails</source>
+			</trans-unit>
+			<trans-unit id="task.push.notification">
+				<source>Push Notification</source>
+			</trans-unit>
+			<trans-unit id="task.push.description">
+				<source>Push Notification Description</source>
+			</trans-unit>
+
+			<trans-unit id="task.push.tx_schulfoto_domain_model_pushlist">
+				<source>Push List</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_schulfoto_domain_model_pushlist">
+				<source>Push List</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushlist.user">
+				<source>Push List User</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushlist.gwallet">
+				<source>Google Wallet</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushlist.gwalletresult">
+				<source>Google Wallet Result</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushlist.pkpass">
+				<source>PK Pass</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushlist.pkpassresult">
+				<source>PK Pass Result</source>
+			</trans-unit>
+
+			<trans-unit id="tx_schulfoto_domain_model_school.addpush">
+				<source>Add to pass push queue</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="tx_schulfoto_domain_model_pushtask">
+				<source>Push Task</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushtask.pushruncode">
+				<source>Run ID</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushtask.pushinfo">
+				<source>Push Info</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushtask.emailsent">
+				<source>Email Sent</source>
+			</trans-unit>
+			<trans-unit id="tx_schulfoto_domain_model_pushtask.pushlist">
+				<source>Push List</source>
+			</trans-unit>
+
+			
+			
+			
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,265 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+	<f:section name="content">
+		<div class="custom-be-layout"></div>
+
+
+		 
+				<f:if condition="{show_page}=='table'">
+
+    <f:then>
+    	<div class="card">
+			
+			<h5 class="card-header">Import File</h5>
+			
+			<div class="card-body">
+   <f:form action="importprocess" controller="Backend" enctype="multipart/form-data"  id="import_preview">
+  		<input type="hidden" name="tx_schulfoto_web_schulfotobackend[type]" value="processdata">
+  		<input type="hidden" name="tx_schulfoto_web_schulfotobackend[file_name]" value="{file_name}">
+
+		 
+		<div class="import-table-school-name mb-3">		
+		  <h5 class="card-title">Schulname:{school_data.name}</h5>
+		  <input type="hidden" name="tx_schulfoto_web_schulfotobackend[schoolid]" value="{schoolid}">
+		</div>
+		<div class="mb-3">
+			<div class="form-check">
+				<input type="checkbox" name="tx_schulfoto_web_schulfotobackend[google_image]" id="google_image" value="1" class="form-check-input">
+				<label class="form-check-label" for="google_image">
+					Google Image
+				</label>
+			  </div>
+		</div>
+		<div class="row mb-3 small-width-aside-form-element" id="google_folder_box" style="display:none">
+			<label class="col-auto col-form-label">Google Folder:</label>
+			<div class="col-auto">
+				<input type="text" name="tx_schulfoto_web_schulfotobackend[google_folder]" id="google_folder" class="form-input">
+			</div>
+		  </div>
+
+		<div class="mb-3" >
+			<div class="form-check">
+				<input type="checkbox" name="tx_schulfoto_web_schulfotobackend[invitation]" id="tx_schulfoto_web_schulfotobackend[invitation]" value="1" class="form-check-input">
+				<label class="form-check-label" for="tx_schulfoto_web_schulfotobackend[invitation]">
+					Invitation emails need to be sent
+				</label>
+			  </div>
+		</div>
+
+		<div class="row mb-3 small-width-aside-form-element">
+			<label class="col-auto col-form-label">Option:</label>
+			<div class="col-auto">
+				<select name="tx_schulfoto_web_schulfotobackend[import_option]" id="import_option" class="form-select">
+					<option value="">select</option>
+					<f:for each="{import_options}" key="import_key" as="import_field">
+							 <option value="{import_key}" >{import_field}</option>
+						</f:for>
+		
+				</select>
+			</div>
+		  </div>
+
+		  <div class="row mb-3 small-width-aside-form-element" id="match_by_row" style="display:none">
+			<label class="col-auto col-form-label">Match By:</label>
+			<div class="col-auto">
+				<select name="tx_schulfoto_web_schulfotobackend[match_by]" id="match_by" class="form-select">
+					<option value="">select</option>
+				<f:for each="{match_by}" key="match_by_key" as="match_by_field">
+						 <option value="{match_by_key}" >{match_by_field}</option>
+					</f:for>
+	
+			</select>
+			</div>
+		  </div>
+
+		  <div class="mb-3">
+			<button type="submit" class="btn btn-primary">Import</button>
+		  </div>
+  		
+  		
+		  <div class="table-responsive mb-3">
+	    	<table class="excel_table_list table table-striped">
+	    		<tr>
+		    			<f:for each="{count_column}" key="ko" as="column">
+		    				<td>
+		    						
+		   <select name="tx_schulfoto_web_schulfotobackend[column][{ko}]" class="column_options form-select">
+	    		<option value="">select</option>
+	    		<f:for each="{school_fields}" key="school_key" as="school_field">
+					 <option value="{school_key}" >{school_field}</option>
+	    		</f:for>
+	    	</select>
+
+		    				</td>
+		    			</f:for>
+		    		</tr>
+
+		    	<f:for each="{raw_data}" key="key_raw" as="raw">
+		    		<tr>
+		    			<f:for each="{raw}" key="key_data" as="data">
+		    				<td>{data}</td>
+		    			</f:for>
+		    		</tr>
+		    	</f:for>
+			</table>
+		</div>
+	   
+<p><strong>Total {number_of_rows} Number of rows.</strong></p>
+</f:form>
+<script type="text/javascript">
+	var mandatoryFields = '<f:format.htmlentitiesDecode>{mandatory_fields->f:format.json()}</f:format.htmlentitiesDecode>';
+	var checkFields = '<f:format.htmlentitiesDecode>{check_fields->f:format.json()}</f:format.htmlentitiesDecode>';
+</script>
+</div>
+		  </div>
+
+    </f:then>
+    <f:else if="{show_page}=='success'">
+    	<div class="card">
+			
+			<h5 class="card-header">Import File</h5>
+			
+			<div class="card-body">
+        <p>Import Successfully</p>
+        <f:if condition="{not_fount_user}">
+        	 <f:form action="importprocess" controller="Backend" enctype="multipart/form-data" id="delete_all_user">
+  				<input type="hidden" name="tx_schulfoto_web_schulfotobackend[type]" value="delete_user">
+		        <div class="table-responsive mb-3">
+			    	<table class="excel_table_list table table-striped">
+			    		<tr>
+			    			<td ><input type="checkbox" class="select_all" data-action="sel_uid" > </td>
+			    			<td >Uid </td>
+			    			<td >Username/Co. No. </td>
+							<td >Class</td>
+			    			<td >First name </td>
+			    			<td >Last name </td>
+			    			<td >Email </td>
+			    			
+			    		</tr>
+
+			    		<f:for each="{not_fount_user}" as="raw">
+			    			<tr>
+			    			<td ><input type="checkbox" class="sel_uid" name="tx_schulfoto_web_schulfotobackend[duid][]" value="{raw.uid}"> </td>
+			    			<td >{raw.uid} </td>
+			    			<td >{raw.username} </td>
+							<td >{raw.klasse.name}</td>
+			    			<td >{raw.firstName} </td>
+			    			<td >{raw.lastName}</td>
+			    			<td >{raw.email} </td>
+			    			
+			    		</tr>
+			    		</f:for>
+			    	</table>
+			    </div>
+			    <div class="mb-3">
+					<button type="submit" class="btn btn-primary">Delete</button>
+				</div>
+			</f:form>
+		</f:if>
+</div>
+		  </div>
+    </f:else>
+    <f:else>
+       
+<div class="card">
+			
+			<h5 class="card-header">Import File</h5>
+			
+			<div class="card-body">
+ <f:form action="importprocess" controller="Backend" enctype="multipart/form-data">
+  		<input type="hidden" name="tx_schulfoto_web_schulfotobackend[type]" value="importfile">
+
+		<div class="row">
+			<div class="mb-3 col-6">
+				<label for="exampleInputEmail1" class="form-label">Schulname</label>
+				<select class="form-select" name="tx_schulfoto_web_schulfotobackend[schoolid]">
+					<option value="">select</option>
+					<f:for each="{schoollist}" key="key" as="schoollists">
+
+					<option value="{schoollists.uid}" <f:if condition="{schoolid}=={schoollists.uid}">selected</f:if>>{schoollists.name}</option>
+					</f:for>
+				</select>
+			</div>
+
+			<div class="mb-3 col-6">
+				<label for="exampleInputEmail1" class="form-label">File</label>
+				<input type="file" name="tx_schulfoto_web_schulfotobackend[file]" class="form-control">
+			</div>
+
+			<div class="mb-3">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+
+		
+		</div>
+</f:form>
+
+</div>
+		  </div>
+
+
+<div class="card">
+			<h5 class="card-header">Import-History</h5>
+			
+			<div class="card-body">
+
+					<div class="table-responsive mb-3">
+			    	<table class="excel_table_list table table-striped">
+			    		<tr>
+			    			<td >Date Time </td>
+			    			<td >Username </td>
+			    			<td >School </td>
+			    			<td >FileName</td>
+			    			<td >Action </td>
+			    			<td >Invitation</td>
+			    		</tr>
+			    		<f:for each="{history_log}" as="raw">
+			    			<tr>
+			    			<td >{raw.crdate} </td>
+			    			<td >{raw.beusername} </td>
+			    			<td >{raw.name} </td>
+			    			<td >{raw.filename} </td>
+			    			<td >{raw.action} </td>
+			    			<td >{raw.email}</td>
+			    		</tr>
+			    		</f:for>
+			    		
+			    	</table>
+			    </div>
+
+</div>
+		  </div>
+    </f:else>
+</f:if>
+			
+
+
+
+
+<script  src="{f:uri.resource(path: 'Js/jquery.js')}"></script>
+<script  src="{f:uri.resource(path: 'Js/form_import.js')}"></script>
+<link rel="stylesheet" href="{f:uri.resource(path: 'Css/form_import.css')}">
+
+<script>
+	jQuery(document).ready(function(){
+		jQuery('.custom-be-layout').parents('.typo3-fullDoc').addClass('custom-be-layout-parent');
+
+		jQuery('.custom-be-layout-parent > div').addClass('clearfix container-fluid');
+
+		jQuery('.custom-be-layout-parent .docheader-funcmenu select').addClass('form-select');
+	});
+</script>
+
+	</f:section>
+    </html>
+    

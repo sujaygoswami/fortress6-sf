@@ -1,0 +1,135 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<div class="custom-be-layout"></div>
+
+		<f:if condition="{flag_sms}">
+					
+					<div class="alert alert-danger" role="alert">
+						No Data Found
+					  </div>
+		</f:if>
+
+		<div class="card mb-3">
+
+			<h5 class="card-header">Export File</h5>
+		
+
+			<div class="card-body">
+				
+				<f:form action="list" id=""  controller="Backend" enctype="multipart/form-data">
+					<input type="hidden" name="tx_schulfoto_web_schulfotobackend[type]" value="exportfile">
+
+					<div class="row">
+						<div class="mb-3 col-6">
+							<label for="exampleInputEmail1" class="form-label">Schulname</label>
+							<select name="tx_schulfoto_web_schulfotobackend[schoolid]" required="" class="form-select">
+								<option value="">select</option>
+								<f:for each="{schoollist}" key="key" as="schoollists">
+								<option value="{schoollists.uid}">{schoollists.name}</option>
+								</f:for>
+							</select>
+						</div>
+
+
+						<div class="mb-3 col-6">
+							<label for="exampleInputEmail1" class="form-label">Date</label>
+							<div class="input-group mb-3">
+								<span class="input-group-text">From</span>
+								<input type="datetime-local"  name="tx_schulfoto_web_schulfotobackend[datefrom]" required="" class="form-control">
+								<span class="input-group-text">To</span>
+								<input type="datetime-local" name="tx_schulfoto_web_schulfotobackend[dateto]" required="" class="form-control">
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<button type="submit" class="btn btn-primary">Export File</button>
+						</div>
+
+					</div>
+
+				</f:form>
+			</div>
+		</div>
+
+
+		<div class="card">
+
+			<h5 class="card-header">Export Images</h5>
+		
+
+			<div class="card-body">
+				
+				<f:form action="list" id=""  controller="Backend" enctype="multipart/form-data">
+					<input type="hidden" name="tx_schulfoto_web_schulfotobackend[type]" value="exportimage">
+
+					<div class="row">
+						<div class="mb-3 col-6">
+							<label for="exampleInputEmail1" class="form-label">Schulname</label>
+							<select name="tx_schulfoto_web_schulfotobackend[schoolid]" required class="form-select">
+								<option value="">select</option>
+								<f:for each="{schoollist}" key="key" as="schoollists">
+								  <option value="{schoollists.uid}">{schoollists.name}</option>
+								</f:for>
+							</select>
+						</div>
+
+
+						<div class="mb-3 col-6">
+							<label for="exampleInputEmail1" class="form-label">Date</label>
+							<div class="input-group mb-3">
+								<span class="input-group-text">From</span>
+								<input type="datetime-local"  name="tx_schulfoto_web_schulfotobackend[datefrom]" required class="form-control">
+								<span class="input-group-text">To</span>
+								<input type="datetime-local" name="tx_schulfoto_web_schulfotobackend[dateto]" required class="form-control">
+							</div>
+						</div>
+
+						<div class="mb-3">
+							<button type="submit" class="btn btn-primary">Export Images</button>
+						</div>
+
+					</div>
+
+				</f:form>
+			</div>
+		</div>
+
+	
+  
+ 
+
+	
+
+
+
+	<script  src="{f:uri.resource(path: 'Js/jquery.js')}"></script>
+<link rel="stylesheet" href="{f:uri.resource(path: 'Css/form_import.css')}">
+
+<script>
+	jQuery(document).ready(function(){
+		jQuery('.custom-be-layout').parents('.typo3-fullDoc').addClass('custom-be-layout-parent');
+
+		jQuery('.custom-be-layout-parent > div').addClass('clearfix container-fluid');
+
+		jQuery('.custom-be-layout-parent .docheader-funcmenu select').addClass('form-select');
+	});
+</script>
+
+
+	</f:section>
+
+
+</html>

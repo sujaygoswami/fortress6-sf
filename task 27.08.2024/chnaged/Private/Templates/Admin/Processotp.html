@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+
+<f:if condition="{otpstatus}==false">
+    <p class="pull-text-center lg"><f:translate key="invalid_otp" /></p>
+</f:if>
+<f:if condition="{otpsendstatus}==true">
+    <p class="pull-text-center lg"><f:translate key="otp_sent" /></p>
+</f:if>
+
+
+    <div class="site-form-module clearfix inset-padded-element">
+        <f:form action="otp" id="passwordform" controller="Admin" enctype="multipart/form-data">
+        <input type="hidden" name="tx_schulfoto_processotp[actiontype]" value="submitotp">
+
+        <!-- form row -->
+        <div class="form-row element element-gap-large">
+            <label class="form-label"><f:translate key="one_time_password" /></label>
+            <input type="text" class="form-control"  name="tx_schulfoto_processotp[otp]"  placeholder="<f:translate key='enter_code' />">
+        </div>
+        <!-- form row -->
+        
+        <!-- form row -->
+        <div class="form-row element element-gap-Extreme">
+            <input type="submit" class="block-btn site-outline-btn site-btn dark-btn volume-lg" value="<f:translate key='confirm' />">
+        </div>
+        <!-- form row -->
+        <!-- form row -->
+        <div class="form-row element element-gap-Extreme">
+            <f:link.action action="otp"  class="block-btn site-outline-btn site-btn dark-btn volume-lg"  arguments="{actiontype:'resend'}" ><f:translate key="resend" /></f:link.action>
+        </div>
+        <!-- form row -->
+        </f:form>
+    </div>
+                           
+
+</f:section>
+</html>

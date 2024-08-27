@@ -1,0 +1,76 @@
+.generatepdfpop .dialog-content {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  max-width: inherit !important;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 96958972932478;
+  text-align: center;
+}
+.generatepdfpop .dialog-content .main_wrap {
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: left;
+  padding: 15px;
+  position: relative;
+}
+.generatepdfpop .dialog-content .main_wrap form {
+  font-size: 14px;
+}
+.generatepdfpop .dialog-content .main_wrap h2 {
+  font-weight: bold;
+  color: #005192;
+  font-size: 22px;
+}
+.generatepdfpop .dialog-content .main_wrap h1:first-child, .generatepdfpop .dialog-content .main_wrap h2:first-child, .generatepdfpop .dialog-content .main_wrap h3:first-child, .generatepdfpop .dialog-content .main_wrap h4:first-child, .generatepdfpop .dialog-content .main_wrap h5:first-child, .generatepdfpop .dialog-content .main_wrap h6:first-child, .generatepdfpop .dialog-content .main_wrap p:first-child, .generatepdfpop .dialog-content .main_wrap li:first-child {
+  margin-top: 0px;
+}
+.generatepdfpop .dialog-content .main_wrap h1:last-child, .generatepdfpop .dialog-content .main_wrap h2:last-child, .generatepdfpop .dialog-content .main_wrap h3:last-child, .generatepdfpop .dialog-content .main_wrap h4:last-child, .generatepdfpop .dialog-content .main_wrap h5:last-child, .generatepdfpop .dialog-content .main_wrap h6:last-child, .generatepdfpop .dialog-content .main_wrap p:last-child, .generatepdfpop .dialog-content .main_wrap li:last-child {
+  margin-bottom: 0px;
+}
+.generatepdfpop i.close {
+  font-style: normal;
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+}
+.generatepdfpop i.close:before {
+  content: 'x';
+}
+
+.table-wrap {
+  display: table;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  margin: 0px;
+  table-layout: fixed;
+  background: transparent;
+}
+.table-wrap .table-cell {
+  display: table-cell;
+}
+.table-wrap .table-cell.bottom-line {
+  vertical-align: bottom;
+}
+.table-wrap .table-cell.top-line {
+  vertical-align: top;
+}
+.table-wrap .table-cell.middle-line {
+  vertical-align: middle;
+}

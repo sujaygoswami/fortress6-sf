@@ -1,0 +1,217 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+
+
+      <f:if condition="{searchresult}">
+      <f:then>
+        <div class="table-wrap">
+          <div class="table-cell middle-line">
+              <div class="main-holder-default">
+                  <div class="container inset-container-type-two">
+                      <!-- search result list -->
+                     <div class="search-result-list table-responsive">
+                         <table cellpadding="0" cellspacing="0">
+                             <tbody>
+                              <f:for each="{searchresult}" key="key" as="results">
+                                 <tr>
+                                     <td class="student-dp">
+                                      <f:if condition="{results.images}">
+                                        <f:then>
+                                          <f:image src="{results.images}" class="dp" width="92c"  maxWidth="{img_max_size}"/>
+                                        </f:then>
+                                        <f:else>
+                                          <img src="fileadmin/templates/Images/dp-placeholder.png" class="dp">
+                                        </f:else>
+                                      </f:if>
+                                      </td>
+                                     <td>{results.klasse.name}</td>
+                                     <td>{results.firstName} {results.lastName}</td>
+                                     <td><f:format.date format="d.m.Y">{results.dateOfBirth}</f:format.date></td>
+                                     <td>
+                                      <f:if condition="{results.validdate}">
+                                        <f:then>
+                                      <f:format.date format="d.m.Y">{results.validdate}</f:format.date>
+                                      </f:then>
+                                      <f:else>
+                                        N/A
+                                        </f:else>
+                                        </f:if>
+                                    </td>
+                                     <td class="pull-text-right action">
+                                      <f:link.action action="schulanlegen" pluginName="Schulanlegen" controller="Admin" pageUid="{settings.schulanlegen_page}" arguments="{uid:results.uid,form_type:'editform'}"><button type="button" class="site-btn default-btn mini"><f:translate key="edit" /></button></f:link.action>
+                                         <div class="clearfix"></div>
+                                         <button type="button" class="site-btn default-btn mini" href="#" data-bs-toggle="modal" data-bs-target="#student-{results.uid}-delete-modal"><f:translate key="delete" /></button>
+                                         <!-- Modal Strat -->
+                                          <div class="modal fade" id="student-{results.uid}-delete-modal" tabindex="-1" aria-labelledby="student-1-delete-modalLabel" aria-hidden="true">
+                                              <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                  
+                                                  <div class="modal-body pull-text-center">
+                                                  <p class="sm"><f:translate key="delete_student" /></p>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                    <f:form action="deactivedata" id="passwordform" controller="Admin" enctype="multipart/form-data">
+                                                      <input type="hidden" name="tx_schulfoto_sadministration[uid]" value="{results.uid}">
+                                                        <button type="submit" class="btn btn-danger" id=""><f:translate key="yes" /></button>
+                                                    </f:form>
+                                                  <button type="button" class="btn btn-success" data-bs-dismiss="modal"><f:translate key="no" /></button>
+                                                  </div>
+                                              </div>
+                                              </div>
+                                          </div>
+                                          <!-- Modal End -->
+                                     </td>
+                                 </tr>
+
+                                 <tr><td colspan="6" class="gap-td">&nbsp;</td></tr>
+                                 </f:for>
+                             </tbody>
+                         </table>
+                         
+                     </div>
+                      <!-- search result list -->
+                  </div>
+              </div>
+          </div>
+      </div>
+      </f:then>
+      <f:else>
+          <f:if condition="{userdata.schulname}">
+            <f:then>
+              <div class="table-wrap">
+                <div class="table-cell middle-line">
+                    <div class="main-holder-default">
+
+                      <f:if condition="{statusaction}=='deactivate'">
+                        <p class="pull-text-center lg"><f:translate key="student_record_changed" /></p>
+                   </f:if>
+
+                   <f:if condition="{search_result_flag}==false">
+                     <div class="table-wrap">
+                       <div class="table-cell middle-line">
+                           <div class="main-holder-default">
+                               <div class="container inset-container-type-one">
+                                 <p class="pull-text-center lg"><f:translate key="no_student_found" /></p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                   </f:if>
+                        <div class="container inset-container-type-one">
+
+          
+                         
+                            <!-- search form -->
+                            <f:form action="schoollist" id="passwordform" controller="Admin" enctype="multipart/form-data">
+                              <input type="hidden" name="tx_schulfoto_sadministration[schoolid]" value="{userdata.schulname.uid}">
+                              <input type="hidden" name="tx_schulfoto_sadministration[type]" value="search">
+
+                            <div class="site-form-type-two">
+                                <div class="field-row element element-gap-MoreExtreme">
+                                    <input type="text" name="tx_schulfoto_sadministration[serach_text]" placeholder="<f:translate key='search_students' />" class="text-input">
+                                </div>
+                                <div class="field-row element element-gap-larger">
+                                    <input type="text" name="tx_schulfoto_sadministration[dateofbirth]" placeholder="<f:translate key='search_by_birth' />" class="text-input" id="date-format">
+                                </div>
+                                <div class="field-row element pull-text-center">
+                                    <input type="submit" value="<f:translate key='search' />" class="site-btn default-btn">
+                                </div>
+                            </div>
+                            </f:form>
+                            <!-- search form -->
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+          </f:then>
+          <f:else>
+            <div class="table-wrap">
+              <div class="table-cell middle-line">
+                  <div class="main-holder-default">
+                      <div class="container inset-container-type-one">
+                         <p class="pull-text-center lg"><f:translate key="no_school" /></p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+          </f:else>
+      </f:if>
+
+         
+      
+  </f:else>
+</f:if>
+<script>
+  // search start
+  var date = document.getElementById('date-format');
+  if(date){
+  function checkValue(str, max) {
+    if (str.charAt(0) !== '0' || str == '00') {
+      var num = parseInt(str);
+      if (isNaN(num) || num <= 0 || num > max) num = 1;
+      str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
+    };
+    return str;
+  };
+  
+  date.addEventListener('input', function(e) {
+    this.type = 'text';
+    var input = this.value;
+    if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+    var values = input.split('.').map(function(v) {
+      return v.replace(/\D/g, '')
+    });
+    if (values[0]) values[0] = checkValue(values[0], 31);
+    if (values[1]) values[1] = checkValue(values[1], 12);
+    var output = values.map(function(v, i) {
+      return v.length == 2 && i < 2 ? v + '.' : v;
+    });
+    this.value = output.join('').substr(0, 10);
+  });
+  
+  date.addEventListener('blur', function(e) {
+    this.type = 'text';
+    var input = this.value;
+    var values = input.split('.').map(function(v, i) {
+      return v.replace(/\D/g, '')
+    });
+    var output = '';
+    
+    if (values.length == 3) {
+      var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+      var month = parseInt(values[0]) - 1;
+      var day = parseInt(values[1]);
+      var d = new Date(year, month, day);
+      if (!isNaN(d)) {
+        document.getElementById('result').innerText = d.toString();
+        var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
+        output = dates.map(function(v) {
+          v = v.toString();
+          return v.length == 1 ? '0' + v : v;
+        }).join(' / ');
+      };
+    };
+    this.value = output;
+  });
+}
+  // search end
+  </script>
+     
+</f:section>
+</html>

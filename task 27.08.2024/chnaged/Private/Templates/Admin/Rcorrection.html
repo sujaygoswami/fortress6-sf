@@ -1,0 +1,64 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+This Template is responsible for displaying a single view for a domain object
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:section name="content">
+
+
+    <div class="table-wrap">
+        <div class="table-cell middle-line">
+            <div class="main-holder-default">
+                <div class="container inset-container-type-two element element-gap-default">
+                    <h1><f:translate key="rcorrection_heading" /></h1>
+                    <p><f:translate key="rcorrection_subheading" /></p>
+                  </div>
+                <div class="container inset-container-type-two">
+                    <!-- search result list -->
+                   <div class="search-result-list table-responsive">
+                       <table cellpadding="0" cellspacing="0">
+                           <tbody>
+                            <f:for each="{searchresult}" key="key" as="results">
+                               <tr>
+                                   <td class="student-dp">
+                                    <f:if condition="{results.images}">
+                                      <f:then>
+                                        <f:image src="{results.images}" class="dp" width="92c"  maxWidth="{img_max_size}"/>
+                                      </f:then>
+                                      <f:else>
+                                        <img src="fileadmin/templates/Images/dp-placeholder.png" class="dp">
+                                      </f:else>
+                                    </f:if>
+                                    </td>
+                                   <td>{results.klasse.name}</td>
+                                   <td>{results.firstName} {results.lastName}</td>
+                                   <td>
+                                    {results.korrekturen}
+                                  </td>
+                                   <td class="pull-text-right action">
+                                    <f:link.action  class="site-btn default-btn mini" action="schulanlegen" pluginName="Schulanlegen" controller="Admin" pageUid="{settings.schulanlegen_page}" arguments="{uid:results.uid,form_type:'editform',page:'corrections'}"><f:translate key="edit" /></f:link.action>
+                                       <div class="clearfix"></div>
+                                       <f:link.action action="ignorecorrection" arguments="{uid:results.uid}" class="site-btn default-btn mini"><f:translate key="rcorrection_ignore" /></f:link.action>
+                                       
+                                   </td>
+                               </tr>
+
+                               <tr><td colspan="5" class="gap-td">&nbsp;</td></tr>
+                               </f:for>
+                           </tbody>
+                       </table>
+                       
+                   </div>
+                    <!-- search result list -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</f:section>
+</html>
